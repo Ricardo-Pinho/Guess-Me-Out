@@ -2,12 +2,12 @@ UserAuth::Application.routes.draw do
 
   match ':controller(/:action(/:id))(.:format)'
   root :to => 'sessions#login'
-  match "signup", :to => "users#new"
-  match "login", :to => "sessions#login"
-  match "logout", :to => "sessions#logout"
-  match "home", :to => "sessions#home"
-  match "profile", :to => "sessions#profile"
-  match "setting", :to => "sessions#setting"
+  match "signup", :to => 'users#new'
+  match "login", :to => 'sessions#login'
+  match "logout", :to => 'sessions#logout'
+  match "home", :to => 'sessions#home'
+  match "profile", :to => 'sessions#profile'
+  match "setting", :to => 'sessions#setting'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
