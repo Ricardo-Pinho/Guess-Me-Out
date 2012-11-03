@@ -33,11 +33,9 @@ body{
 .Main_Header h1{
 	float:left;
 	margin-top:8px;
-	color:#C4C1BD;
 	background-image: url('who-logo.png');
 	height:43px;
 	width:215px;
-	text-indent:-9999px;
 }
 
 .nav{
