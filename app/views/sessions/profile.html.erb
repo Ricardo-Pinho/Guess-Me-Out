@@ -1,6 +1,11 @@
 <h2 class='User_Header'><%=@current_user.username%> Profile <h2>
 
 <p>
+  <b>Last Login:</b>
+  <%= @current_user.last_login %>
+</p>
+
+<p>
   <b>Email:</b>
   <%= @current_user.email %>
 </p>

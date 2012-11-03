@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   #Only on Create so other actions like update password attribute can be nil
   validates_length_of :password, :in => 6..20, :on => :create
 
-  attr_accessible :username, :email, :password, :password_confirmation, :name, :birthdate, :sex, :location, :credits
+  attr_accessible :username, :email, :password, :password_confirmation, :name, :birthdate, :sex, :location, :credits, :last_login
 
 
   def self.authenticate(username_or_email="", login_password="")
@@ -24,6 +24,8 @@ class User < ActiveRecord::Base
     end
 
     if user && user.match_password(login_password)
+	  time=Time.new
+	  user.update_attribute(:last_login, time.strftime("%Y-%m-%d %H:%M:%S"))
       return user
     else
       return false

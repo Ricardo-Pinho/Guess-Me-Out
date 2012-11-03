@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20120319110639) do
     t.string   "encrypted_password"
     t.string   "name"
     t.date     "birthdate"
+    t.date     "last_login"
     t.string   "sex"
     t.integer  "credits"
     t.string   "location"
