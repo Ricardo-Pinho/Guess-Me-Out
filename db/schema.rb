@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(:version => 20120319110639) do
     t.string   "username"
     t.string   "email"
     t.string   "encrypted_password"
-    t.string   "salt"
     t.string   "name"
     t.date     "birthdate"
     t.string   "sex"

@@ -20,7 +20,6 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'bcrypt-ruby', :require => 'bcrypt' 
 end
 
 gem 'jquery-rails'

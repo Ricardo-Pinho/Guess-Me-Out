@@ -31,15 +31,14 @@ class User < ActiveRecord::Base
   end   
 
   def match_password(login_password="")
-    encrypted_password == BCrypt::Engine.hash_secret(login_password, salt)
+    encrypted_password == login_password
   end
 
 
 
   def encrypt_password
     unless password.blank?
-      self.salt = BCrypt::Engine.generate_salt
-      self.encrypted_password = BCrypt::Engine.hash_secret(password, salt)
+      self.encrypted_password = password
     end
   end
 
