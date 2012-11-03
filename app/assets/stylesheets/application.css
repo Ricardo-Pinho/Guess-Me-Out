@@ -22,7 +22,6 @@ body{
 }
 
 .Main_Header{
-	background-image: url('header_bg.png');
 	height:60px;
 	padding:0 20px;
 	border-radius: 18px;
