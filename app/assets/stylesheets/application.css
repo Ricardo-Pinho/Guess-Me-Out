@@ -35,7 +35,7 @@ body{
 	margin-top:8px;
 	color:#C4C1BD;
 	background: url('who-logo.png');
-	background-size:cover;
+	background-size:300px 55px;
 	background-attachment:fixed; 
 	height:55px;
 	width:300px;
