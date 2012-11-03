@@ -3,15 +3,12 @@ UserAuth::Application.routes.draw do
   match ':controller(/:action(/:id))(.:format)'
   root :to => 'sessions#login'
   match "signup", :to => 'users#new'
+  match "create", :to => 'users#create'
   match "login", :to => 'sessions#login'
   match "logout", :to => 'sessions#logout'
   match "home", :to => 'sessions#home'
   match "profile", :to => 'sessions#profile'
   match "setting", :to => 'sessions#setting'
-  resource :users do
-	# Route GET /user/admin_login
-	get 'create', :on => :collection
-	end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
