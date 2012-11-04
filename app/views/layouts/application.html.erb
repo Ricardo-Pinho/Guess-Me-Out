@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="Main_Header">
-		<h1>Ruby Source</h1>
+		<h1><%= link_to image_tag("who-logo.png", :class => 'logo'), {:action => 'home', :controller => 'home'} %></h1>
 		<%unless session[:user_id]%>
 			<ul class="nav">
 				<li><%= link_to :Signup , signup_path, class: "nav_links"%></li>|
@@ -16,7 +16,6 @@
 			</ul>
 		<%else%>
 			<ul class="nav">
-				<li><%= link_to :Home , :home, class: "nav_links" %> |</li>
 				<li><%= link_to :Profile , :profile, class: "nav_links" %> |</li>
 				<li><%= link_to :Setting , :setting, class: "nav_links" %> |</li>
 				<li><%= link_to :Logout , :logout, class: "nav_links" %></li>	
