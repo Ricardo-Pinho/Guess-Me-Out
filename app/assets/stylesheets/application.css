@@ -3,8 +3,8 @@ body{
 }
 .Sign_Form{
 	text-align: center;
-	margin:auto;
-	margin-top:10px;	
+	margin: auto;
+	float: center;
 	width:500px;
 	background-color: rgba(0, 0, 0, .2);
 	padding-bottom:20px;
@@ -97,29 +97,52 @@ height:50px;
 }
 
 #navright {
-  float : right;
-  clear : right;
-  /*height : 208px;*/
+	float : right;
+	clear : right;
 }
 
-#help{
-  border : 5px ridge Black;
-  /*padding : 10px;*/
-  background-color: white;
-  margin-bottom : 10px;
+.help, .avatar{
+	width : 200px;
+	color: #C4C1BD;
+    margin-bottom : 10px;
+	background-color: rgba(0, 0, 0, .2);
+	border-radius: 18px;
+	box-shadow: 5px 5px 5px #888888;
 }
 
-.navtitle {
+.helpcontent ul, .avatarcontent ul{
+padding:0px;
+list-style-type:circle;
+}
+
+.helpcontent li, .avatarcontent li{
+padding-left: 5px;
+padding-bottom: 5px;
+}
+
+.navtitleavatar, .navtitlehelp {
+  cursor:pointer;
+  width : 200px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
   font-size : 1.4em;
-    background-color : #010101;
+  background-color : #010101;
+  border-radius: 18px;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 #content{
 	margin:auto;
-	margin-top:5px;	
+	margin-top:5px;
+	margin-right : 215px;	
 	background-color: rgba(0, 0, 0, .2);
 	padding: 20px;
 	border-radius: 18px;
 	box-shadow: 5px 5px 5px #888888;
 }
+
+.expanded .plus {display:none;}
+.collapsed .minus {display: none;}
+.container {margin-bottom: 50px;}
 
