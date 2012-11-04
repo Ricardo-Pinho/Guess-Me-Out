@@ -10,12 +10,13 @@
    def create
     	@user = User.new(params[:user])
     	if @user.save
-    		flash[:notice] = "You Signed up successfully"
-			flash[:color]= "valid"
+    		flash.now[:notice] = "You Signed up successfully"
+			flash.now[:color]= "valid"
 			redirect_to(:controller=>'sessions', :action => 'login')
       else
-        flash[:notice] = "Form is invalid"
-        flash[:color]= "invalid"
+        flash.now[:notice] = "Form is invalid"
+        flash.now[:color]= "invalid"
+		render "new"
       end
     end
 
