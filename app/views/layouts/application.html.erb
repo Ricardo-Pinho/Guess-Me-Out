@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="Main_Header">
-		<h1><%= link_to image_tag("who-logo.png", :class => 'logo'), {:action => 'home', :controller => 'home'} %></h1>
+		<div class="logo"><%= link_to image_tag("who-logo.png", :class => 'logo'), {:action => 'home', :controller => 'home'} %></div>
 		<%unless session[:user_id]%>
 			<ul class="nav">
 				<li><%= link_to :Signup , signup_path, class: "nav_links"%></li>|
@@ -20,6 +20,7 @@
 				<li><%= link_to :Logout , :logout, class: "nav_links" %></li>	
 			</ul>
 		<%end%>
+		<div class="titleheader">Welcome to Guess Me Out</div>
 	</div>
 	<% if flash[:color]== "valid" %>
 		<div class="valid_notice">
@@ -39,7 +40,7 @@
 				<div class="help">
 				  <div class="navtitlehelp">Help</div>
 				  <ul class="helpcontent">
-				  <li>How To Play</li>
+				  <li><%= link_to :"How To Play" , howtoplay_path %></li>
 				  </ul>
 				</div>
 				<div class="avatar">
