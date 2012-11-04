@@ -7,7 +7,6 @@ UserAuth::Application.routes.draw do
   match "logout", :to => 'sessions#logout'
   match "home", :to => 'home#home'
   match "profile", :to => 'sessions#profile'
-  match "setting", :to => 'sessions#setting'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

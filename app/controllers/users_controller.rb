@@ -11,12 +11,12 @@
     	@user = User.new(params[:user])
     	if @user.save
     		flash[:notice] = "You Signed up successfully"
-        flash[:color]= "valid"
+			flash[:color]= "valid"
+			redirect_to(:controller=>'sessions', :action => 'login')
       else
         flash[:notice] = "Form is invalid"
         flash[:color]= "invalid"
       end
-      render "new"
     end
 
 end

@@ -7,10 +7,6 @@ class SessionsController < ApplicationController
 		#Profile Page
 	end
 
-	def setting
-		#Setting Page
-	end
-
 	def login
 		#Login Form
 	end
@@ -20,7 +16,7 @@ class SessionsController < ApplicationController
 		if authorized_user
 			session[:user_id] = authorized_user.id
 			flash[:notice] = "Welcome again, you logged in as #{authorized_user.username}"
-			redirect_to(:action => 'home')
+			redirect_to(:controller=>'home', :action => 'home')
 
 
 		else

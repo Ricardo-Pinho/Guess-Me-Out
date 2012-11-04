@@ -96,6 +96,24 @@ height:50px;
 	text-align: center;
 }
 
+#navright {
+  float : right;
+  clear : right;
+  /*height : 208px;*/
+}
+
+#help{
+  border : 5px ridge Black;
+  /*padding : 10px;*/
+  background-color: white;
+  margin-bottom : 10px;
+}
+
+.navtitle {
+  font-size : 1.4em;
+    background-color : #010101;
+}
+
 #content{
 	margin:auto;
 	margin-top:5px;	
