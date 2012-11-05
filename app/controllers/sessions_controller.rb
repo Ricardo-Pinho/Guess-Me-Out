@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
  
-	before_filter :authenticate_user, :except => [:index, :login, :login_attempt, :logout]
-	before_filter :save_login_state, :only => [:index, :login, :login_attempt]
+	before_filter :authenticate_user, :except => [:index, :login, :login_attempt, :login_android, :notlogin_android, :login_attempt_android, :logout]
+	before_filter :save_login_state, :only => [:index, :login, :login_attempt, :login_android, :notlogin_android, :login_attempt_android]
 
 	def profile
 		#Profile Page
@@ -10,6 +10,18 @@ class SessionsController < ApplicationController
 	def login
 		#Login Form
 	end
+	
+	def login_android
+		#Login Form
+	end
+	
+	def notlogin_android
+	  respond_to do |format|
+		format.json{
+		render :json => "{Invalid Username or Password}"
+    }
+	  end
+    end
 
 	def login_attempt
 		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
@@ -20,9 +32,19 @@ class SessionsController < ApplicationController
 
 
 		else
-			flash[:notice] = "Invalid Username or Password"
-        	flash[:color]= "invalid"
+			flash.now[:notice] = "Invalid Username or Password"
+        	flash.now[:color]= "invalid"
 			render "login"	
+		end
+	end
+	
+	def login_attempt_android
+		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
+		if authorized_user
+			redirect_to(:controller=>'users', :action => 'show', :id=>authorized_user.id, :format=>'json')
+			
+		else
+			redirect_to(:controller=>'sessions', :action => 'notlogin_android', :format=>'json')
 		end
 	end
 

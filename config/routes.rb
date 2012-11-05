@@ -1,6 +1,7 @@
 UserAuth::Application.routes.draw do
 
-  match ':controller(/:action(/:id))(.:format)'
+  resources :users
+  match ':controller(/:action)(/:id)(.:format)'
   root :to => 'home#home'
   match "signup", :to => 'users#new'
   match "login", :to => 'sessions#login'
@@ -8,6 +9,9 @@ UserAuth::Application.routes.draw do
   match "home", :to => 'home#home'
   match "profile", :to => 'sessions#profile'
   match "howtoplay", :to => 'help#howtoplay'
+  match "notshow_android", :to => 'users#notshow_android'
+  match "new_android", :to => 'users#new_android'
+  match "login_android", :to => 'sessions#login_android'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
