@@ -1,0 +1,45 @@
+<% @page_title = "UserAuth | Signup" -%>
+<div class= "Sign_Form">
+  <h1>Sign Up</h1>
+  <%= form_for(:user, :url => {:controller => 'users', :action => 'create_android'}) do |f| %>
+
+    <p>          
+      Username:</br> <%= f.text_field :username%>
+    </p>
+
+    <p>
+      Email:</br> <%= f.text_field :email%>
+    </p>
+
+    <p>      
+      Password:</br> <%= f.password_field :password%>
+    </p>
+
+    <p>     
+      Password Confirmation:</br> <%= f.password_field :password_confirmation%>
+    </p>
+	
+	<p>
+      Name:</br> <%= f.text_field :name%>
+    </p>
+	
+	<p>
+      Birthday:</br> <%= f.date_select(:birthdate, :order => [:day, :month, :year], :default => {:year => Time.now.year-18, :month =>1, :day => 1 }, :start_year => 1900, :end_year => Time.now.year) %>
+    </p>
+	
+	<p>
+      Sex:</br>
+		<p><%= f.radio_button(:sex, "Male") %>Male</p>
+		<p><%= f.radio_button(:sex, "Female") %>Female</p>
+		<p><%= f.radio_button(:sex, "Other") %>Other</p>
+    </p>
+	
+	<p>
+      Location:</br> <%= f.text_field :location%>
+    </p>
+	
+	<%= f.hidden_field(:credits, :value => "0") %>
+		
+    <%= f.submit :Signup %>
+  <% end %>
+</div>
