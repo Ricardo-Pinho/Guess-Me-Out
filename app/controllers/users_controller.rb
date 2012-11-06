@@ -7,6 +7,22 @@
       @user = User.new     
   end
 
+  def edit
+	@user=User.find(params[:user_id])
+	if (params[:user].email!="")
+		@user.email=params[:user].email
+	if @user.save
+    		flash.now[:notice] = "You Signed up successfully"
+			flash.now[:color]= "valid"
+			redirect_to(:controller=>'sessions', :action => 'login')
+      else
+        flash.now[:notice] = "Form is invalid"
+        flash.now[:color]= "invalid"
+		render "new"
+      end
+	
+  end
+  
    def create
     	@user = User.new(params[:user])
     	if @user.save
