@@ -1,16 +1,16 @@
 body{
 	background-color: #C4C1BD;
+    margin:0;
 }
 .Sign_Form{
-	text-align: center;
-	margin: auto;
-	float: center;
+	text-align: left;
+    margin:auto;
+    padding: 20px;
+	float: left;
 	width:500px;
 	background-color: rgba(0, 0, 0, .2);
 	padding-bottom:20px;
 	padding-top:2px;
-	border-radius: 18px;
-	box-shadow: 5px 5px 5px #888888;
 
 }
 
@@ -23,45 +23,97 @@ body{
 
 .Main_Header{
 	background-image: url('header_bg.png');
-	height:60px;
 	padding:0 20px;
-	border-radius: 18px;
-	box-shadow: 5px 5px 5px #888888;
+    position: relative;
+	/*box-shadow: 5px 5px 5px #888888;*/
 
 }
 
-.Main_Header .titleheader{
-	margin-top:5px;
-	color:#C4C1BD;
-	font-weight: bold;
-	text-align: center;
-	font-size : 2em;
-	vertical-align:middle;
+@media only screen and (max-height: 599px) {
+    .Main_Header{
+        height: 200px;
+    }
+    .Main_Header .logo{
+        height:50px;
+        width:250px;
+    }
 }
+
+@media only screen and (max-height: 899px) {
+    .Main_Header{
+        height: 300px;
+    }
+    .Main_Header .logo{
+        height:100px;
+        width:300px;
+    }
+}
+
+@media only screen and (min-height: 900px) {
+    .Main_Header{
+        height: 400px;
+    }
+    .Main_Header .logo{
+        height:150px;
+        width:450px;
+    }
+}
+
 
 .Main_Header .logo{
 	float:left;
 	margin-top:4px;
-	height:50px;
-	width:250px;
 }
 
 .nav{
 	list-style-type: none;
-	float: right;
-	font-size : 1.4em;
-	color:#C4C1BD;
-	vertical-align:middle;
+    right:5px;
+	/*font-size : 1.4em;*/
+	color:#ff4500;
+    position: absolute; bottom: 0;
 }
 .nav li{
 	display: inline;
 	margin-right:5px;
 
 }
+
+.tab{
+    list-style-type: none;
+    position: absolute; bottom: 0;
+    margin: 0;
+    padding:0;
+}
+
+.tab ul{
+    margin: 0;
+    padding:0;
+}
+
+.tab li{
+    text-align: center;
+    display: inline;
+    font-size:1.4em;
+    background-color:white;
+    border-color:white;
+    border-style:ridge;
+    border-width:medium;
+    border-bottom:0;
+    padding:0;
+    margin:0;
+}
+
 .nav_links{
-	color: #C4C1BD;
+	color: #ff8c00;
 	text-decoration: none;
-} 
+}
+
+.tab_links{
+    color: black;
+    text-decoration: none;
+    margin: 0;
+    padding:0;
+}
 
 .notice, .valid_notice, .invalid_notice{
 	height:35px;
@@ -87,25 +139,20 @@ body{
 	border:1px solid green;
 }
 
-.User_Header{
+/*.User_Header{
 
 	background-color: rgba(0, 0, 0, .2);
 	border-radius: 18px;
 	margin:auto;
 	width:220px;
 	text-align:center;
-}
+} */
 
 .center{
 	text-align: center;
 }
 
-#navright {
-	float : right;
-	clear : right;
-}
-
-.help, .avatar{
+/*.help, .avatar{
 	width : 200px;
 	color: #C4C1BD;
     margin-bottom : 10px;
@@ -141,15 +188,15 @@ padding-bottom: 5px;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-}
+}*/
 
 #content{
 	margin:auto;
-	margin-right : 215px;	
-	background-color: rgba(0, 0, 0, .2);
+	/*margin-right : 215px;
+	background-color: rgba(0, 0, 0, .2);*/
 	padding: 20px;
-	border-radius: 18px;
-	box-shadow: 5px 5px 5px #888888;
+	/*border-radius: 18px;
+	box-shadow: 5px 5px 5px #888888;*/
 }
 
 .expanded .plus {display:none;}

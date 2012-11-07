@@ -8,19 +8,26 @@
 </head>
 <body>
 	<div class="Main_Header">
-		<div class="logo"><%= link_to image_tag("who-logo.png", :class => 'logo'), {:action => 'home', :controller => 'home'} %></div>
-		<%unless session[:user_id]%>
-			<ul class="nav">
-				<li><%= link_to :Signup , signup_path, class: "nav_links"%></li>|
-				<li><%= link_to :Login , login_path, class: "nav_links"%></li>	
-			</ul>
+		<p class="logo"><%= link_to image_tag("who-logo.png", :class => 'logo'), {:action => 'home', :controller => 'home'} %></p>
+        <ul class="tab">
+                <li><%= link_to :Home , :root, class: "tab_links" %></li>
+          <%unless session[:user_id]%>
+          <%else%>
+                <li><%= link_to :Profile , :profile, class: "tab_links" %></li>
+                <li><%= link_to :Avatar , :avatar, class: "tab_links" %></li>
+          <%end%>
+                <li><%= link_to :Statistics , :statistics, class: "tab_links" %></li>
+                <li><%= link_to :Help , :help, class: "tab_links"%></li>
+          </ul>
+        <ul class="nav">
+        <%unless session[:user_id]%>
+				<li><%= link_to :Signup , :signup, class: "nav_links"%></li>|
+				<li><%= link_to :Login , :login, class: "nav_links"%></li>
 		<%else%>
-			<ul class="nav">
-				<li><%= link_to :Profile , :profile, class: "nav_links" %> |</li>
-				<li><%= link_to :Logout , :logout, class: "nav_links" %></li>	
-			</ul>
+              <li>Welcome, <%= session[:username] %></li>|
+              <li><%= link_to :Logout , :logout, class: "nav_links" %></li>
 		<%end%>
-		<div class="titleheader">Welcome to Guess Me Out</div>
+        </ul>
 	</div>
 	<% if flash[:color]== "valid" %>
 		<div class="valid_notice">
@@ -35,21 +42,6 @@
 			<p><%=flash[:notice]%></p>
 		</div>
 	<%end%>
-		<!-- nav tag -->
-		<div id="navright">
-				<div class="help">
-				  <div class="navtitlehelp">Help</div>
-				  <ul class="helpcontent">
-				  <li><%= link_to :"How To Play" , howtoplay_path %></li>
-				  </ul>
-				</div>
-				<div class="avatar">
-				  <div class="navtitleavatar">Avatar</div>
-				  <ul class="avatarcontent">
-				  <li>Create Avatar</li>
-				  </ul>
-				</div>
-		</div> <!-- nav content -->
 <%= yield %>
 
 </body>
