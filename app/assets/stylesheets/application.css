@@ -1,23 +1,21 @@
 body{
-	background-color: white;
-    margin:0;
+	background-color: black;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  background-image: url('bkg.png');
+  background-repeat: repeat-x;
 }
 
-.bodyhelp{
-    background-color:red;
+div{
+  background-color: transparent;
+  margin: auto;
+  width: 960;
 }
-.bodystatistics{
-    background-color:orange;
+
+p {
+  font-size: 0.8em;
 }
-.bodyavatar{
-    background-color:yellow;
-}
-.bodyprofile{
-    background-color:blue;
-}
-.bodyhome{
-    background-color:deeppink;
-}
+
+
 .Sign_Form{
 	text-align: left;
     margin:auto;
@@ -38,7 +36,6 @@ body{
 }
 
 .Main_Header{
-	background-image: url('header_bg.png');
 	padding:0 20px;
     position: relative;
 	/*box-shadow: 5px 5px 5px #888888;*/
@@ -53,6 +50,8 @@ body{
         height:50px;
         width:250px;
     }
+    #content{
+    }
 }
 
 @media only screen and (max-height: 899px) {
@@ -62,6 +61,9 @@ body{
     .Main_Header .logo{
         height:100px;
         width:300px;
+    }
+    #content{
+      
     }
 }
 
@@ -73,12 +75,15 @@ body{
         height:150px;
         width:450px;
     }
+    #content{
+      width: 900px;
+    }
 }
 
 
 .Main_Header .logo{
 	float:left;
-	margin-top:4px;
+	// margin-top:4px;
 }
 
 .nav{
@@ -97,55 +102,20 @@ body{
 .tab{
     list-style-type: none;
     position: absolute; bottom: 0;
-    margin: 0;
-    padding:0;
 }
 
-.tab span.tabhome, .tab span.tabhelp, .tab span.tabstatistics, .tab span.tabprofile, .tab span.tabavatar{
+
+
+.tab div, .tab span{
+    background-color: transparent;
     text-align: center;
     font-size:1.2em;
-    background-color:white;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    padding: 10px;
-    padding-top:100px;
-    padding-bottom:20px;
-    margin:0;
     display: inline-block;
-    width: 75px;
-}
-
-.tab div.tabhome, .tab div.tabhelp, .tab div.tabstatistics, .tab div.tabprofile, .tab div.tabavatar{
-    text-align: center;
-    font-size:1.2em;
-    background-color:white;
-    padding: 10px;
-    padding-top:100px;
-    padding-bottom:20px;
-    margin:0;
-    display: inline-block;
-    width: 75px;
-}
-
-.tab span.tabhome, .tab div.tabhome{
-     background-color:deeppink;
+    height: 60px;
+    width: 150px;
+    background-image: url('tab_up.png');
+    line-height: 75px;
  }
-
-.tab span.tabhelp, .tab div.tabhelp{
-    background-color:#ff0000;
-}
-
-.tab span.tabavatar, .tab div.tabavatar{
-    background-color:yellow;
-}
-
-.tab span.tabprofile, .tab div.tabprofile{
-    background-color:blue;
-}
-
-.tab span.tabstatistics, .tab div.tabstatistics{
-    background-color:orange;
-}
 
 .tab_links{
     color: black;
@@ -158,18 +128,17 @@ body{
 }
 
 .notice, .valid_notice, .invalid_notice{
-	height:35px;
 	width: 400px;
+  height: 10px;
 	margin:auto;
-	margin-top:20px;
 }
 .notice, .invalid_notice p, .valid_notice p{
 	text-align:center;
-	margin-top:6px;
 }
 
 .notice{
 	background-color: transparent;
+  float: right;
 }
 
 .active{
@@ -238,8 +207,7 @@ padding-bottom: 5px;
 
 #content{
 	margin:auto;
-	/*margin-right : 215px;
-	background-color: rgba(0, 0, 0, .2);*/
+  background-color: #d7d7d7;
 	padding: 20px;
 	/*border-radius: 18px;
 	box-shadow: 5px 5px 5px #888888;*/
@@ -247,5 +215,5 @@ padding-bottom: 5px;
 
 .expanded .plus {display:none;}
 .collapsed .minus {display: none;}
-.container {margin-bottom: 50px;}
+.container {margin-bottom: 0px;}
 
