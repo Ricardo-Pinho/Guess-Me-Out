@@ -1,15 +1,19 @@
 UserAuth::Application.routes.draw do
 
+  resources :avatars
+
   resources :users
   match ':controller(/:action)(/:id)(.:format)'
   root :to => 'home#home'
   match "signup", :to => 'users#new'
+  match "avatar", :to =>'avatars#new'
   match "login", :to => 'sessions#login'
   match "logout", :to => 'sessions#logout'
   match "home", :to => 'home#home'
   match "help", :to => 'home#help'
   match "statistics", :to => 'home#statistics'
   match "profile", :to => 'sessions#profile'
+  match "avatar", :to => 'avatars#show'
   match "notshow_android", :to => 'users#notshow_android'
   match "new_android", :to => 'users#new_android'
   match "login_android", :to => 'sessions#login_android'

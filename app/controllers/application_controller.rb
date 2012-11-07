@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   #This method for prevent user to access Signup & Login Page without logout
   def save_login_state
     if session[:user_id]
-            redirect_to(:controller => 'sessions', :action => 'home')
+            redirect_to(:controller => 'home', :action => 'home')
       return false
     else
       return true

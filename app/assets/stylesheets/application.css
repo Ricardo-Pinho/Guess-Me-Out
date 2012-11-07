@@ -1,6 +1,22 @@
 body{
-	background-color: #C4C1BD;
+	background-color: white;
     margin:0;
+}
+
+.bodyhelp{
+    background-color:red;
+}
+.bodystatistics{
+    background-color:orange;
+}
+.bodyavatar{
+    background-color:yellow;
+}
+.bodyprofile{
+    background-color:blue;
+}
+.bodyhome{
+    background-color:deeppink;
 }
 .Sign_Form{
 	text-align: left;
@@ -85,34 +101,60 @@ body{
     padding:0;
 }
 
-.tab ul{
-    margin: 0;
-    padding:0;
-}
-
-.tab li{
+.tab span.tabhome, .tab span.tabhelp, .tab span.tabstatistics, .tab span.tabprofile, .tab span.tabavatar{
     text-align: center;
-    display: inline;
-    font-size:1.4em;
+    font-size:1.2em;
     background-color:white;
-    border-color:white;
-    border-style:ridge;
-    border-width:medium;
-    border-bottom:0;
-    padding:0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 10px;
+    padding-top:100px;
+    padding-bottom:20px;
     margin:0;
+    display: inline-block;
+    width: 75px;
 }
 
-.nav_links{
-	color: #ff8c00;
-	text-decoration: none;
+.tab div.tabhome, .tab div.tabhelp, .tab div.tabstatistics, .tab div.tabprofile, .tab div.tabavatar{
+    text-align: center;
+    font-size:1.2em;
+    background-color:white;
+    padding: 10px;
+    padding-top:100px;
+    padding-bottom:20px;
+    margin:0;
+    display: inline-block;
+    width: 75px;
+}
+
+.tab span.tabhome, .tab div.tabhome{
+     background-color:deeppink;
+ }
+
+.tab span.tabhelp, .tab div.tabhelp{
+    background-color:#ff0000;
+}
+
+.tab span.tabavatar, .tab div.tabavatar{
+    background-color:yellow;
+}
+
+.tab span.tabprofile, .tab div.tabprofile{
+    background-color:blue;
+}
+
+.tab span.tabstatistics, .tab div.tabstatistics{
+    background-color:orange;
 }
 
 .tab_links{
     color: black;
     text-decoration: none;
-    margin: 0;
-    padding:0;
+}
+
+.nav_links{
+	color: #ff8c00;
+	text-decoration: none;
 }
 
 .notice, .valid_notice, .invalid_notice{
@@ -128,6 +170,10 @@ body{
 
 .notice{
 	background-color: transparent;
+}
+
+.active{
+    border-radius: 0;
 }
 
 .invalid_notice{

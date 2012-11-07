@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
 	before_filter :authenticate_user, :except => [:index, :login, :login_attempt, :login_android, :notlogin_android, :login_attempt_android, :logout]
 	before_filter :save_login_state, :only => [:index, :login, :login_attempt, :login_android, :notlogin_android, :login_attempt_android]
 
+
 	def profile
 		#Profile Page
 	end
@@ -27,6 +28,7 @@ class SessionsController < ApplicationController
 		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
 		if authorized_user
 			session[:user_id] = authorized_user.id
+      session[:user_name] = authorized_user.username
 			flash[:notice] = "Welcome again, you logged in as #{authorized_user.username}"
 			redirect_to(:controller=>'home', :action => 'home')
 

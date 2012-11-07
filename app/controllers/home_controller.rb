@@ -5,11 +5,11 @@ class HomeController < ApplicationController
   end
 
   def help
-    #Home Page
+    #Help Page
   end
 
   def statistics
-    #Home Page
+    #Statistics Page
   end
 
 end
