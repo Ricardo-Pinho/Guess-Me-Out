@@ -3,6 +3,8 @@ body{
   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
   background-image: url('bkg.png');
   background-repeat: repeat-x;
+  width: 980px;
+  margin: auto;
 }
 
 div{
@@ -42,7 +44,15 @@ p {
 
 }
 
-@media only screen and (max-height: 599px) {
+.Main_Header {
+  height: 250px ;
+}
+
+.logo{
+  height: 85%;
+}
+
+/*@media only screen and (max-height: 599px) {
     .Main_Header{
         height: 200px;
     }
@@ -51,6 +61,8 @@ p {
         width:250px;
     }
     #content{
+      width: 100%;
+      padding: 0px;
     }
 }
 
@@ -63,7 +75,9 @@ p {
         width:300px;
     }
     #content{
-      
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
     }
 }
 
@@ -76,14 +90,15 @@ p {
         width:450px;
     }
     #content{
-      width: 900px;
+      width: 960px;
+      padding: 20px;
     }
-}
+}*/
 
 
 .Main_Header .logo{
 	float:left;
-	// margin-top:4px;
+	margin-top:4px;
 }
 
 .nav{
@@ -91,7 +106,7 @@ p {
     right:5px;
 	/*font-size : 1.4em;*/
 	color:#ff4500;
-    position: absolute; bottom: 0;
+    position: absolute; bottom: -21px;
 }
 .nav li{
 	display: inline;
@@ -101,20 +116,30 @@ p {
 
 .tab{
     list-style-type: none;
-    position: absolute; bottom: 0;
+    position: absolute; bottom: -21px;
 }
 
+.tab div{
+  background-image: url('tab_up.png');
+}
 
+.tab span{
+  background-image: url('tab_down.png');
+}
 
 .tab div, .tab span{
     background-color: transparent;
+    background-repeat:no-repeat;
     text-align: center;
     font-size:1.2em;
     display: inline-block;
-    height: 60px;
-    width: 150px;
-    background-image: url('tab_up.png');
-    line-height: 75px;
+    height: 45px;
+    width: 175px;
+    line-height: 45px;
+    margin-left: -20px;
+ }
+
+ .tab a {
  }
 
 .tab_links{
@@ -207,8 +232,9 @@ padding-bottom: 5px;
 
 #content{
 	margin:auto;
-  background-color: #d7d7d7;
-	padding: 20px;
+  background-color: #ddebff;
+  padding-left: 30px;
+  padding-right: 30px;
 	/*border-radius: 18px;
 	box-shadow: 5px 5px 5px #888888;*/
 }
@@ -216,4 +242,19 @@ padding-bottom: 5px;
 .expanded .plus {display:none;}
 .collapsed .minus {display: none;}
 .container {margin-bottom: 0px;}
+
+#rightpane{
+  text-align: right;
+  height: 
+}
+  #rightpane img {
+    
+    width: 300px;
+  }
+
+#leftpane {
+  width: 600px;
+  float:left;
+}
+
 
