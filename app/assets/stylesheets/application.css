@@ -1,6 +1,6 @@
 body{
 	background-color: black;
-  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-image: url('bkg.png');
   background-repeat: repeat-x;
   width: 980px;
@@ -10,7 +10,6 @@ body{
 div{
   background-color: transparent;
   margin: auto;
-  width: 960;
 }
 
 p {
@@ -38,18 +37,24 @@ p {
 }
 
 .Main_Header{
-	padding:0 20px;
-    position: relative;
+	padding: 0 0px;
+  position: relative;
 	/*box-shadow: 5px 5px 5px #888888;*/
-
-}
-
-.Main_Header {
   height: 250px ;
 }
 
 .logo{
-  height: 85%;
+  height: 100%;
+}
+
+.Main_Header .logo{
+  float:left;
+}
+
+.social{
+  height: 50px;
+  padding-top: 10px;
+  text-align: right;
 }
 
 /*@media only screen and (max-height: 599px) {
@@ -95,12 +100,6 @@ p {
     }
 }*/
 
-
-.Main_Header .logo{
-	float:left;
-	margin-top:4px;
-}
-
 .nav{
 	list-style-type: none;
     right:5px;
@@ -115,8 +114,9 @@ p {
 }
 
 .tab{
-    list-style-type: none;
-    position: absolute; bottom: 0px;
+  list-style-type: none;
+  position: absolute; bottom: 0px;
+  padding: 0px 20px;
 }
 
 .tab div{
@@ -129,13 +129,13 @@ p {
 
 .tab div, .tab span{
     background-color: transparent;
-    background-repeat:no-repeat;
+    background-size: 100%;
     text-align: center;
-    font-size:1.2em;
+    font-size: 1.0em;
     display: inline-block;
-    height: 45px;
-    width: 175px;
-    line-height: 45px;
+    height: 30px;
+    width: 150px;
+    line-height: 30px;
     margin-left: -20px;
  }
 
@@ -232,9 +232,8 @@ padding-bottom: 5px;
 
 #content{
 	margin:auto;
-  background-color: #ddebff;
-  padding-left: 30px;
-  padding-right: 30px;
+  background-color: #c6cad3;
+  padding: 30px;
 	/*border-radius: 18px;
 	box-shadow: 5px 5px 5px #888888;*/
 }
@@ -245,16 +244,23 @@ padding-bottom: 5px;
 
 #rightpane{
   text-align: right;
-  height: 
+  float: right;
+
 }
-  #rightpane img {
+  #rightpane img.smartphone {
     
-    width: 300px;
+    width: 250px;
   }
 
 #leftpane {
-  width: 600px;
-  float:left;
+  width: 900px;
+  min-height: 450px;
+}
+
+div#credits{
+  color: #222;
+  font-size: 0.7em;
+  padding: 5px;
 }
 
 
