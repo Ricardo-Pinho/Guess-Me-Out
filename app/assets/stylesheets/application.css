@@ -106,7 +106,7 @@ p {
     right:5px;
 	/*font-size : 1.4em;*/
 	color:#ff4500;
-    position: absolute; bottom: -21px;
+    position: absolute; bottom: 0px;
 }
 .nav li{
 	display: inline;
@@ -116,7 +116,7 @@ p {
 
 .tab{
     list-style-type: none;
-    position: absolute; bottom: -21px;
+    position: absolute; bottom: 0px;
 }
 
 .tab div{
