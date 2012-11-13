@@ -48,6 +48,7 @@
       if (params[:user].location!="")
         @user.location=params[:user].location
         flash.now[:notice]  +="Location edited. "
+      end
     if @user.save
           flash.now[:notice] += ""
         flash.now[:color]= "valid"
