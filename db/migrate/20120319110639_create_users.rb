@@ -10,8 +10,13 @@ class CreateUsers < ActiveRecord::Migration
 		t.string :sex
 		t.integer :credits
 		t.string :location
+<<<<<<< HEAD
 		t.integer :admin
     t.timestamps
+=======
+		t.boolean : admin
+      	t.timestamps
+>>>>>>> 5a21aceefabd678c5eeaeeff2ce5ee0f5ab9d6c0
     end
   end
 end

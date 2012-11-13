@@ -2,7 +2,7 @@
 <div id="Edit_Form" class= "User_Form">
   <h1>Edit Profile</h1>
   <%= form_for(:user, :url => {:controller => 'users', :action => 'edit'}) do |f| %>
-	<% f.hidden_field: session[user_id] %>
+	<% f.hidden_field :session[user_id] %>
     <p>
       Email:</br> <%= f.text_field :email%>
     </p>
