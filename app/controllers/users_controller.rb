@@ -35,20 +35,20 @@
 
   def edit
     @user=User.find( :params[user_id])
-    flash.now[:notice]=""
     if (params[:user].email!="")
       @user.email=params[:user].email
-      flash.now[:notice]  +="Email edited. "
+      flash.now[:notice]  ="Email edited. "
+    end
     if (params[:user].password!="")
       if (params[:user].password_confirmation==params[:user].password)
         @user.password= params[:user].password
-        flash.now[:notice]  +="Password edited. "
+        flash.now[:notice]  ="Password edited. "
       end
     end
-      if (params[:user].location!="")
-        @user.location=params[:user].location
-        flash.now[:notice]  +="Location edited. "
-      end
+    if (params[:user].location!="")
+      @user.location=params[:user].location
+      flash.now[:notice]  ="Location edited. "
+    end
     if @user.save
           flash.now[:notice] += ""
         flash.now[:color]= "valid"
@@ -58,8 +58,8 @@
           flash.now[:color]= "invalid"
           render "new"
     end
-    end
   end
+
   
 
 	   def create
