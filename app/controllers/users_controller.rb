@@ -34,7 +34,7 @@
     end
 
   def edit
-    @user=User.find( :params[user_id])
+    @user=User.find( :session[:user_id])
     if (params[:user].email!="")
       @user.email=params[:user].email
       flash.now[:notice]  ="Email edited. "

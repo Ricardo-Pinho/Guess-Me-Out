@@ -18,7 +18,7 @@ UserAuth::Application.routes.draw do
   match "new_android", :to => 'users#new_android'
   match "login_android", :to => 'sessions#login_android'
   match "create_android", :to=> 'users#create_android'
-  match "edit_user", :to=> 'users#edit'
+  match "user/edit", :to=> 'users#edit'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
