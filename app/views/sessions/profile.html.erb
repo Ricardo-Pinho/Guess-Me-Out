@@ -80,6 +80,22 @@
 	  <b>Admin:</b>
 	  <%= @current_user.admin %>
 	</p>
+
+      <p>
+        <span class="password_edit">Edit Password</span>
+      <div class="edit_password">
+        <p>Password</p>
+        <p>
+          <%= f.password_field :password %>
+        </p>
+        <p>Confirm Password</p>
+        <p>
+          <%= f.password_field :password_confirmation %>
+        </p>
+      </div>
+
+      </p>
+
     <div class="edit_form">
       <%= f.submit "Edit Selected Fields" %>
     <% end %>

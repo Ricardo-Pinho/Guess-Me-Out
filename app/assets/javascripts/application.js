@@ -129,3 +129,26 @@ $(document).ready(function() {
         }*/
     });
 });
+
+$(document).ready(function() {
+    $('.edit_password').hide();
+    $(".password_edit").click(function() {
+        $(".edit_password").slideToggle("fast");
+        if ($('.edit_form').is(":visible")){}
+        else{
+            $(".edit_form").slideToggle("fast");
+        }
+        /*if ($('.edit_name').is(":visible")){
+         $('.edit_name').slideToggle("fast");
+         }
+         if ($('.edit_birthdate').is(":visible")){
+         $('.edit_birthdate').slideToggle("fast");
+         }
+         if ($('.edit_sex').is(":visible")){
+         $('.edit_sex').slideToggle("fast");
+         }
+         if ($('.edit_email').is(":visible")){
+         $('.edit_email').slideToggle("fast");
+         }*/
+    });
+});

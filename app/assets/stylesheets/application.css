@@ -220,31 +220,32 @@ div#credits{
 }
 
  .email_edit{
-     text-shadow: #333333;
+
      color:red;
     cursor:pointer;
 }
 
  .name_edit{
-    text-shadow: #333333;
     color:red;
     cursor:pointer;
 }
 
  .birthdate_edit{
-    text-shadow: #333333;
     color:red;
     cursor:pointer;
 }
 
  .sex_edit{
-    text-shadow: #333333;
     color:red;
     cursor:pointer;
 }
 
  .location_edit{
-    text-shadow: #333333;
+    color:red;
+    cursor:pointer;
+}
+
+.password_edit{
     color:red;
     cursor:pointer;
 }

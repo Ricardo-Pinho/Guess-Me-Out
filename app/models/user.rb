@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates :password, :confirmation => true
   #Only on Create so other actions like update password attribute can be nil
   validates_length_of :password, :in => 6..20, :on => :create
-
+  validates_length_of :password, :in => 6..20, :allow_blank => true, :on => :update
   attr_accessible :username, :email, :password, :password_confirmation, :name, :birthdate, :sex, :location, :credits, :last_login, :admin
 
 

@@ -35,14 +35,11 @@
       end
     end
 
-  def edit1
-
-  end
-
   def edit
     @user=User.find_by_username(@current_user.username)
     @user_edit=User.new(params[:user])
     @flash_notice=""
+    flash[:color]= "valid"
 
     if (@user_edit.email!=@user.email)
       @user.email=@user_edit.email
@@ -54,10 +51,14 @@
         @flash_notice << "Name edited. "
     end
 
-    if (@user_edit.password!=@user.password)
+    if (@user_edit.password!="")
       if (@user_edit.password==@user_edit.password_confirmation)
         @user.password=@user_edit.password
+        @user.encrypted_password=@user_edit.password
         @flash_notice << "Password edited. "
+      else
+        flash[:color]= "invalid"
+        @flash_notice << "Password Confirmation does not match the initial Password. "
       end
     end
 
@@ -77,7 +78,6 @@
     end
 
     if @user.save
-          flash[:color]= "valid"
           flash[:notice] = @flash_notice
           redirect_to(:controller=>'sessions', :action => 'profile')
         else
@@ -91,7 +91,7 @@
 
 	   def create
     	@user = User.new(params[:user])
-    	if @user.save
+    	if @user.save!
     		flash[:notice] = "You Signed up successfully"
 			flash[:color]= "valid"
 			redirect_to(:controller=>'sessions', :action => 'login')
