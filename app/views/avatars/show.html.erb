@@ -1,15 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div id="content">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @avatar.name %>
-</p>
+	<p>
+	  <b>Name:</b>
+	  <%= @avatar.name %>
+	</p>
 
-<p>
-  <b>User:</b>
-  <%= @avatar.user %>
-</p>
+	<p>
+	  <b>User:</b>
+	  <%= User.find(@avatar.user).username %>
+	</p>
 
 
-<%= link_to 'Edit', edit_avatar_path(@avatar) %> |
-<%= link_to 'Back', avatars_path %>
+	<%= link_to 'Edit', edit_avatar_path(@avatar) %> |
+	<%= link_to 'Back', avatars_path %>
+
+</div>
