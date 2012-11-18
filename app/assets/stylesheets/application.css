@@ -118,23 +118,45 @@ div.nav{
 	text-align:center;
 }
 
-.notice{
-	background-color: transparent;
-  float: right;
-}
-
 .active{
     border-radius: 0;
 }
 
-.invalid_notice{
-	background-color: #FFCCCC;
-	border:1px solid red;
+.notice{
+  float: left;
+  height: auto;
+  width: 100%;
+  font-size: 0.8em;
 }
-.valid_notice{
-	background-color: #CCFFCC;
-	border:1px solid green;
-}
+
+  .notice span{
+    min-width: 100px;
+    max-width: none;
+    border-radius: 2px;
+    margin-top: 2px;
+    line-height: 30px;
+    color: white;
+  }
+
+  #normal_notice span{
+  	background-color: #36bcff;
+    border:1px solid #227ca9;
+    padding: 3px;
+  }
+
+  #invalid_notice span{
+  	background-color: #f14040;
+  	border:1px solid #bb2929;
+  }
+  #valid_notice span{
+  	background-color: #5cd648;
+  	border:1px solid #389828;
+  }
+
+  #normal_notice span:empty, #invalid_notice span:empty, #valid_notice span:empty{
+    background-color: transparent;
+    border:0px none;
+  }
 
 .center{
   text-align: center;
