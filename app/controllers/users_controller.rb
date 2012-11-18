@@ -34,20 +34,32 @@
     end
 
   def edit
-    @user=User.find(params[:user_id])
+    @user=User.find( :session[:user_id])
     if (params[:user].email!="")
       @user.email=params[:user].email
+      flash.now[:notice]  ="Email edited. "
+    end
+    if (params[:user].password!="")
+      if (params[:user].password_confirmation==params[:user].password)
+        @user.password= params[:user].password
+        flash.now[:notice]  ="Password edited. "
+      end
+    end
+    if (params[:user].location!="")
+      @user.location=params[:user].location
+      flash.now[:notice]  ="Location edited. "
+    end
     if @user.save
-          flash.now[:notice] = "You Signed up successfully"
+          flash.now[:notice] += ""
         flash.now[:color]= "valid"
         redirect_to(:controller=>'sessions', :action => 'login')
-        else
+    else
           flash.now[:notice] = "Form is invalid"
           flash.now[:color]= "invalid"
-      render "new"
-        end
+          render "new"
     end
   end
+
   
 
 	   def create

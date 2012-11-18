@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
 		t.string :sex
 		t.integer :credits
 		t.string :location
+		t.boolean : admin
       	t.timestamps
     end
   end

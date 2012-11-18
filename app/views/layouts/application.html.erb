@@ -2,6 +2,7 @@
 <html>
     <head>
       <title>Guess Me Out</title>
+      <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
       <%= stylesheet_link_tag    "application", :media => "all" %>
       <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
@@ -11,7 +12,13 @@
     <body>
 
         <div class="Main_Header">
-            <p class="logo"><%= link_to image_tag("logo_vertical_icons.png", :class => 'logo'), {:action => 'home', :controller => 'home'} %></p>
+            <div class="logo">
+              <%= link_to image_tag("logo_horizontal_t2.png", :class => 'logo'), {:action => 'home', :controller => 'home'} %>
+            </div>
+            <div class="social">
+              <%= link_to image_tag("faceb.png", :class => 'social'), "http://www.facebook.com" %>
+              <%= link_to image_tag("play.png", :class => 'social'), "http://play.google.com" %>
+            </div>
             <div class="tab">
 
               <%if url_for(params)=="/"%>
@@ -77,5 +84,8 @@
   
     <%= yield %>
 
+    <div id="credits">
+      © FEUP 2012
+    </div>
     </body>
 </html>
