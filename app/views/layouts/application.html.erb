@@ -73,16 +73,16 @@
 
       </div>
       <% if flash[:color]== "valid" %>
-          <div class="valid_notice">
-              <p><%= flash[:notice]%></p>
+          <div class="notice" id="valid_notice">
+              <div><%= flash[:notice]%></div>
           </div>
       <% elsif flash[:color]== "invalid"%>
-          <div class="invalid_notice">
-              <p><%=flash[:notice]%></p>
+          <div class="notice" id="invalid_notice">
+              <div><%=flash[:notice]%></div>
           </div>
       <%else%>
-          <div class="notice">
-              <p><%=flash[:notice]%></p>
+          <div class="notice" id="normal_notice">
+              <span><%=flash[:notice]%></span>
           </div>
       <%end%>
     </div>
