@@ -1,4 +1,5 @@
-<% @page_title = "UserAuth | Signup" -%>
+<div id="content">
+  <% @page_title = "UserAuth | Signup" -%>
 <div class= "Sign_Form">
   <h1>Sign Up</h1>
   <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
@@ -18,38 +19,39 @@
     <p>     
       Password Confirmation:</br> <%= f.password_field :password_confirmation%>
     </p>
-	
-	<p>
+  
+  <p>
       Name:</br> <%= f.text_field :name%>
     </p>
-	
-	<p>
+  
+  <p>
       Birthday:</br> <%= f.date_select(:birthdate, :order => [:day, :month, :year], :default => {:year => Time.now.year-18, :month =>1, :day => 1 }, :start_year => 1900, :end_year => Time.now.year) %>
     </p>
-	
-	<p>
+  
+  <p>
       Sex:</br>
-		<p><%= f.radio_button(:sex, "Male") %>Male</p>
-		<p><%= f.radio_button(:sex, "Female") %>Female</p>
-		<p><%= f.radio_button(:sex, "Other") %>Other</p>
+    <p><%= f.radio_button(:sex, "Male") %>Male</p>
+    <p><%= f.radio_button(:sex, "Female") %>Female</p>
+    <p><%= f.radio_button(:sex, "Other") %>Other</p>
     </p>
-	
-	<p>
+  
+  <p>
       Location:</br> <%= f.text_field :location%>
     </p>
-	
-	<%= f.hidden_field(:credits, :value => "0") %>
+  
+  <%= f.hidden_field(:credits, :value => "0") %>
 
   <%= f.hidden_field(:admin, :value => "1") %>
-		
+    
     <%= f.submit :Signup %>
   <% end %>
 
   <% if @user.errors.any? %>
-	<ul class="Signup_Errors">
-		<% for message_error in @user.errors.full_messages %>
-			<li>* <%= message_error %></li>
-	  	<% end %>
-	</ul>
+  <ul class="Signup_Errors">
+    <% for message_error in @user.errors.full_messages %>
+      <li>* <%= message_error %></li>
+      <% end %>
+  </ul>
   <% end %>
+</div>
 </div>

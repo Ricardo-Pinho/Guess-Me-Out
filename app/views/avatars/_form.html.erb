@@ -1,25 +1,23 @@
-<%= form_for(@avatar) do |f| %>
-  <% if @avatar.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@avatar.errors.count, "error") %> prohibited this avatar from being saved:</h2>
+<div id="content">
+  <%= form_for(@avatar) do |f| %>
+    <% if @avatar.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@avatar.errors.count, "error") %> prohibited this avatar from being saved:</h2>
 
-      <ul>
-      <% @avatar.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @avatar.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

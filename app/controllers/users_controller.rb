@@ -39,24 +39,25 @@
     if (params[:user].email!="")
       @user.email=params[:user].email
       flash.now[:notice]  +="Email edited. "
-    if (params[:user].password!="")
-      if (params[:user].password_confirmation==params[:user].password)
-        @user.password= params[:user].password
-        flash.now[:notice]  +="Password edited. "
+      if (params[:user].password!="")
+        if (params[:user].password_confirmation==params[:user].password)
+          @user.password= params[:user].password
+          flash.now[:notice]  +="Password edited. "
+        end
       end
-    end
       if (params[:user].location!="")
         @user.location=params[:user].location
         flash.now[:notice]  +="Location edited. "
-    if @user.save
+        if @user.save
           flash.now[:notice] += ""
-        flash.now[:color]= "valid"
-        redirect_to(:controller=>'sessions', :action => 'login')
-    else
+          flash.now[:color]= "valid"
+          redirect_to(:controller=>'sessions', :action => 'login')
+        else
           flash.now[:notice] = "Form is invalid"
           flash.now[:color]= "invalid"
           render "new"
-    end
+        end
+      end
     end
   end
   

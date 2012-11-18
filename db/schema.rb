@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20121107190638) do
     t.string   "sex"
     t.integer  "credits"
     t.string   "location"
+    t.integer  "admin"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
