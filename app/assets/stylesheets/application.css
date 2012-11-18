@@ -219,6 +219,36 @@ div#credits{
   padding: 5px;
 }
 
+ .email_edit{
+     text-shadow: #333333;
+     color:red;
+    cursor:pointer;
+}
+
+ .name_edit{
+    text-shadow: #333333;
+    color:red;
+    cursor:pointer;
+}
+
+ .birthdate_edit{
+    text-shadow: #333333;
+    color:red;
+    cursor:pointer;
+}
+
+ .sex_edit{
+    text-shadow: #333333;
+    color:red;
+    cursor:pointer;
+}
+
+ .location_edit{
+    text-shadow: #333333;
+    color:red;
+    cursor:pointer;
+}
+
 
 /************************* media queries *******************************/
 

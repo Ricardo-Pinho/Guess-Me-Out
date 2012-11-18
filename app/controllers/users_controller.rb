@@ -2,6 +2,8 @@
    class UsersController < ApplicationController
 
   before_filter :save_login_state, :only => [:new, :create, :show, :notshow_android, :create_android]
+  before_filter :authenticate_user, :except => [:new, :create, :show, :notshow_android, :create_android]
+
 
   def new
       #Signup Form
@@ -33,49 +35,55 @@
       end
     end
 
+  def edit1
+
+  end
+
   def edit
-    @user=User.find( :session[:user_id])
-    if (params[:user].email!="")
-      @user.email=params[:user].email
-<<<<<<< HEAD
-      flash.now[:notice]  +="Email edited. "
-      if (params[:user].password!="")
-        if (params[:user].password_confirmation==params[:user].password)
-          @user.password= params[:user].password
-          flash.now[:notice]  +="Password edited. "
-        end
-      end
-      if (params[:user].location!="")
-        @user.location=params[:user].location
-        flash.now[:notice]  +="Location edited. "
-        if @user.save
-=======
-      flash.now[:notice]  ="Email edited. "
+    @user=User.find_by_username(@current_user.username)
+    @user_edit=User.new(params[:user])
+    @flash_notice=""
+
+    if (@user_edit.email!=@user.email)
+      @user.email=@user_edit.email
+      @flash_notice <<"Email edited. "
     end
-    if (params[:user].password!="")
-      if (params[:user].password_confirmation==params[:user].password)
-        @user.password= params[:user].password
-        flash.now[:notice]  ="Password edited. "
+
+    if (@user_edit.name!=@user.name)
+        @user.name=@user_edit.name
+        @flash_notice << "Name edited. "
+    end
+
+    if (@user_edit.password!=@user.password)
+      if (@user_edit.password==@user_edit.password_confirmation)
+        @user.password=@user_edit.password
+        @flash_notice << "Password edited. "
       end
     end
-    if (params[:user].location!="")
-      @user.location=params[:user].location
-      flash.now[:notice]  ="Location edited. "
+
+    if (@user_edit.birthdate!=@user.birthdate)
+      @user.birthdate=@user_edit.birthdate
+      @flash_notice << "Birthdate edited. "
     end
+
+    if (@user_edit.sex!=@user.sex)
+      @user.sex=@user_edit.sex
+      @flash_notice << "Sex edited. "
+    end
+
+    if (@user_edit.location!=@user.location)
+      @user.location=@user_edit.location
+      @flash_notice << "Location edited. "
+    end
+
     if @user.save
->>>>>>> 58520ed5d8bf7f0442c47ad77b3ecaa00d10d50c
-          flash.now[:notice] += ""
-          flash.now[:color]= "valid"
-          redirect_to(:controller=>'sessions', :action => 'login')
+          flash[:color]= "valid"
+          flash[:notice] = @flash_notice
+          redirect_to(:controller=>'sessions', :action => 'profile')
         else
           flash.now[:notice] = "Form is invalid"
           flash.now[:color]= "invalid"
-          render "new"
-<<<<<<< HEAD
-        end
-      end
-=======
->>>>>>> 58520ed5d8bf7f0442c47ad77b3ecaa00d10d50c
+          render "sessions/profile"
     end
   end
 

@@ -1,43 +1,87 @@
-<h2 class='User_Header'><%=@current_user.username%> Profile <h2>
-
 <div id="content">
+  <%= form_for(:user, :url => {:controller => 'users', :action => 'edit'}) do |f| %>
+  <h2 class='User_Header'><%=@current_user.username%>'s profile </h2>
 	<p>
 	  <b>Last Login:</b>
 	  <%= @current_user.last_login %>
 	</p>
 
+    <p>
+      <b>Credits:</b>
+      <%= @current_user.credits %>
+    </p>
+
 	<p>
 	  <b>Email:</b>
 	  <%= @current_user.email %>
+
+      <span class="email_edit">Edit</span>
+        <div class="edit_email">
+            <p>
+              <%= f.text_field :email %>
+            </p>
+        </div>
+
 	</p>
 
 	<p>
 	  <b>Name:</b>
 	  <%= @current_user.name %>
+
+      <span class="name_edit">Edit</span>
+      <div class="edit_name">
+            <p>
+              <%= f.text_field :name %>
+            </p>
+      </div>
+
 	</p>
 
 	<p>
 	  <b>Birthdate:</b>
 	  <%= @current_user.birthdate %>
+
+      <span class="birthdate_edit">Edit</span>
+      <div class="edit_birthdate">
+            <p>
+              <%= f.date_select(:birthdate, :order => [:day, :month, :year], :default => {:year => Time.now.year-18, :month =>1, :day => 1 }, :start_year => 1900, :end_year => Time.now.year) %>
+            </p>
+      </div>
+
 	</p>
 
 	<p>
 	  <b>Sex:</b>
 	  <%= @current_user.sex %>
-	</p>
 
-	<p>
-	  <b>Credits:</b>
-	  <%= @current_user.credits %>
+      <span class="sex_edit">Edit</span>
+      <div class="edit_sex">
+            <p><%= f.radio_button(:sex, "Male") %>Male</p>
+            <p><%= f.radio_button(:sex, "Female") %>Female</p>
+            <p><%= f.radio_button(:sex, "Other") %>Other</p>
+      </div>
+
 	</p>
 
 	<p>
 	  <b>Location:</b>
 	  <%= @current_user.location %>
+
+      <span class="location_edit">Edit</span>
+      <div class="edit_location">
+            <p>
+              <%= f.text_field :location %>
+            </p>
+      </div>
+
 	</p>
 
 	<p>
 	  <b>Admin:</b>
 	  <%= @current_user.admin %>
 	</p>
-</div>
+    <div class="edit_form">
+      <%= f.submit "Edit Selected Fields" %>
+    <% end %>
+    </div>
+  </div>
