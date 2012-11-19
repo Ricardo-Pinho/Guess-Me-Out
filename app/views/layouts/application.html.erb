@@ -8,6 +8,21 @@
   </head>
 
   <body>
+    <div class="social">
+      <%= link_to image_tag("faceb.png", :class => 'social_img'), "http://www.facebook.com/guessmeoutapp" %>
+      <%= link_to image_tag("Google_Play_Store_96.png", :class => 'social_img'), "https://play.google.com/store/apps/details?id=com.milempresas.farmacias&feature=trending-apps#?t=W251bGwsMSwyLDEwNSwiY29tLm1pbGVtcHJlc2FzLmZhcm1hY2lhcyJd" %>
+    </div>
+    <div class="nav">
+      <ul class="nav">
+        <%unless session[:user_id]%>
+                <li><%= link_to :Signup , :signup, class: "nav_links"%></li>|
+                <li><%= link_to :Login , :login, class: "nav_links"%></li>
+        <%else%>
+              <li>Welcome, <%= session[:user_name] %></li>|
+              <li><%= link_to :Logout , :logout, class: "nav_links" %></li>
+        <%end%>
+      </ul>
+    </div>
     <div class="Main_Header">
       <div class="logo">
         <!-- <%= link_to({:action => 'home', :controller => 'home'}) do %>
@@ -19,66 +34,59 @@
       <div class="tab">
 
         <%if url_for(params)=="/"%>
-          <%= link_to content_tag(:div, "Home", :class => 'tab_link') , :root, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Home", :class => 'tab_selected') , :root, class: "tab_links" %>
         <%else%>
-          <%= link_to content_tag(:span, "Home", :class => 'tab_link') , :root, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Home", :class => 'tab_unselected') , :root, class: "tab_links" %>
         <%end%>
 
         <%unless session[:user_id]%>
         <%else%>
 
         <%if url_for(params)=="/profile"%>
-          <%= link_to content_tag(:div, "Profile", :class => 'tab_link') , :profile, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Profile", :class => 'tab_selected') , :profile, class: "tab_links" %>
         <%else%>
-          <%= link_to content_tag(:span, "Profile", :class => 'tab_link') , :profile, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Profile", :class => 'tab_unselected') , :profile, class: "tab_links" %>
         <%end%>
 
         <%if url_for(params)=="/avatars/new"%>
-          <%= link_to content_tag(:div, "Avatar", :class => 'tab_link') , new_avatar_path, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Avatar", :class => 'tab_selected') , new_avatar_path, class: "tab_links" %>
         <%else%>
-          <%= link_to content_tag(:span, "Avatar", :class => 'tab_link') , new_avatar_path, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Avatar", :class => 'tab_unselected') , new_avatar_path, class: "tab_links" %>
         <%end%>
 
         <%end%>
 
         <%if url_for(params)=="/statistics"%>
-          <%= link_to content_tag(:div, "Statistics", :class => 'tab_link') , :statistics, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Statistics", :class => 'tab_selected') , :statistics, class: "tab_links" %>
         <%else%>
-          <%= link_to content_tag(:span, "Statistics", :class => 'tab_link') , :statistics, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Statistics", :class => 'tab_unselected') , :statistics, class: "tab_links" %>
         <%end%>
 
 
         <%if url_for(params)=="/help"%>
-          <%= link_to content_tag(:div, "Help", :class => 'tab_link') , :help, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Help", :class => 'tab_selected') , :help, class: "tab_links" %>
         <%else%>
-          <%= link_to content_tag(:span, "Help", :class => 'tab_link') , :help, class: "tab_links" %>
+          <%= link_to content_tag(:div, "Help", :class => 'tab_unselected') , :help, class: "tab_links" %>
         <%end%>
 
-        <div class="nav">
-          <ul class="nav">
-            <%unless session[:user_id]%>
-                    <li><%= link_to :Signup , :signup, class: "nav_links"%></li>|
-                    <li><%= link_to :Login , :login, class: "nav_links"%></li>
-            <%else%>
-                  <li>Welcome, <%= session[:user_name] %></li>|
-                  <li><%= link_to :Logout , :logout, class: "nav_links" %></li>
-            <%end%>
-          </ul>
-        </div>
 
-        <div class="social">
-          <%= link_to image_tag("faceb.png", :class => 'social_img'), "http://www.facebook.com/guessmeoutapp" %>
-          <%= link_to image_tag("Google_Play_Store_96.png", :class => 'social_img'), "https://play.google.com/store/apps/details?id=com.milempresas.farmacias&feature=trending-apps#?t=W251bGwsMSwyLDEwNSwiY29tLm1pbGVtcHJlc2FzLmZhcm1hY2lhcyJd" %>
-        </div>
+        <div id="search">
+          <%= form_for(:search_query, :url => {:controller => 'users', :action => 'search'}) do |f| %>
+            <%= f.text_field :username %>
+            <%= f.submit "" %>
+          <% end %>
 
+        </div>
       </div>
+
+
       <% if flash[:color]== "valid" %>
           <div class="notice" id="valid_notice">
-              <div><%= flash[:notice]%></div>
+              <span><%= flash[:notice]%></span>
           </div>
       <% elsif flash[:color]== "invalid"%>
           <div class="notice" id="invalid_notice">
-              <div><%=flash[:notice]%></div>
+              <span><%=flash[:notice]%></span>
           </div>
       <%else%>
           <div class="notice" id="normal_notice">

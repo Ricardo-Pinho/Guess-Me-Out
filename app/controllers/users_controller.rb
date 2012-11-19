@@ -9,6 +9,15 @@
       #Signup Form
       @user = User.new     
   end
+
+    def search
+    @query = User.new(params[:search_query])
+    @users = User.find(:all, :conditions=> ["username like ?","%" + @query.username  + "%"])
+    respond_to do |format|
+    format.html
+    format.json
+    end
+  end
   
   def show
 	  @user = User.find( params[:id] )
@@ -81,9 +90,9 @@
           flash[:notice] = @flash_notice
           redirect_to(:controller=>'sessions', :action => 'profile')
         else
-          flash.now[:notice] = "Form is invalid"
-          flash.now[:color]= "invalid"
-          render "sessions/profile"
+          flash[:notice] = "Form is invalid"
+          flash[:color]= "invalid"
+          redirect_to(:controller=>'sessions', :action => 'profile')
     end
   end
 
@@ -91,7 +100,7 @@
 
 	   def create
     	@user = User.new(params[:user])
-    	if @user.save!
+    	if @user.save
     		flash[:notice] = "You Signed up successfully"
 			flash[:color]= "valid"
 			redirect_to(:controller=>'sessions', :action => 'login')

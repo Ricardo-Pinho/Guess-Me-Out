@@ -152,3 +152,10 @@ $(document).ready(function() {
          }*/
     });
 });
+
+
+$(document).ready(function() {
+    setTimeout( function(){
+        $('.notice').fadeOut('slow');
+    }, 3000);
+});

@@ -1,10 +1,10 @@
 body{
-	background-color: black;
+	background-color: #0f313f;
   font-family: 'Montserrat', sans-serif;
   background-image: url('bkg.png');
-  background-repeat: repeat-x;
   width: 980px;
   margin: auto;
+  box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.25);
 }
 
 div{
@@ -54,20 +54,19 @@ div.logo{
   position: absolute;
   bottom: 0px;
   left: 0px;
-  padding: 0px 20px;
   height: 30px;
+  width: 100%;
 }
 
-div.tab_link{
-  background-color: #e3f6ff;
+div.tab_selected{
+  background-color: #e3faff;
 }
 
-span.tab_link{
+div.tab_unselected{
   background-color: #abdbf3;
-  margin-top: -5px;
 }
 
-.tab div, .tab span{
+div.tab_selected, div.tab_unselected{
     background-size: 100%;
     text-align: center;
     font-size: 0.85em;
@@ -76,28 +75,53 @@ span.tab_link{
     line-height: 30px;
  }
 
- .tab a {
- }
+  .tab a {
+  }
 
-a.tab_links{
-    color: black;
-    text-decoration: none;
-}
+  a.tab_links{
+      color: black;
+      text-decoration: none;
+  }
+
+  div#search{
+    float: right;
+    background-color: #abdbf3;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.5) inset;
+    margin: auto;
+    width: auto;
+  }
+
+  div#search input{
+      border: none;
+      background: rgba(0,0,0,0);
+  }
+
+    div#search input[type="text"]{
+      
+      height: 100%;
+    }
+
+    div#search input[type="submit"]{
+      background-image: url('search_icon.png');
+      width: 20px;
+    }
 
 div.social{
   height: 30px;
   float: right;
 }
   .social_img{
-    height: 30px;
+    height: 100%;
   }
 
 div.nav{
   color: rgb(255, 200, 0);
-  width: 250px;
-  float: right;
-  bottom: 0px;
-  line-height: 0px;
+  width: 100%;
+  height: 30px;
+  font-size: 0.8em;
+  background-image: url('blackpixel.png');
 }
 .nav li{
   display: inline;
@@ -211,7 +235,7 @@ padding-bottom: 5px;
 
 #content{
 	margin:auto;
-  background-color: #e3f6ff;
+  background-color: #e3faff;
   padding: 30px;
 	/*border-radius: 18px;
 	box-shadow: 5px 5px 5px #888888;*/
@@ -236,9 +260,10 @@ padding-bottom: 5px;
 }
 
 div#credits{
-  color: #222;
+  color: #AAA;
   font-size: 0.7em;
   padding: 5px;
+  background-image: url('blackpixel.png');
 }
 
  .email_edit{
@@ -281,11 +306,24 @@ div#credits{
     float: none;
   }
   div.tab{
+    height: auto;
+    position: relative;
   }
     div.tab div, div.tab span{
       margin: 0px;
       display: block;
+      width: auto;
+      position: relative;
+      width: auto;
+      padding-left: 5px;
+      padding-right: 5px;
     }
+    div#search{
+      width: 100%;
+      float: none;
+      padding: 0px;
+    }
+
   div.nav, div.social{
     float: none;
   }

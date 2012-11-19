@@ -1,0 +1,28 @@
+<div id="content">
+
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Sex</th>
+    <th>Birthdate</th>
+  	<th>Credits</th>
+  	<th>Admin</th>
+  </tr>
+
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.username %></td>
+    <td><%= user.name %></td>
+    <td><%= user.location %></td>
+    <td><%= user.sex %></td>
+    <td><%= user.birthdate %></td>
+    <td><%= user.credits %></td>
+    <td><%= user.admin %></td>
+  </tr>
+<% end %>
+</table>
+
+  </div>
