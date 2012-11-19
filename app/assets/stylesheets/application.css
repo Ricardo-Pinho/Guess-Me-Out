@@ -56,26 +56,24 @@ div.logo{
   left: 0px;
   height: 30px;
   width: 100%;
+  background-image: url("bkg_white.png");
 }
 
-div.tab_selected{
-  background-color: #e3faff;
-}
+  div.tab_selected{
+    background-color: #e3faff;
+  }
 
-div.tab_unselected{
-  background-color: #abdbf3;
-}
+  div.tab_unselected{
+    background-color: #abdbf3;
+  }
 
-div.tab_selected, div.tab_unselected{
+  div.tab_selected, div.tab_unselected{
     background-size: 100%;
     text-align: center;
     font-size: 0.85em;
     display: inline-block;
     width: 100px;
     line-height: 30px;
- }
-
-  .tab a {
   }
 
   a.tab_links{
@@ -86,12 +84,14 @@ div.tab_selected, div.tab_unselected{
   div#search{
     float: right;
     background-color: #abdbf3;
-    border-radius: 15px;
-    height: 100%;
+    border-radius: 3px;
+    height: 20px;
     box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.5) inset;
     margin: auto;
+    margin-top: 5px;
     width: auto;
-  }
+    display
+:  }
 
   div#search input{
       border: none;
@@ -237,8 +237,6 @@ padding-bottom: 5px;
 	margin:auto;
   background-color: #e3faff;
   padding: 30px;
-	/*border-radius: 18px;
-	box-shadow: 5px 5px 5px #888888;*/
 }
 
 .expanded .plus {display:none;}
