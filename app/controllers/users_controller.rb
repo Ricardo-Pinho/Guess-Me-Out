@@ -38,7 +38,7 @@
 
    def create_android
     	@user = User.new(params[:user])
-    	if @user.save
+    	if @user.save!
 			redirect_to(:controller=>'users', :action => 'show', :id=>@user.id, :format=>'json')
       else
 		redirect_to(:controller=>'users', :action => 'notshow_android', :format=>'json')
