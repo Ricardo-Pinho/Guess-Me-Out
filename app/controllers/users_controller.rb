@@ -2,7 +2,7 @@
    class UsersController < ApplicationController
 
   before_filter :save_login_state, :only => [:new, :create, :notshow_android, :create_android]
-  before_filter :authenticate_user, :except => [:new, :create, :show, :notshow_android, :create_android]
+  before_filter :authenticate_user, :except => [:new, :create, :show, :notshow_android, :create_android, :new_android]
 
 
   def new
@@ -10,7 +10,11 @@
       @user = User.new     
   end
 
-    def search
+  def new_android
+      @user = User.new  
+  end
+
+  def search
     @query = User.new(params[:search_query])
     @users = User.all( :conditions=> ["username like ?","%" + @query.username  + "%"])
     respond_to do |format|
@@ -37,11 +41,22 @@
   end
 
    def create_android
-    	@user = User.new(params[:user])
-    	if @user.save
-			redirect_to(:controller=>'users', :action => 'show', :id=>@user.id, :format=>'json')
+    	@user = User.new()
+
+      @user.name = params[:name]
+      @user.username = params[:username]
+      @user.email = params[:email]
+      @user.password = params[:password]
+      @user.birthdate = params[:birthdate]
+      @user.sex = params[:sex]
+      @user.location = params[:location]
+      @user.credits = 0
+      @user.admin = 0
+
+    	if @user.save!
+			 redirect_to(:controller=>'users', :action => 'show', :id=>@user.id, :format=>'json')
       else
-		redirect_to(:controller=>'users', :action => 'notshow_android', :format=>'json')
+		    redirect_to(:controller=>'users', :action => 'notshow_android', :format=>'json')
       end
     end
 

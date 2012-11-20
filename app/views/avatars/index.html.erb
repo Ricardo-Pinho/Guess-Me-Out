@@ -1,29 +1,6 @@
 <div id="content">
   <h1>Listing avatars</h1>
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
 
-<<<<<<< HEAD
-    <% @avatars.each do |avatar| %>
-    <tr>
-      <td><%= avatar.name %></td>
-      <td><%= avatar.user %></td>
-      <td><%= link_to 'Show', avatar %></td>
-      <td><%= link_to 'Edit', edit_avatar_path(avatar) %></td>
-      <td><%= link_to 'Destroy', avatar, confirm: 'Are you sure?', method: :delete %></td>
-    </tr>
-    <% end %>
-  </table>
-  <br/>
-  <%= link_to 'New Avatar', new_avatar_path %>
-</div>  
-=======
 <table>
   <tr>
     <th>Name</th>
@@ -47,4 +24,3 @@
 <br />
 
 <%= link_to 'New Avatar', new_avatar_path %>
->>>>>>> ed61df694828d2e8f6f7e547a830ce0dc51c1102
