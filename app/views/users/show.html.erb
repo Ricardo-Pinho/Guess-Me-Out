@@ -1,0 +1,139 @@
+<div id="content">
+
+  <% if @user.errors.any? %>
+      <ul class="Signup_Errors">
+        <% for message_error in @user.errors.full_messages %>
+            <li>* <%= message_error %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+  <%= form_for(:user, :url => "edit") do |f| %>
+      <h2 class='User_Header'><%=@user.username%>'s profile </h2>
+      <p>
+        <b>Last Login:</b>
+        <%= @user.last_login %>
+      </p>
+
+      <p>
+        <b>Credits:</b>
+        <%= @user.credits %>.00 coins
+
+        <%if session[:user_admin]==1 %>
+            <span class="credits_edit">Edit</span>
+            <div class="edit_credits">
+              <p>
+                <%= f.text_field :credits,:class=>'coin_case' %>.00
+              </p>
+            </div>
+        <%end%>
+
+      </p>
+
+      <p>
+        <b>Email:</b>
+        <%= @user.email %>
+        <%if session[:user_admin]==1 || session[:user_name]==@user.username %>
+            <span class="email_edit">Edit</span>
+          <div class="edit_email">
+            <p>
+              <%= f.text_field :email %>
+            </p>
+          </div>
+        <%end%>
+
+      </p>
+
+      <p>
+        <b>Name:</b>
+        <%= @user.name %>
+        <%if session[:user_admin]==1 || session[:user_name]==@user.username %>
+            <span class="name_edit">Edit</span>
+          <div class="edit_name">
+            <p>
+              <%= f.text_field :name %>
+            </p>
+          </div>
+        <%end%>
+      </p>
+
+      <p>
+        <b>Birthdate:</b>
+        <%= @user.birthdate %>
+        <%if session[:user_admin]==1 || session[:user_name]==@user.username %>
+            <span class="birthdate_edit">Edit</span>
+          <div class="edit_birthdate">
+            <p>
+              <%= f.date_select(:birthdate, :order => [:day, :month, :year], :default => {:year => Time.now.year-18, :month =>1, :day => 1 }, :start_year => 1900, :end_year => Time.now.year) %>
+            </p>
+          </div>
+        <%end%>
+
+      </p>
+
+      <p>
+        <b>Sex:</b>
+        <%= @user.sex %>
+        <%if session[:user_admin]==1 || session[:user_name]==@user.username %>
+            <span class="sex_edit">Edit</span>
+          <div class="edit_sex">
+            <p><%= f.radio_button(:sex, "Male") %>Male</p>
+            <p><%= f.radio_button(:sex, "Female") %>Female</p>
+            <p><%= f.radio_button(:sex, "Other") %>Other</p>
+          </div>
+        <%end%>
+
+      </p>
+
+      <p>
+        <b>Location:</b>
+        <%= @user.location %>
+        <%if session[:user_admin]==1 || session[:user_name]==@user.username %>
+            <span class="location_edit">Edit</span>
+          <div class="edit_location">
+            <p>
+              <%= f.text_field :location %>
+            </p>
+          </div>
+        <%end%>
+
+      </p>
+
+      <p>
+        <b>Status:</b>
+        <%if @user.admin==1 %>
+            Admin
+        <%else%>
+            User
+        <%end%>
+        <%if session[:user_admin]==1%>
+            <span class="admin_edit">Edit</span>
+            <div class="edit_admin">
+              <p><%= f.radio_button(:admin, 1) %>Admin</p>
+              <p><%= f.radio_button(:admin, 0) %>User</p>
+            </div>
+        <%end%>
+
+      </p>
+
+      <%if session[:user_admin]==1 || session[:user_name]==@user.username %>
+          <p>
+            <span class="password_edit">Edit Password</span>
+          <div class="edit_password">
+            <p>Password</p>
+            <p>
+              <%= f.password_field :password %>
+            </p>
+            <p>Confirm Password</p>
+            <p>
+              <%= f.password_field :password_confirmation %>
+            </p>
+          </div>
+          </p>
+          <%= f.hidden_field(:username, :value => @user.username) %>
+      <%end%>
+      <div class="edit_form">
+        <%= f.submit "Edit Selected Fields" %>
+  <% end %>
+  </div>
+</div>

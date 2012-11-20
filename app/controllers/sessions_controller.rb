@@ -6,7 +6,8 @@ class SessionsController < ApplicationController
 
 	def profile
 		#Profile Page
-    @user = User.new(:email =>@current_user.email, :name =>@current_user.name, :sex => @current_user.sex,:birthdate =>@current_user.birthdate, :location =>@current_user.location)
+    session[:saved_location] = "profile"
+    @user = User.new(:admin =>@current_user.admin, :email =>@current_user.email, :name =>@current_user.name, :sex => @current_user.sex,:birthdate =>@current_user.birthdate, :location =>@current_user.location)
 	end
 
 	def login
@@ -29,8 +30,10 @@ class SessionsController < ApplicationController
 		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
 		if authorized_user
 			session[:user_id] = authorized_user.id
+      session[:user_admin] = authorized_user.admin
       session[:user_name] = authorized_user.username
       session[:user_sex] = authorized_user.sex
+      session[:saved_location] = ""
       session[:user_birthdate] =authorized_user.birthdate
 			flash[:notice] = "Welcome again, you logged in as #{authorized_user.username}"
 			redirect_to(:controller=>'home', :action => 'home')

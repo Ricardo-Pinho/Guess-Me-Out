@@ -1,7 +1,7 @@
 
    class UsersController < ApplicationController
 
-  before_filter :save_login_state, :only => [:new, :create, :show, :notshow_android, :create_android]
+  before_filter :save_login_state, :only => [:new, :create, :notshow_android, :create_android]
   before_filter :authenticate_user, :except => [:new, :create, :show, :notshow_android, :create_android]
 
 
@@ -12,7 +12,7 @@
 
     def search
     @query = User.new(params[:search_query])
-    @users = User.find(:all, :conditions=> ["username like ?","%" + @query.username  + "%"])
+    @users = User.all( :conditions=> ["username like ?","%" + @query.username  + "%"])
     respond_to do |format|
     format.html
     format.json
@@ -21,6 +21,7 @@
   
   def show
 	  @user = User.find( params[:id] )
+    session[:saved_location] = ""
 	  respond_to do |format|
 		format.html
 		format.json
@@ -45,8 +46,12 @@
     end
 
   def edit
-    @user=User.find_by_username(@current_user.username)
     @user_edit=User.new(params[:user])
+    if(session[:saved_location] == "profile")
+      @user=User.find_by_username(@current_user.username)
+    else
+      @user=User.find_by_username(@user_edit.username)
+    end
     @flash_notice=""
     flash[:color]= "valid"
 
@@ -86,13 +91,33 @@
       @flash_notice << "Location edited. "
     end
 
+    if (@user_edit.admin!=@user.admin)
+    @user.admin=@user_edit.admin
+    @flash_notice << "Status edited. "
+    end
+
+    if (@user_edit.credits!=@user.credits)
+      @user.credits=@user_edit.credits
+      @flash_notice << "Status edited. "
+    end
+
     if @user.save
           flash[:notice] = @flash_notice
-          redirect_to(:controller=>'sessions', :action => 'profile')
+          if (session[:saved_location] == "profile")
+            session[:saved_location] = ""
+            redirect_to(:controller=>'sessions', :action => 'profile')
+          else
+          redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
+          end
         else
           flash[:notice] = "Form is invalid"
           flash[:color]= "invalid"
-          redirect_to(:controller=>'sessions', :action => 'profile')
+          if (session[:saved_location] == "profile")
+            session[:saved_location] = ""
+            redirect_to(:controller=>'sessions', :action => 'profile')
+          else
+            redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
+          end
     end
   end
 

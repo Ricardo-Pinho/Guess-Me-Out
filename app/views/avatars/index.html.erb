@@ -9,6 +9,7 @@
       <th></th>
     </tr>
 
+<<<<<<< HEAD
     <% @avatars.each do |avatar| %>
     <tr>
       <td><%= avatar.name %></td>
@@ -22,3 +23,28 @@
   <br/>
   <%= link_to 'New Avatar', new_avatar_path %>
 </div>  
+=======
+<table>
+  <tr>
+    <th>Name</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @avatars.each do |avatar| %>
+  <tr>
+    <td><%= avatar.name %></td>
+    <td> <%= User.find(avatar.user).username %></td>
+    <td><%= link_to 'Show', avatar %></td>
+    <td><%= link_to 'Edit', edit_avatar_path(avatar) %></td>
+    <td><%= link_to 'Destroy', avatar, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Avatar', new_avatar_path %>
+>>>>>>> ed61df694828d2e8f6f7e547a830ce0dc51c1102
