@@ -153,6 +153,52 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $('.edit_admin').hide();
+    $(".admin_edit").click(function() {
+        $(".edit_admin").slideToggle("fast");
+        if ($('.edit_form').is(":visible")){}
+        else{
+            $(".edit_form").slideToggle("fast");
+        }
+        /*if ($('.edit_name').is(":visible")){
+         $('.edit_name').slideToggle("fast");
+         }
+         if ($('.edit_birthdate').is(":visible")){
+         $('.edit_birthdate').slideToggle("fast");
+         }
+         if ($('.edit_sex').is(":visible")){
+         $('.edit_sex').slideToggle("fast");
+         }
+         if ($('.edit_email').is(":visible")){
+         $('.edit_email').slideToggle("fast");
+         }*/
+    });
+});
+
+$(document).ready(function() {
+    $('.edit_credits').hide();
+    $(".credits_edit").click(function() {
+        $(".edit_credits").slideToggle("fast");
+        if ($('.edit_form').is(":visible")){}
+        else{
+            $(".edit_form").slideToggle("fast");
+        }
+        /*if ($('.edit_name').is(":visible")){
+         $('.edit_name').slideToggle("fast");
+         }
+         if ($('.edit_birthdate').is(":visible")){
+         $('.edit_birthdate').slideToggle("fast");
+         }
+         if ($('.edit_sex').is(":visible")){
+         $('.edit_sex').slideToggle("fast");
+         }
+         if ($('.edit_email').is(":visible")){
+         $('.edit_email').slideToggle("fast");
+         }*/
+    });
+});
+
 
 $(document).ready(function() {
     setTimeout( function(){

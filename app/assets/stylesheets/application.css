@@ -297,6 +297,21 @@ div#credits{
     cursor:pointer;
 }
 
+.admin_edit{
+    color:red;
+    cursor:pointer;
+}
+
+.credits_edit{
+    color:red;
+    cursor:pointer;
+}
+
+.coin_case{
+    width: 75px;
+}
+
+
 
 /************************* media queries *******************************/
 

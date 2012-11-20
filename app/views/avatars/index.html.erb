@@ -12,7 +12,7 @@
 <% @avatars.each do |avatar| %>
   <tr>
     <td><%= avatar.name %></td>
-    <td><%= avatar.user %></td>
+    <td> <%= User.find(avatar.user).username %></td>
     <td><%= link_to 'Show', avatar %></td>
     <td><%= link_to 'Edit', edit_avatar_path(avatar) %></td>
     <td><%= link_to 'Destroy', avatar, confirm: 'Are you sure?', method: :delete %></td>
