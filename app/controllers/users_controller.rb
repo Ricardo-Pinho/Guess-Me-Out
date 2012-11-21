@@ -35,7 +35,7 @@
   def notshow_android
 	  respond_to do |format|
 		format.json{
-		render :json => "{not registered}"
+		render :json => "{'user': 'not-registered'}"
     }
 	  end
   end

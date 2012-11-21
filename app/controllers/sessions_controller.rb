@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
 	def notlogin_android
 	  respond_to do |format|
 		format.json{
-		render :json => "{Invalid Username or Password}"
+		render :json => "{'user': 'false'}"
     }
 	  end
     end
