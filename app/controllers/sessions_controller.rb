@@ -15,7 +15,10 @@ class SessionsController < ApplicationController
 	end
 	
 	def login_android
-		#Login Form
+		@query=User.find_by_id(params[:id])
+		respond_to do |format|
+		format.json
+		end
 	end
 	
 	def notlogin_android
@@ -30,11 +33,11 @@ class SessionsController < ApplicationController
 		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
 		if authorized_user
 			session[:user_id] = authorized_user.id
-      session[:user_admin] = authorized_user.admin
-      session[:user_name] = authorized_user.username
-      session[:user_sex] = authorized_user.sex
-      session[:saved_location] = ""
-      session[:user_birthdate] =authorized_user.birthdate
+			session[:user_admin] = authorized_user.admin
+			session[:user_name] = authorized_user.username
+			session[:user_sex] = authorized_user.sex
+			session[:saved_location] = ""
+			session[:user_birthdate] =authorized_user.birthdate
 			flash[:notice] = "Welcome again, you logged in as #{authorized_user.username}"
 			redirect_to(:controller=>'home', :action => 'home')
 
@@ -47,7 +50,7 @@ class SessionsController < ApplicationController
 	end
 	
 	def login_attempt_android
-		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
+		authorized_user = User.authenticate(params[:email],params[:password])
 		if authorized_user
 			redirect_to(:controller=>'users', :action => 'show', :id=>authorized_user.id, :format=>'json')
 			
