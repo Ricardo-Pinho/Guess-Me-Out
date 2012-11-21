@@ -7,6 +7,23 @@ body{
   box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.25);
 }
 
+a:link {
+  text-decoration:none;
+  color: #d08b13;
+}
+a:visited {
+  text-decoration:none;
+  color: #d08b13;
+}
+a:hover {
+  text-decoration:underline;
+  color: #d04813;
+}
+a:active {
+  text-decoration:underline;
+  color: #d04813;
+}
+
 div{
   background-color: transparent;
   margin: auto;
@@ -90,8 +107,7 @@ div.logo{
     margin: auto;
     margin-top: 5px;
     width: auto;
-    display
-:  }
+  }
 
   div#search input{
       border: none;
@@ -106,6 +122,26 @@ div.logo{
     div#search input[type="submit"]{
       background-image: url('search_icon.png');
       width: 20px;
+    }
+
+    div.user_search {
+      margin-top: 12px;
+    }
+
+    div.user_search span {
+      margin-right: 5px;
+      font-size: 0.8em;
+    }
+
+      div.user_search span span{
+        color: #679;
+      }
+
+    div.user_search div#username{
+      float: none;
+      font-size: 1.2em;
+      text-decoration: none;
+      margin-bottom: -5px;
     }
 
 div.social{
@@ -237,6 +273,7 @@ padding-bottom: 5px;
 	margin:auto;
   background-color: #e3faff;
   padding: 30px;
+  min-height: 450px;
 }
 
 .expanded .plus {display:none;}
@@ -314,9 +351,13 @@ div#credits{
 /************************* media queries *******************************/
 
 @media only screen and (max-width:499px) {
+  #content{
+    min-width: 0px;
+  }
   #rightpane, #leftpane{
     width: 100%;
     float: none;
+    min-height: 450px;
   }
   div.tab{
     height: auto;
