@@ -40,24 +40,34 @@
 	  end
   end
 
-   def create_android
-    	@user = User.new()
-
-      @user.name = params[:name]
-      @user.username = params[:username]
-      @user.email = params[:email]
-      @user.password = params[:password]
-      @user.birthdate = params[:birthdate]
-      @user.sex = params[:sex]
-      @user.location = params[:location]
-      @user.credits = 0
-      @user.admin = 0
-
-    	if @user.save!
-			 redirect_to(:controller=>'users', :action => 'show', :id=>@user.id, :format=>'json')
-      else
-		    redirect_to(:controller=>'users', :action => 'notshow_android', :format=>'json')
-      end
+	def create_android
+		respond_to do |format|
+			@user = User.new()
+			@user.name = params[:name]
+			@user.email = params[:email]
+			@user.password = params[:password]
+			@user.birthdate = params[:birthdate]
+			@user.sex = params[:sex]
+			@user.credits = 0
+			@user.admin = 0
+			
+			@existance = User.where("email = ?", @user.email);
+			if @existance.empty?
+				if @user.save
+					format.json{
+						render :json => @user.to_json(:only=>[:name,:email,:birthdate])
+					}
+				else
+					format.json{
+						render :json => "{\"user\": \"an-error-occurred\"}"
+					}
+				end
+			else
+				format.json{
+					render :json => "{\"user\": \"already-exists\"}"
+				}
+			end
+		end
     end
 
   def edit
