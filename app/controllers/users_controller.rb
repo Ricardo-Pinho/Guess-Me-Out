@@ -24,18 +24,18 @@
   end
   
   def show
-	  @user = User.find( params[:id] )
-    session[:saved_location] = ""
-	  respond_to do |format|
+	@user = User.find( params[:id] )
+	session[:saved_location] = ""
+	respond_to do |format|
 		format.html
 		format.json
-	  end
+	end
   end
   
   def notshow_android
 	  respond_to do |format|
 		format.json{
-		render :json => "{'user': 'not-registered'}"
+		render :json => "{\"user\": \"not-registered\"}"
     }
 	  end
   end
@@ -116,38 +116,38 @@
       @flash_notice << "Status edited. "
     end
 
-    if @user.save
-          flash[:notice] = @flash_notice
-          if (session[:saved_location] == "profile")
-            session[:saved_location] = ""
-            redirect_to(:controller=>'sessions', :action => 'profile')
-          else
-          redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
-          end
-        else
-          flash[:notice] = "Form is invalid"
-          flash[:color]= "invalid"
-          if (session[:saved_location] == "profile")
-            session[:saved_location] = ""
-            redirect_to(:controller=>'sessions', :action => 'profile')
-          else
-            redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
-          end
-    end
+	if @user.save
+		flash[:notice] = @flash_notice
+		if (session[:saved_location] == "profile")
+		session[:saved_location] = ""
+		redirect_to(:controller=>'sessions', :action => 'profile')
+		else
+			redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
+		end
+		else
+			flash[:notice] = "Form is invalid"
+			flash[:color]= "invalid"
+			if (session[:saved_location] == "profile")
+			session[:saved_location] = ""
+			redirect_to(:controller=>'sessions', :action => 'profile')
+			else
+			redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
+		end
+	end
   end
 
   
 
-	   def create
-    	@user = User.new(params[:user])
-    	if @user.save
-    		flash[:notice] = "You Signed up successfully"
+	def create
+		@user = User.new(params[:user])
+		if @user.save
+			flash[:notice] = "You Signed up successfully"
 			flash[:color]= "valid"
 			redirect_to(:controller=>'sessions', :action => 'login')
-      else
-        flash.now[:notice] = "Form is invalid"
-        flash.now[:color]= "invalid"
-		render "new"
-      end
-    end
+		else
+			flash.now[:notice] = "Form is invalid"
+			flash.now[:color]= "invalid"
+			render "new"
+		end
+	end
 end

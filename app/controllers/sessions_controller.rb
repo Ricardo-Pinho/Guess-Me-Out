@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
 	before_filter :authenticate_user, :except => [:index, :login, :login_attempt, :login_android, :notlogin_android, :login_attempt_android, :logout]
 	before_filter :save_login_state, :only => [:index, :login, :login_attempt, :login_android, :notlogin_android, :login_attempt_android]
 
-
 	def profile
 		#Profile Page
     session[:saved_location] = "profile"
@@ -24,7 +23,7 @@ class SessionsController < ApplicationController
 	def notlogin_android
 	  respond_to do |format|
 		format.json{
-		render :json => "{'user': 'false'}"
+		render :json => "{\"user\": \"false\"}"
     }
 	  end
     end
@@ -50,12 +49,22 @@ class SessionsController < ApplicationController
 	end
 	
 	def login_attempt_android
-		authorized_user = User.authenticate(params[:email],params[:password])
-		if authorized_user
-			redirect_to(:controller=>'users', :action => 'show', :id=>authorized_user.id, :format=>'json')
-			
-		else
-			redirect_to(:controller=>'sessions', :action => 'notlogin_android', :format=>'json')
+		respond_to do |format|
+			authorized_user = User.authenticate(params[:email],params[:password])
+			if authorized_user
+				#redirect_to(:controller=>'users', :action => 'show', :id=>authorized_user.id, :format=>'json')
+				@user = User.find(authorized_user.id)
+				
+				session[:saved_location] = ""
+				format.json{
+					render :json => @user.to_json(:only=>[:name,:email,:birthdate])
+				}
+			else
+				#redirect_to(:controller=>'sessions', :action => 'notlogin_android', :format=>'json')
+				format.json{
+					render :json => "{\"user\": \"false\"}"
+				}
+			end
 		end
 	end
 
