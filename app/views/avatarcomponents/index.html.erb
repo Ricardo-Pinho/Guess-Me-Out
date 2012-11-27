@@ -1,0 +1,25 @@
+<h1>Listing avatarcomponents</h1>
+
+<table>
+  <tr>
+    <th>Avatar</th>
+    <th>Componenttype</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @avatarcomponents.each do |avatarcomponent| %>
+  <tr>
+    <td><%= avatarcomponent.avatar %></td>
+    <td><%= avatarcomponent.componenttype %></td>
+    <td><%= link_to 'Show', avatarcomponent %></td>
+    <td><%= link_to 'Edit', edit_avatarcomponent_path(avatarcomponent) %></td>
+    <td><%= link_to 'Destroy', avatarcomponent, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Avatarcomponent', new_avatarcomponent_path %>

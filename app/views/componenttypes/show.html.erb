@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Color:</b>
+  <%= @componenttype.color %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @componenttype.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @componenttype.price %>
+</p>
+
+<p>
+  <b>Svg:</b>
+  <%= @componenttype.svg %>
+</p>
+
+<p>
+  <b>Component:</b>
+  <%= @componenttype.component %>
+</p>
+
+
+<%= link_to 'Edit', edit_componenttype_path(@componenttype) %> |
+<%= link_to 'Back', componenttypes_path %>
