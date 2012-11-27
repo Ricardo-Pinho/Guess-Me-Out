@@ -1,0 +1,2 @@
+module AvatarcomponentsHelper
+end

@@ -40,24 +40,34 @@
 	  end
   end
 
-   def create_android
-    	@user = User.new()
-
-      @user.name = params[:name]
-      @user.username = params[:username]
-      @user.email = params[:email]
-      @user.password = params[:password]
-      @user.birthdate = params[:birthdate]
-      @user.sex = params[:sex]
-      @user.location = params[:location]
-      @user.credits = 0
-      @user.admin = 0
-
-    	if @user.save!
-			 redirect_to(:controller=>'users', :action => 'show', :id=>@user.id, :format=>'json')
-      else
-		    redirect_to(:controller=>'users', :action => 'notshow_android', :format=>'json')
-      end
+	def create_android
+		respond_to do |format|
+			@user = User.new()
+			@user.name = params[:name]
+			@user.email = params[:email]
+			@user.password = params[:password]
+			@user.birthdate = params[:birthdate]
+			@user.sex = params[:sex]
+			@user.credits = 0
+			@user.admin = 0
+			
+			@existance = User.where("email = ?", @user.email);
+			if @existance.empty?
+				if @user.save
+					format.json{
+						render :json => @user.to_json(:only=>[:name,:email,:birthdate])
+					}
+				else
+					format.json{
+						render :json => "{\"user\": \"an-error-occurred\"}"
+					}
+				end
+			else
+				format.json{
+					render :json => "{\"user\": \"already-exists\"}"
+				}
+			end
+		end
     end
 
   def edit
@@ -149,5 +159,28 @@
 			flash.now[:color]= "invalid"
 			render "new"
 		end
-	end
+  end
+
+  # DELETE /avatars/1
+  # DELETE /avatars/1.json
+  def destroy
+    @user = User.find(params[:id])
+    @loggeduser=User.find_by_username(@current_user.username)
+    if @user.email!=@loggeduser.email
+      @user.destroy
+      flash[:color]= "valid"
+      flash[:notice] = "User was deleted"
+    respond_to do |format|
+      format.html { redirect_to(:controller=>'home', :action => 'home') }
+      format.json {render :json => "{user deleted}"}
+      end
+      else
+      flash.now[:color]= "invalid"
+      flash.now[:notice] = "User was not deleted"
+      respond_to do |format|
+        format.html {render "show"}
+        format.json {render :json => "{user deleted}"}
+        end
+      end
+  end
 end

@@ -52,7 +52,6 @@ class SessionsController < ApplicationController
 		respond_to do |format|
 			authorized_user = User.authenticate(params[:email],params[:password])
 			if authorized_user
-				#redirect_to(:controller=>'users', :action => 'show', :id=>authorized_user.id, :format=>'json')
 				@user = User.find(authorized_user.id)
 				
 				session[:saved_location] = ""
@@ -60,7 +59,6 @@ class SessionsController < ApplicationController
 					render :json => @user.to_json(:only=>[:name,:email,:birthdate])
 				}
 			else
-				#redirect_to(:controller=>'sessions', :action => 'notlogin_android', :format=>'json')
 				format.json{
 					render :json => "{\"user\": \"false\"}"
 				}

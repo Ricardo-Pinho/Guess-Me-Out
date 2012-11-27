@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   after_save :clear_password
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :username, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
+  validates :username, :presence => true, :length => { :in => 3..20 }
   validates :email, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
   validates :admin, :presence => true
   validates :credits, :presence => true, :numericality => true

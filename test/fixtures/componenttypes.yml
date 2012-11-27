@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  color: 1
+  name: MyString
+  price: 1
+  svg: MyText
+  component: 
+
+two:
+  color: 1
+  name: MyString
+  price: 1
+  svg: MyText
+  component: 
