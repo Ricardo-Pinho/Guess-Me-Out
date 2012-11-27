@@ -24,6 +24,10 @@ a:active {
   color: #d04813;
 }
 
+a img {
+  border: none;
+}
+
 div{
   background-color: transparent;
   margin: auto;
@@ -84,7 +88,7 @@ div.logo{
     background-color: #abdbf3;
   }
 
-  div.tab_selected, div.tab_unselected{
+  .tab_selected, .tab_unselected{
     background-size: 100%;
     text-align: center;
     font-size: 0.85em;
@@ -92,6 +96,12 @@ div.logo{
     width: 100px;
     line-height: 30px;
   }
+
+    div.tab_selected:hover,
+    div.tab_unselected:hover,
+    div#search:hover{
+      background-color: #e6f8ff;
+    }
 
   a.tab_links{
       color: black;

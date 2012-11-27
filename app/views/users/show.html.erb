@@ -10,6 +10,10 @@
 
   <%= form_for(:user, :url => "edit") do |f| %>
       <h2 class='User_Header'><%=@user.username%>'s profile </h2>
+
+      <div id="avatar">
+        <%= image_tag( "avatars/" + @user.email + ".jpg") %>
+      </div>
       <p>
         <b>Last Login:</b>
         <%= @user.last_login %>
