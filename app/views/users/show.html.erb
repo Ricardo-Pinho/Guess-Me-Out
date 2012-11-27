@@ -132,8 +132,22 @@
           </p>
           <%= f.hidden_field(:username, :value => @user.username) %>
       <%end%>
+
       <div class="edit_form">
         <%= f.submit "Edit Selected Fields" %>
-  <% end %>
+      <% end %>
+
+     <%if @user.admin==1 %>
+
+          <%= form_for(:user, :url => "delete") do |f| %>
+
+              <div class="delete_form">
+                <%= f.submit "Delete" %>
+          <%end%>
+
+      <%end%>
+
+
+
   </div>
 </div>
