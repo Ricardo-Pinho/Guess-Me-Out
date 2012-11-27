@@ -7,7 +7,10 @@
       <% @users.each do |user| %>
         <div class="user_search">
         <div id="username">
+          <%if user.sex.blank? %>
+          <%else%>
           <%= image_tag(user.sex + ".png", :title => user.sex) %>
+          <%end%>
           <%= link_to user.username, :controller => 'users', :action => 'show', :id => user %>
         </div>
         <span id="name">
@@ -23,7 +26,10 @@
           <%end%>
         </span>
         <span id="birth">
+        <%if user.birthdate.blank? %>
+        <%else%>
           <span>Birth:</span><%= user.birthdate %>
+        <%end%>
         </span>
         <%if session[:user_admin]==1 %>
           <span id="credits">  
