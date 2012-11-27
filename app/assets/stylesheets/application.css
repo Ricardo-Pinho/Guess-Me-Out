@@ -1,10 +1,27 @@
 body{
 	background-color: #0f313f;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Orienta', sans-serif;
   background-image: url('bkg.png');
   width: 980px;
   margin: auto;
   box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.25);
+}
+
+a:link {
+  text-decoration:none;
+  color: #d08b13;
+}
+a:visited {
+  text-decoration:none;
+  color: #d08b13;
+}
+a:hover {
+  text-decoration:underline;
+  color: #d04813;
+}
+a:active {
+  text-decoration:underline;
+  color: #d04813;
 }
 
 div{
@@ -56,26 +73,24 @@ div.logo{
   left: 0px;
   height: 30px;
   width: 100%;
+  background-image: url("bkg_white.png");
 }
 
-div.tab_selected{
-  background-color: #e3faff;
-}
+  div.tab_selected{
+    background-color: #e3faff;
+  }
 
-div.tab_unselected{
-  background-color: #abdbf3;
-}
+  div.tab_unselected{
+    background-color: #abdbf3;
+  }
 
-div.tab_selected, div.tab_unselected{
+  div.tab_selected, div.tab_unselected{
     background-size: 100%;
     text-align: center;
     font-size: 0.85em;
     display: inline-block;
     width: 100px;
     line-height: 30px;
- }
-
-  .tab a {
   }
 
   a.tab_links{
@@ -86,10 +101,11 @@ div.tab_selected, div.tab_unselected{
   div#search{
     float: right;
     background-color: #abdbf3;
-    border-radius: 15px;
-    height: 100%;
+    border-radius: 3px;
+    height: 20px;
     box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.5) inset;
     margin: auto;
+    margin-top: 5px;
     width: auto;
   }
 
@@ -106,6 +122,26 @@ div.tab_selected, div.tab_unselected{
     div#search input[type="submit"]{
       background-image: url('search_icon.png');
       width: 20px;
+    }
+
+    div.user_search {
+      margin-top: 12px;
+    }
+
+    div.user_search span {
+      margin-right: 5px;
+      font-size: 0.8em;
+    }
+
+      div.user_search span span{
+        color: #679;
+      }
+
+    div.user_search div#username{
+      float: none;
+      font-size: 1.2em;
+      text-decoration: none;
+      margin-bottom: -5px;
     }
 
 div.social{
@@ -237,8 +273,7 @@ padding-bottom: 5px;
 	margin:auto;
   background-color: #e3faff;
   padding: 30px;
-	/*border-radius: 18px;
-	box-shadow: 5px 5px 5px #888888;*/
+  min-height: 450px;
 }
 
 .expanded .plus {display:none;}
@@ -316,9 +351,13 @@ div#credits{
 /************************* media queries *******************************/
 
 @media only screen and (max-width:499px) {
+  #content{
+    min-width: 0px;
+  }
   #rightpane, #leftpane{
     width: 100%;
     float: none;
+    min-height: 450px;
   }
   div.tab{
     height: auto;

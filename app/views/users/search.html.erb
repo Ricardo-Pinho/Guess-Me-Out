@@ -1,32 +1,43 @@
 <div id="content">
-
-
-<table>
-  <tr>
-    <th>Username</th>
-    <th>Name</th>
-    <th>Location</th>
-    <th>Sex</th>
-    <th>Birthdate</th>
-  	<th>Credits</th>
-  	<th>Status</th>
-  </tr>
-
-  <% @users.each do |user| %>
-  <tr>
-    <td><%= link_to user.username, :controller => 'users', :action => 'show', :id => user %></td>
-    <td><%= user.name %></td>
-    <td><%= user.location %></td>
-    <td><%= user.sex %></td>
-    <td><%= user.birthdate %></td>
-    <td><%= user.credits %></td>
-    <td><%if user.admin==1 %>
-          Admin
-      <%else%>
-          User
-      <%end%></td>
-  </tr>
-<% end %>
-</table>
-
-  </div>
+  <h2>User search results</h2>
+    <%if @users.empty? %>
+      <p class="emtpy_results">Unfortunately, no user matches your search. Try harder.</p>
+      <% end %>
+    <%else%>
+      <% @users.each do |user| %>
+        <div class="user_search">
+        <div id="username">
+          <%= image_tag(user.sex + ".png", :title => user.sex) %>
+          <%= link_to user.username, :controller => 'users', :action => 'show', :id => user %>
+        </div>
+        <span id="name">
+          <%if user.name.blank? %>
+          <%else%>
+            <span>Name:</span><%= user.name %>
+          <%end%>
+        </span>
+        <span id="location">
+          <%if user.location.blank? %>
+          <%else%>
+            <span>From:</span><%= user.location %>
+          <%end%>
+        </span>
+        <span id="birth">
+          <span>Birth:</span><%= user.birthdate %>
+        </span>
+        <%if session[:user_admin]==1 %>
+          <span id="credits">  
+              <span>Credits:</span><%= user.credits %>
+          </span>
+          <span id="status">
+            <span>Status:</span>
+            <%if user.admin==1 %>
+              Admin
+            <%else%>
+              User
+            <%end%>
+          </span>
+        <% end %>
+        </div>
+      <%end%>
+</div>

@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   after_save :clear_password
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :username, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
+  validates :username, :presence => true, :length => { :in => 3..20 }
   validates :email, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
   validates :admin, :presence => true
   validates :credits, :presence => true, :numericality => true
@@ -15,7 +15,6 @@ class User < ActiveRecord::Base
   validates_length_of :password, :in => 6..20, :on => :create
   validates_length_of :password, :in => 6..20, :allow_blank => true, :on => :update
   attr_accessible :username, :email, :password, :password_confirmation, :name, :birthdate, :sex, :location, :credits, :last_login, :admin
-
 
   def self.authenticate(username_or_email="", login_password="")
 

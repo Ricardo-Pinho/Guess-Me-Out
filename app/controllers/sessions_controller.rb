@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
 	before_filter :authenticate_user, :except => [:index, :login, :login_attempt, :login_android, :notlogin_android, :login_attempt_android, :logout]
 	before_filter :save_login_state, :only => [:index, :login, :login_attempt, :login_android, :notlogin_android, :login_attempt_android]
 
-
 	def profile
 		#Profile Page
     session[:saved_location] = "profile"
@@ -15,13 +14,16 @@ class SessionsController < ApplicationController
 	end
 	
 	def login_android
-		#Login Form
+		@query=User.find_by_id(params[:id])
+		respond_to do |format|
+		format.json
+		end
 	end
 	
 	def notlogin_android
 	  respond_to do |format|
 		format.json{
-		render :json => "{Invalid Username or Password}"
+		render :json => "{\"user\": \"false\"}"
     }
 	  end
     end
@@ -30,11 +32,11 @@ class SessionsController < ApplicationController
 		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
 		if authorized_user
 			session[:user_id] = authorized_user.id
-      session[:user_admin] = authorized_user.admin
-      session[:user_name] = authorized_user.username
-      session[:user_sex] = authorized_user.sex
-      session[:saved_location] = ""
-      session[:user_birthdate] =authorized_user.birthdate
+			session[:user_admin] = authorized_user.admin
+			session[:user_name] = authorized_user.username
+			session[:user_sex] = authorized_user.sex
+			session[:saved_location] = ""
+			session[:user_birthdate] =authorized_user.birthdate
 			flash[:notice] = "Welcome again, you logged in as #{authorized_user.username}"
 			redirect_to(:controller=>'home', :action => 'home')
 
@@ -47,12 +49,20 @@ class SessionsController < ApplicationController
 	end
 	
 	def login_attempt_android
-		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
-		if authorized_user
-			redirect_to(:controller=>'users', :action => 'show', :id=>authorized_user.id, :format=>'json')
-			
-		else
-			redirect_to(:controller=>'sessions', :action => 'notlogin_android', :format=>'json')
+		respond_to do |format|
+			authorized_user = User.authenticate(params[:email],params[:password])
+			if authorized_user
+				@user = User.find(authorized_user.id)
+				
+				session[:saved_location] = ""
+				format.json{
+					render :json => @user.to_json(:only=>[:name,:email,:birthdate])
+				}
+			else
+				format.json{
+					render :json => "{\"user\": \"false\"}"
+				}
+			end
 		end
 	end
 
