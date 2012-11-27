@@ -135,15 +135,12 @@
 
       <div class="edit_form">
         <%= f.submit "Edit Selected Fields" %>
+      </div>
       <% end %>
 
-     <%if @user.admin==1 %>
+     <%if session[:user_admin]==1 %>
 
-          <%= form_for(:user, :url => "delete") do |f| %>
-
-              <div class="delete_form">
-                <%= f.submit "Delete" %>
-          <%end%>
+        <%= link_to 'Destroy', @user, confirm: 'Are you sure?', method: :delete %>
 
       <%end%>
 

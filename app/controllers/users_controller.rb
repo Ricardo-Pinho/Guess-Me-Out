@@ -159,5 +159,28 @@
 			flash.now[:color]= "invalid"
 			render "new"
 		end
-	end
+  end
+
+  # DELETE /avatars/1
+  # DELETE /avatars/1.json
+  def destroy
+    @user = User.find(params[:id])
+    @loggeduser=User.find_by_username(@current_user.username)
+    if @user.email!=@loggeduser.email
+      @user.destroy
+      flash[:color]= "valid"
+      flash[:notice] = "User was deleted"
+    respond_to do |format|
+      format.html { redirect_to(:controller=>'home', :action => 'home') }
+      format.json {render :json => "{user deleted}"}
+      end
+      else
+      flash.now[:color]= "invalid"
+      flash.now[:notice] = "User was not deleted"
+      respond_to do |format|
+        format.html {render "show"}
+        format.json {render :json => "{user deleted}"}
+        end
+      end
+  end
 end
