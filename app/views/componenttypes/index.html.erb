@@ -17,8 +17,8 @@
     <td><%= componenttype.color %></td>
     <td><%= componenttype.name %></td>
     <td><%= componenttype.price %></td>
-    <td><%= componenttype.svg %></td>
-    <td><%= componenttype.component %></td>
+    <td><%= raw(componenttype.svg) %></td>
+    <td><%= Component.find(componenttype.component).name %></td>
     <td><%= link_to 'Show', componenttype %></td>
     <td><%= link_to 'Edit', edit_componenttype_path(componenttype) %></td>
     <td><%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></td>

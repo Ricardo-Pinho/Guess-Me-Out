@@ -41,7 +41,6 @@ class ComponenttypesController < ApplicationController
   # POST /componenttypes.json
   def create
     @componenttype = Componenttype.new(params[:componenttype])
-
     respond_to do |format|
       if @componenttype.save
         format.html { redirect_to @componenttype, notice: 'Componenttype was successfully created.' }

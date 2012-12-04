@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121107190638) do
+ActiveRecord::Schema.define(:version => 20121127184508) do
+
+  create_table "avatarcomponents", :force => true do |t|
+    t.integer  "avatar_id"
+    t.integer  "componenttype_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "avatarcomponents", ["avatar_id"], :name => "index_avatarcomponents_on_avatar_id"
+  add_index "avatarcomponents", ["componenttype_id"], :name => "index_avatarcomponents_on_componenttype_id"
 
   create_table "avatars", :force => true do |t|
     t.string   "name"
@@ -21,6 +31,24 @@ ActiveRecord::Schema.define(:version => 20121107190638) do
   end
 
   add_index "avatars", ["user_id"], :name => "index_avatars_on_user_id"
+
+  create_table "components", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "componenttypes", :force => true do |t|
+    t.integer  "color"
+    t.string   "name"
+    t.integer  "price"
+    t.text     "svg"
+    t.integer  "component_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "componenttypes", ["component_id"], :name => "index_componenttypes_on_component_id"
 
   create_table "users", :force => true do |t|
     t.string   "username"

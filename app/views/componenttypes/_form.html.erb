@@ -28,8 +28,8 @@
     <%= f.text_area :svg %>
   </div>
   <div class="field">
-    <%= f.label :component %><br />
-    <%= f.text_field :component %>
+    <%= f.label :Component %><br />
+    <%= collection_select(:componenttype, :component_id, Component.find(:all), :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

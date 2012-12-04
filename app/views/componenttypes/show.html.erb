@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Color:</b>
   <%= @componenttype.color %>
@@ -17,12 +15,12 @@
 
 <p>
   <b>Svg:</b>
-  <%= @componenttype.svg %>
+  <%= raw(@componenttype.svg) %>
 </p>
 
 <p>
   <b>Component:</b>
-  <%= @componenttype.component %>
+  <%= Component.find(@componenttype.component).name %>
 </p>
 
 
