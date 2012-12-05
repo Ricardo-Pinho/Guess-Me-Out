@@ -16,11 +16,13 @@ ActiveRecord::Schema.define(:version => 20121127184508) do
   create_table "avatarcomponents", :force => true do |t|
     t.integer  "avatar_id"
     t.integer  "componenttype_id"
+    t.integer  "component_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
 
   add_index "avatarcomponents", ["avatar_id"], :name => "index_avatarcomponents_on_avatar_id"
+  add_index "avatarcomponents", ["component_id"], :name => "index_avatarcomponents_on_component_id"
   add_index "avatarcomponents", ["componenttype_id"], :name => "index_avatarcomponents_on_componenttype_id"
 
   create_table "avatars", :force => true do |t|
