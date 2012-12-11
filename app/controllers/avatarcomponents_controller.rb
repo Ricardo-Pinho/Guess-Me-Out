@@ -10,19 +10,11 @@ class AvatarcomponentsController < ApplicationController
     end
   end
 
-  def getAvatarTypesId
-    @getid = Avatarcomponent(:first, :conditions => [ "avatar_id = ? and componenttype", user_name])
-
-
-    respond_to do |format|
-      format.json { render: json => "{}" }
-    end
-  end
-
   # GET /avatarcomponents/1
   # GET /avatarcomponents/1.json
   def show
     @avatarcomponent = Avatarcomponent.find(params[:id])
+
 
     respond_to do |format|
       format.html # show.html.erb

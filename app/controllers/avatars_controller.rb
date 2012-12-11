@@ -17,10 +17,10 @@ class AvatarsController < ApplicationController
   # GET /avatars/1.json
   def show
     @avatar = Avatar.find(params[:id])
-
+    @avatarcomponents = Avatarcomponent.all( :conditions=> ["avatar_id like ?", + @avatar.id])
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @avatar }
+      format.json { render json: @avatarcomponents}
     end
   end
 

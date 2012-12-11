@@ -2,18 +2,19 @@
 
 <p>
   <b>Avatar:</b>
-  <%= @avatarcomponent.avatar %>
-</p>
-
-<p>
-  <b>Componenttype:</b>
-  <%= @avatarcomponent.componenttype %>
+  <%= Avatar.find(@avatarcomponent.avatar).name %>
 </p>
 
 <p>
   <b>Component:</b>
-  <%= @avatarcomponent.component %>
+  <%= Component.find(@avatarcomponent.component).name %>
 </p>
+
+<p>
+  <b>Type:</b>
+  <%= Componenttype.find(@avatarcomponent.componenttype).name %>
+</p>
+
 
 
 <%= link_to 'Edit', edit_avatarcomponent_path(@avatarcomponent) %> |

@@ -12,9 +12,9 @@
 
 <% @avatarcomponents.each do |avatarcomponent| %>
   <tr>
-    <td><%= avatarcomponent.avatar %></td>
-    <td><%= avatarcomponent.componenttype %></td>
-    <td><%= avatarcomponent.component %></td>
+    <td><%= Avatar.find(avatarcomponent.avatar).name %></td>
+    <td><%= Component.find(avatarcomponent.component).name %></td>
+    <td><%= Componenttype.find(avatarcomponent.componenttype).name %></td>
     <td><%= link_to 'Show', avatarcomponent %></td>
     <td><%= link_to 'Edit', edit_avatarcomponent_path(avatarcomponent) %></td>
     <td><%= link_to 'Destroy', avatarcomponent, confirm: 'Are you sure?', method: :delete %></td>

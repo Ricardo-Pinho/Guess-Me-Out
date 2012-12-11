@@ -1,15 +1,21 @@
 <div id="content">
 	<p id="notice"><%= notice %></p>
 
-	<p>
-	  <b>Name:</b>
-	  <%= @avatar.name %>
-	</p>
+<table>
+  <tr>
+    <th>Avatar</th>
+    <th>Componenttype</th>
+    <th>Component</th>
+  </tr>
 
-	<p>
-	  <b>User:</b>
-	  <%= User.find(@avatar.user).username %>
-	</p>
+<% @avatarcomponents.each do |avatarcomponent| %>
+  <tr>
+    <td><%= Avatar.find(avatarcomponent.avatar).name %></td>
+    <td><%= Component.find(avatarcomponent.component).name %></td>
+    <td><%= Componenttype.find(avatarcomponent.componenttype).name %></td>
+  </tr>
+<% end %>
+</table>
 
 
 	<%= link_to 'Edit', edit_avatar_path(@avatar) %> |
