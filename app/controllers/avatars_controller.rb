@@ -83,4 +83,56 @@ class AvatarsController < ApplicationController
       format.json { head :no_content }
     end
   end
+	
+	
+	def create_avatar_android
+	#ainda em teste
+		respond_to do |format|
+			@avatar = Avatar.new()
+			@avatar.name = params[:name]
+			@cTypeHair = Avatarcomponent.new()
+			@cTypeSkin = Avatarcomponent.new()
+			@cTypeEyes = Avatarcomponent.new()
+			@cTypeNose = Avatarcomponent.new()
+			@cTypeMouth = Avatarcomponent.new()
+			@cTypeFacial = Avatarcomponent.new()
+			@cTypeShirt = Avatarcomponent.new()
+		
+			if @avatar.save
+				@cTypeHair.avatar_id = @avatar.id
+				@cTypeSkin.avatar_id = @avatar.id
+				@cTypeEyes.avatar_id = @avatar.id
+				@cTypeNose.avatar_id = @avatar.id
+				@cTypeMouth.avatar_id = @avatar.id
+				@cTypeFacial.avatar_id = @avatar.id
+				@cTypeShirt.avatar_id = @avatar.id
+				
+				@cTypeHair.component_id = 1
+				@cTypeSkin.component_id = 2
+				@cTypeEyes.component_id = 3
+				@cTypeNose.component_id = 4
+				@cTypeMouth.component_id = 5
+				@cTypeFacial.component_id = 6
+				@cTypeShirt.component_id = 7
+				
+				@cTypeHair.componenttype_id = params[:idHair]
+				@cTypeSkin.componenttype_id = params[:idSkin]
+				@cTypeEyes.componenttype_id = params[:idEyes]
+				@cTypeNose.componenttype_id = params[:idNose]
+				@cTypeMouth.componenttype_id = params[:idMouth]
+				@cTypeFacial.componenttype_id = params[:idFacial]
+				@cTypeShirt.componenttype_id = params[:idShirt]
+				
+				if @cTypeHair.save and @cTypeSkin.save and @cTypeEyes.save and @cTypeNose.save and @cTypeMouth.save and @cTypeFacial.save and @cTypeShirt.save
+					format.json{
+						render :json => "{\"avatar\": \"done\"}"
+					}
+				else
+					format.json{
+						render :json => "{\"avatar\": \"not-done\"}"
+					}				
+				end
+			end
+		end
+	end
 end

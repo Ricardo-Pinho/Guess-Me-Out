@@ -50,24 +50,24 @@
 			@user.sex = params[:sex]
 			@user.credits = 0
 			@user.admin = 0
-			
-			@existance = User.where("email = ?", @user.email);
-			if @existance.empty?
-				if @user.save
-					format.json{
-						render :json => @user.to_json(:only=>[:name,:email,:birthdate])
-					}
+				
+				@existance = User.where("email = ?", @user.email);
+				if @existance.empty?
+					if @user.save
+						format.json{
+							render :json => @user.to_json(:only=>[:name,:email,:birthdate])
+						}
+					else
+						format.json{
+							render :json => "{\"user\": \"an-error-occurred\"}"
+						}
+					end
 				else
 					format.json{
-						render :json => "{\"user\": \"an-error-occurred\"}"
+						render :json => "{\"user\": \"already-exists\"}"
 					}
 				end
-			else
-				format.json{
-					render :json => "{\"user\": \"already-exists\"}"
-				}
 			end
-		end
     end
 
   def edit
