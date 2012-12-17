@@ -39,7 +39,7 @@ class AvatarsController < ApplicationController
   def edit
     @avatar = Avatar.find(params[:id])
   end
-
+	
   # POST /avatars
   # POST /avatars.json
   def create
@@ -88,8 +88,8 @@ class AvatarsController < ApplicationController
 	def create_avatar_android
 	#ainda em teste
 		respond_to do |format|
-			@avatar = Avatar.new()
-			@avatar.name = params[:name]
+			@avatarC = Avatar.new()
+			@avatarC.name = params[:name]
 			@cTypeHair = Avatarcomponent.new()
 			@cTypeSkin = Avatarcomponent.new()
 			@cTypeEyes = Avatarcomponent.new()
@@ -98,14 +98,14 @@ class AvatarsController < ApplicationController
 			@cTypeFacial = Avatarcomponent.new()
 			@cTypeShirt = Avatarcomponent.new()
 		
-			if @avatar.save
-				@cTypeHair.avatar_id = @avatar.id
-				@cTypeSkin.avatar_id = @avatar.id
-				@cTypeEyes.avatar_id = @avatar.id
-				@cTypeNose.avatar_id = @avatar.id
-				@cTypeMouth.avatar_id = @avatar.id
-				@cTypeFacial.avatar_id = @avatar.id
-				@cTypeShirt.avatar_id = @avatar.id
+			if @avatarC.save
+				@cTypeHair.avatar_id = @avatarC.id
+				@cTypeSkin.avatar_id = @avatarC.id
+				@cTypeEyes.avatar_id = @avatarC.id
+				@cTypeNose.avatar_id = @avatarC.id
+				@cTypeMouth.avatar_id = @avatarC.id
+				@cTypeFacial.avatar_id = @avatarC.id
+				@cTypeShirt.avatar_id = @avatarC.id
 				
 				@cTypeHair.component_id = 1
 				@cTypeSkin.component_id = 2
@@ -132,6 +132,10 @@ class AvatarsController < ApplicationController
 						render :json => "{\"avatar\": \"not-done\"}"
 					}				
 				end
+			else
+				format.json{
+					render :json => "{\"avatar\": \"not-done\"}"
+				}						
 			end
 		end
 	end

@@ -1,7 +1,7 @@
 class CreateComponenttypes < ActiveRecord::Migration
   def change
     create_table :componenttypes do |t|
-      t.string :color
+      t.integer :color
       t.string :name
       t.integer :price
       t.string :svg

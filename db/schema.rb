@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20121127184508) do
   end
 
   create_table "componenttypes", :force => true do |t|
-    t.string   "color"
+    t.integer  "color"
     t.string   "name"
     t.integer  "price"
     t.string   "svg"
