@@ -23,9 +23,8 @@ class AvatarcomponentsController < ApplicationController
   end
 
   def getavatar
-    @avatarcomponents = Avatarcomponent.find_by_sql("select * from avatarcomponents, componenttypes where componenttypes.id=avatarcomponents.componenttype_id and avatarcomponents.avatar_id="+params[:avatarid])
-
-    respond_to do |format|
+		respond_to do |format|
+			@avatarcomponents = Avatarcomponent.find_by_sql("select * from avatarcomponents, componenttypes where componenttypes.id=avatarcomponents.componenttype_id and avatarcomponents.avatar_id="+params[:avatarid])
       format.html # show.html.erb
       format.json { render json: @avatarcomponents }
     end
@@ -83,8 +82,8 @@ class AvatarcomponentsController < ApplicationController
   # PUT /avatarcomponents/1
   # PUT /avatarcomponents/1.json
   def updatecomponent
-    @avatarcomponent = Avatarcomponent.find(params[:avatarcomponentid])
-    respond_to do |format|
+		respond_to do |format|
+			@avatarcomponent = Avatarcomponent.find(params[:avatarcomponentid])
       if @avatarcomponent.update_attribute(:componenttype_id, params[:componenttypeid])
         format.html { redirect_to @avatarcomponent, notice: 'Avatarcomponent was successfully updated.' }
         format.json { render json: @avatarcomponent }

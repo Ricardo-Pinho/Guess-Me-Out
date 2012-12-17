@@ -9,7 +9,7 @@
 Component.delete_all
 Componenttype.delete_all
 
-Component.create([{name: 'Hair'}, {name: 'HairColor'}, {name: 'Skin'}, {name: 'EyeColor'}, {name: 'Moustache'}, {name: 'Nose'}, {name: 'Mouth'}, {name: 'Facial'}, {name: 'Shirt'}, {name: 'ShirtColor'}])
+Component.create([{name: 'Hair'}, {name: 'HairColor'}, {name: 'Skin'}, {name: 'EyeColor'}, {name: 'Moustache'}, {name: 'Nose'}, {name: 'Mouth'}, {name: 'Shirt'}, {name: 'ShirtColor'}])
 
 # Tests
 
@@ -39,6 +39,6 @@ Componenttype.create!(:component_id=> 5, :name => 'moustache', :color => 1, :pri
 
 Componenttype.create!(:component_id=> 5, :name => 'no moustache', :color => 2, :price => 0, :svg => '<path id="path5370" fill="#EDCE77"/><path id="path5382" fill="#EDCE77"/>')
 
-Componenttype.create!(:component_id=> 10, :name => 'Blue', :color => 1, :price => 0, :svg => '#266EBC')
+Componenttype.create!(:component_id=> 9, :name => 'Blue', :color => 1, :price => 0, :svg => '#266EBC')
 
-Componenttype.create!(:component_id=> 10, :name => 'Red', :color => 2, :price => 0, :svg => '#9B1010')
+Componenttype.create!(:component_id=> 9, :name => 'Red', :color => 2, :price => 0, :svg => '#9B1010')

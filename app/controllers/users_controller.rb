@@ -53,7 +53,7 @@
 				
 				@existance = User.where("email = ?", @user.email);
 				if @existance.empty?
-					if @user.save
+					if @user.save!
 						format.json{
 							render :json => @user.to_json(:only=>[:name,:email,:birthdate])
 						}
