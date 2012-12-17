@@ -21,6 +21,17 @@ class ComponenttypesController < ApplicationController
     end
   end
 
+
+  def gettypebycolor
+    @componentid = params[:componentid]
+    @color = params[:color]
+    @componenttype = Componenttype.all( :conditions=> ["component_id like ? and color like ?", @componentid, @color])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @componenttype }
+    end
+  end
+
   # GET /componenttypes/new
   # GET /componenttypes/new.json
   def new

@@ -22,6 +22,15 @@ class AvatarcomponentsController < ApplicationController
     end
   end
 
+  def getavatar
+    @avatarcomponents = Avatarcomponent.find_by_sql("select * from avatarcomponents, componenttypes where componenttypes.id=avatarcomponents.componenttype_id and avatarcomponents.avatar_id="+params[:avatarid])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @avatarcomponents }
+    end
+  end
+
   # GET /avatarcomponents/new
   # GET /avatarcomponents/new.json
   def new
@@ -63,6 +72,22 @@ class AvatarcomponentsController < ApplicationController
       if @avatarcomponent.update_attributes(params[:avatarcomponent])
         format.html { redirect_to @avatarcomponent, notice: 'Avatarcomponent was successfully updated.' }
         format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @avatarcomponent.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
+  # PUT /avatarcomponents/1
+  # PUT /avatarcomponents/1.json
+  def updatecomponent
+    @avatarcomponent = Avatarcomponent.find(params[:avatarcomponentid])
+    respond_to do |format|
+      if @avatarcomponent.update_attribute(:componenttype_id, params[:componenttypeid])
+        format.html { redirect_to @avatarcomponent, notice: 'Avatarcomponent was successfully updated.' }
+        format.json { render json: @avatarcomponent }
       else
         format.html { render action: "edit" }
         format.json { render json: @avatarcomponent.errors, status: :unprocessable_entity }
