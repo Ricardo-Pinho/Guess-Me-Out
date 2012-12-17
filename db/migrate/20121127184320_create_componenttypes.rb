@@ -4,7 +4,7 @@ class CreateComponenttypes < ActiveRecord::Migration
       t.string :color
       t.string :name
       t.integer :price
-      t.text :svg
+      t.string :svg
       t.references :component
 
       t.timestamps
