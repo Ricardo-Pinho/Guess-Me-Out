@@ -29,6 +29,8 @@ UserAuth::Application.routes.draw do
   match "login_android", :to => 'sessions#login_android'
   match "login_attempt_android", :to => 'sessions#login_attempt_android'
   match "user/edit", :to=> 'users#edit1'
+	match "svgs_android", :to => 'componenttypes#getsvgs_android'
+	match "create_avatar_android", :to => 'avatars#create_avatar_android'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

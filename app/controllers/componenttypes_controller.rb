@@ -21,7 +21,6 @@ class ComponenttypesController < ApplicationController
     end
   end
 
-
   def gettypebycolor
 		respond_to do |format|
 			@componentid = params[:componentid]
@@ -31,6 +30,15 @@ class ComponenttypesController < ApplicationController
       format.json { render json: @componenttype }
     end
   end
+	
+	def getsvgs_android
+		respond_to do |format|
+			@componentid = params[:componentid]
+			@componenttype = Componenttype.all( :conditions=> ["component_id like ?", @componentid])
+      format.html # show.html.erb
+      format.json { render json: @componenttype.to_json(:only=>[:component_id,:color,:svg,:id]) }
+    end	
+	end
 
   # GET /componenttypes/new
   # GET /componenttypes/new.json

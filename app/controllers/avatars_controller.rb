@@ -90,7 +90,10 @@ class AvatarsController < ApplicationController
 		respond_to do |format|
 			@avatarC = Avatar.new()
 			@avatarC.name = params[:name]
+			@avatarC.user_id = params[:userID]
 			@cTypeHair = Avatarcomponent.new()
+			@cHairColor = Avatarcomponent.new()
+			@cShirtColor = Avatarcomponent.new()
 			@cTypeSkin = Avatarcomponent.new()
 			@cTypeEyes = Avatarcomponent.new()
 			@cTypeNose = Avatarcomponent.new()
@@ -108,22 +111,26 @@ class AvatarsController < ApplicationController
 				@cTypeShirt.avatar_id = @avatarC.id
 				
 				@cTypeHair.component_id = 1
-				@cTypeSkin.component_id = 2
-				@cTypeEyes.component_id = 3
-				@cTypeNose.component_id = 4
-				@cTypeMouth.component_id = 5
-				@cTypeFacial.component_id = 6
-				@cTypeShirt.component_id = 7
+				@cHairColor.component_id = 2
+				@cTypeSkin.component_id = 3
+				@cTypeEyes.component_id = 4
+				@cTypeFacial.component_id = 5
+				@cTypeNose.component_id = 6
+				@cTypeMouth.component_id = 7
+				@cTypeShirt.component_id = 8
+				@cShirtColor.component_id = 9
 				
 				@cTypeHair.componenttype_id = params[:idHair]
+				@cHairColor.componenttype_id = params[:hairColor]
 				@cTypeSkin.componenttype_id = params[:idSkin]
 				@cTypeEyes.componenttype_id = params[:idEyes]
 				@cTypeNose.componenttype_id = params[:idNose]
 				@cTypeMouth.componenttype_id = params[:idMouth]
 				@cTypeFacial.componenttype_id = params[:idFacial]
 				@cTypeShirt.componenttype_id = params[:idShirt]
+				@cShirtColor.componenttype_id = params[:shirtColor]
 				
-				if @cTypeHair.save and @cTypeSkin.save and @cTypeEyes.save and @cTypeNose.save and @cTypeMouth.save and @cTypeFacial.save and @cTypeShirt.save
+				if @cTypeHair.save and @cTypeSkin.save and @cTypeEyes.save and @cTypeNose.save and @cTypeMouth.save and @cTypeFacial.save and @cTypeShirt.save and @cHairColor.save and @cShirtColor.save
 					format.json{
 						render :json => "{\"avatar\": \"done\"}"
 					}
