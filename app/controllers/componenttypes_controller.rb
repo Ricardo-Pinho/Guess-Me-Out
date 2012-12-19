@@ -23,7 +23,7 @@ class ComponenttypesController < ApplicationController
 
   def gettypebycolor
 		respond_to do |format|
-			@componentid = params[:componentid]
+			@componentid = params[:component_id]
 			@color = params[:color]
 			@componenttype = Componenttype.all( :conditions=> ["component_id like ? and color like ?", @componentid, @color])
       format.html # show.html.erb
