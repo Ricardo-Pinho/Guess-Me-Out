@@ -1,6 +1,6 @@
 class AvatarsController < ApplicationController
 
-  before_filter :authenticate_user
+  #before_filter :authenticate_user
 
   # GET /avatars
   # GET /avatars.json
@@ -86,7 +86,6 @@ class AvatarsController < ApplicationController
 	
 	
 	def create_avatar_android
-	#ainda em teste
 		respond_to do |format|
 			@avatarC = Avatar.new()
 			@avatarC.name = params[:name]
@@ -100,7 +99,7 @@ class AvatarsController < ApplicationController
 			@cTypeMouth = Avatarcomponent.new()
 			@cTypeFacial = Avatarcomponent.new()
 			@cTypeShirt = Avatarcomponent.new()
-		
+			
 			if @avatarC.save
 				@cTypeHair.avatar_id = @avatarC.id
 				@cTypeSkin.avatar_id = @avatarC.id
@@ -109,6 +108,8 @@ class AvatarsController < ApplicationController
 				@cTypeMouth.avatar_id = @avatarC.id
 				@cTypeFacial.avatar_id = @avatarC.id
 				@cTypeShirt.avatar_id = @avatarC.id
+				@cHairColor.avatar_id = @avatarC.id
+				@cShirtColor.avatar_id = @avatarC.id
 				
 				@cTypeHair.component_id = 1
 				@cHairColor.component_id = 2
@@ -146,4 +147,5 @@ class AvatarsController < ApplicationController
 			end
 		end
 	end
+	
 end
