@@ -24,7 +24,7 @@ class AvatarcomponentsController < ApplicationController
 
   def getavatar
 		respond_to do |format|
-			@avatarcomponents = Avatarcomponent.find_by_sql("select * from avatarcomponents, componenttypes where componenttypes.id=avatarcomponents.componenttype_id and avatarcomponents.avatar_id="+params[:avatarid])
+			@avatarcomponents = Avatarcomponent.find_by_sql("select avatarcomponents.id as id, componenttypes.component_id as component_id, componenttypes.color as color  from avatarcomponents, componenttypes where componenttypes.id=avatarcomponents.componenttype_id and avatarcomponents.avatar_id="+params[:avatarid])
       format.html # show.html.erb
       format.json { render json: @avatarcomponents }
     end
@@ -56,7 +56,6 @@ class AvatarcomponentsController < ApplicationController
         format.json { render json: @avatarcomponent.errors, status: :unprocessable_entity }
       end
     end
-  end
 
   # GET /avatarcomponents/1/edit
   def edit
