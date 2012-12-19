@@ -23,6 +23,7 @@ UserAuth::Application.routes.draw do
   match "getavatar", :to => 'avatarcomponents#getavatar'
   match "gettypebycolor", :to => 'componenttypes#gettypebycolor'
   match "updatecomponent", :to => 'avatarcomponents#updatecomponent'
+  match "create_avatarcomponent", :to => 'avatarcomponents#createavatarcomponent'
   match "notshow_android", :to => 'users#notshow_android'
   match "new_android", :to => 'users#new_android'
   match "create_android", :to => 'users#create_android'
