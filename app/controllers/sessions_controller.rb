@@ -56,7 +56,7 @@ class SessionsController < ApplicationController
 				
 				session[:saved_location] = ""
 				format.json{
-					render :json => @user.to_json(:only=>[:name,:email,:birthdate])
+					render :json => @user.to_json(:only=>[:name,:email,:birthdate,:id])
 				}
 			else
 				format.json{

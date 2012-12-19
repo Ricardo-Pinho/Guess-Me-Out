@@ -32,6 +32,8 @@ UserAuth::Application.routes.draw do
 	match "svgs_android", :to => 'componenttypes#getsvgs_android'
 	match "create_avatar_android", :to => 'avatars#create_avatar_android'
   match "find_match", :to=> 'node#find_match'
+	match "getUserNameById", :to => 'users#getUserNameById'
+	
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
