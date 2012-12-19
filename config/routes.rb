@@ -23,6 +23,7 @@ UserAuth::Application.routes.draw do
   match "getavatar", :to => 'avatarcomponents#getavatar'
   match "gettypebycolor", :to => 'componenttypes#gettypebycolor'
   match "updatecomponent", :to => 'avatarcomponents#updatecomponent'
+  match "create_avatarcomponent", :to => 'avatarcomponents#createavatarcomponent'
   match "notshow_android", :to => 'users#notshow_android'
   match "new_android", :to => 'users#new_android'
   match "create_android", :to => 'users#create_android'
@@ -32,6 +33,8 @@ UserAuth::Application.routes.draw do
 	match "svgs_android", :to => 'componenttypes#getsvgs_android'
 	match "create_avatar_android", :to => 'avatars#create_avatar_android'
   match "find_match", :to=> 'node#find_match'
+	match "getUserNameById", :to => 'users#getUserNameById'
+	
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

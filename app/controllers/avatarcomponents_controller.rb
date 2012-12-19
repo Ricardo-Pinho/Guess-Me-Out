@@ -40,6 +40,23 @@ class AvatarcomponentsController < ApplicationController
       format.json { render json: @avatarcomponent }
     end
   end
+  
+    # GET /avatarcomponents/new
+  # GET /avatarcomponents/new.json
+  def createavatarcomponent
+    @avatarcomponent = Avatarcomponent.new()
+	@avatarcomponent.avatar_id = params[:avatar_id]
+	@avatarcomponent.component_id = params[:component_id]
+	@avatarcomponent.componenttype_id = params[:componenttype_id]
+      if @avatarcomponent.save
+        format.html { redirect_to @avatarcomponent, notice: 'Avatarcomponent was successfully created.' }
+        format.json { render json: @avatarcomponent, status: :created, location: @avatarcomponent }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @avatarcomponent.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # GET /avatarcomponents/1/edit
   def edit

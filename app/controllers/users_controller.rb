@@ -55,7 +55,7 @@
 				if @existance.empty?
 					if @user.save!
 						format.json{
-							render :json => @user.to_json(:only=>[:name,:email,:birthdate])
+							render :json => @user.to_json(:only=>[:name,:email,:birthdate,:id])
 						}
 					else
 						format.json{
@@ -183,4 +183,14 @@
         end
       end
   end
+	
+	def getUserNameById
+		respond_to do |format|
+			@user = User.find(params[:id])
+			format.json{
+				render :json => @user.to_json(:only=>[:name])
+			}
+		end
+	end
+	
 end
