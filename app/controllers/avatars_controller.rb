@@ -53,11 +53,8 @@ class AvatarsController < ApplicationController
 	@cTypeMouth = Avatarcomponent.new()
 	@cTypeFacial = Avatarcomponent.new()
 	@cTypeShirt = Avatarcomponent.new()
-	
-		
-				
 
-    respond_to do |format|
+	respond_to do |format|
       if @avatar.save
 		@cTypeHair.avatar_id = @avatar.id
 		@cTypeSkin.avatar_id = @avatar.id
