@@ -19,6 +19,15 @@ var hairTypeID2;
 var moustacheType;
 var moustacheTypeID;
 var moustacheTypeID2;
+var noseType;
+var noseTypeID;
+var noseTypeID2;
+var mouthType;
+var mouthTypeID;
+var mouthTypeID2;
+var shirtType;
+var shirtTypeID;
+var shirtTypeID2;
 var shirtColor;
 var shirtColorRGB;
 var shirtColorID;
@@ -45,6 +54,12 @@ function changeSkinColor(ch)
 		data=data[0];
 		skinColorID=data.id;
 		skinColorRGB=data.svg;
+		for(var j=0; j<myFace.children.length; j++) 
+			myFace.children[j].setAttribute("fill",skinColorRGB);
+			myFace=document.getElementById("Nose");
+		for(var j=0; j<myFace.children.length; j++) 
+			myFace.children[j].setAttribute("fill",skinColorRGB);
+		myFace=document.getElementById("Ear");
 		for(var j=0; j<myFace.children.length; j++) 
 			myFace.children[j].setAttribute("fill",skinColorRGB);
 	});
@@ -156,12 +171,73 @@ function changeMoustacheType( ch)
 	});			
 }
 
+function changeMouthType( ch)
+{
+	var myMouth= document.getElementById("Mouth");
+	mouthType=mouthType+ch;
+	if (mouthType==0){ 
+		moustacheType=1;
+	}
+	if (mouthType==2){
+		moustacheType=1;
+	}
+	$.getJSON(path+"gettypebycolor.json",{component_id: 7,color: mouthType},
+		function(data) {
+			data=data[0];
+			myMouth.innerHTML=data.svg;
+			mouthTypeID=data.id;
+	});			
+}
+
+function changeNoseType( ch)
+{
+	var myNose= document.getElementById("Nose");
+	noseType=noseType+ch;
+	if (noseType==0){ 
+		noseType=1;
+	}
+	if (noseType==2){
+		noseType=1;
+	}
+	$.getJSON(path+"gettypebycolor.json",{component_id: 6,color: noseType},
+		function(data) {
+			data=data[0];
+			myNose.innerHTML=data.svg;
+			noseTypeID=data.id;
+			for(var j=0; j<myNose.children.length; j++) 
+				myNose.children[j].setAttribute("fill",skinColorRGB);
+	});			
+}
+
+
+function changeShirtType( ch)
+{
+	var myShirt= document.getElementById("Tshirt");
+	shirtType=shirtType+ch;
+	if (shirtType==0){ 
+		shirtType=1;
+	}
+	if (shirtType==2){
+		shirtType=1;
+	}
+	$.getJSON(path+"gettypebycolor.json",{component_id: 8,color: shirtType},
+		function(data) {
+			data=data[0];
+			myShirt.innerHTML=data.svg;
+			shirtTypeID=data.id;
+			myShirt.children[0].setAttribute("fill",shirtColorRGB);
+	});			
+}
+
 $(document).ready(function() {
 	skinColor=1;
 	eyeColor=1;
 	hairColor=1;
 	hairType=1;
 	moustacheType=1;
+	noseType=1;
+	mouthType=1;
+	shirtType=1;
 	shirtColor=1;
 	avatar=parseInt($("svg").attr('id'));
 	$.getJSON(path+"getavatar.json",{avatarid:avatar},
@@ -222,6 +298,9 @@ $(document).ready(function() {
 		changeShirtColor(0);	
 		changeHairType(0);	
 		changeMoustacheType(0);
+		changeNoseType(0);
+		changeMouthType(0);
+		changeShirtType(0);
 	});
 	
 	
@@ -234,6 +313,9 @@ $(document).ready(function() {
 		$.getJSON(path+"updatecomponent.json", { avatarcomponentid: skinColorID2, componenttypeid: skinColorID  }, function(json) {});
 		$.getJSON(path+"updatecomponent.json", { avatarcomponentid: eyeColorID2, componenttypeid: eyeColorID  }, function(json) {});
 		$.getJSON(path+"updatecomponent.json", { avatarcomponentid: moustacheTypeID2, componenttypeid: moustacheTypeID  }, function(json) {});
+		$.getJSON(path+"updatecomponent.json", { avatarcomponentid: noseTypeID2, componenttypeid: noseTypeID  }, function(json) {});
+		$.getJSON(path+"updatecomponent.json", { avatarcomponentid: mouthTypeID2, componenttypeid: mouthTypeID  }, function(json) {});
+		$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtTypeID2, componenttypeid: shirtTypeID  }, function(json) {});
 		$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtColorID2, componenttypeid: shirtColorID  }, function(json) {});
 	});
 	
