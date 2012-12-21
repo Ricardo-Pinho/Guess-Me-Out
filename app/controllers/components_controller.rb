@@ -1,4 +1,7 @@
 class ComponentsController < ApplicationController
+
+  before_filter :authenticate_user, :except => [:index, :show]
+
   # GET /components
   # GET /components.json
   def index

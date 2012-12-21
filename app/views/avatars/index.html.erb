@@ -1,14 +1,15 @@
 <div id="content">
 <h1>Listing avatars</h1>
-  <h1>Listing avatars</h1>
 
 <table>
   <tr>
     <th>Name</th>
     <th>User</th>
     <th></th>
-    <th></th>
-    <th></th>
+    <%if session[:user_admin]==1 %>
+        <th></th>
+        <th></th>
+    <%end%>
   </tr>
 
 <% @avatars.each do |avatar| %>
@@ -16,8 +17,10 @@
     <td><%= avatar.name %></td>
     <td> <%= User.find(avatar.user).username %></td>
     <td><%= link_to 'Show', avatar %></td>
-    <td><%= link_to 'Edit', edit_avatar_path(avatar) %></td>
-    <td><%= link_to 'Destroy', avatar, confirm: 'Are you sure?', method: :delete %></td>
+    <%if session[:user_admin]==1 %>
+        <td><%= link_to 'Edit', edit_avatar_path(avatar) %></td>
+        <td><%= link_to 'Destroy', avatar, confirm: 'Are you sure?', method: :delete %></td>
+    <%end%>
   </tr>
 <% end %>
 </table>

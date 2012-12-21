@@ -1,5 +1,7 @@
 UserAuth::Application.routes.draw do
 
+  resources :usercomponents
+
   resources :avatarcomponents
 
   resources :componenttypes

@@ -1,4 +1,7 @@
 class AvatarcomponentsController < ApplicationController
+
+  before_filter :authenticate_user, :except => [:index, :show, :getavatar, :getavatarsvg]
+
   # GET /avatarcomponents
   # GET /avatarcomponents.json
   def index

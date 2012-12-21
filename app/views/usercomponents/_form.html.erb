@@ -1,0 +1,29 @@
+<%= form_for(@usercomponent) do |f| %>
+  <% if @usercomponent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@usercomponent.errors.count, "error") %> prohibited this usercomponent from being saved:</h2>
+
+      <ul>
+      <% @usercomponent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :component %><br />
+    <%= f.text_field :component %>
+  </div>
+  <div class="field">
+    <%= f.label :componenttype %><br />
+    <%= f.text_field :componenttype %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

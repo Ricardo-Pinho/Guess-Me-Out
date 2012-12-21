@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   attr_accessor :password
 
   before_save :encrypt_password
+  before_update :encrypt_password
+  after_update :clear_password
   after_save :clear_password
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -13,7 +15,7 @@ class User < ActiveRecord::Base
   #Only on Create so other actions like update password attribute can be nil
   validates_length_of :password, :in => 6..20, :on => :create
   validates_length_of :password, :in => 6..20, :allow_blank => true, :on => :update
-  attr_accessible :username, :email, :password, :password_confirmation, :name, :birthdate, :sex, :location, :credits, :last_login, :admin
+  attr_accessible :username, :email, :password, :password_confirmation, :name, :birthdate, :sex, :location, :credits, :last_login, :admin, :authentication
 
   def self.authenticate(username_or_email="", login_password="")
 
@@ -33,14 +35,14 @@ class User < ActiveRecord::Base
   end   
 
   def match_password(login_password="")
-    encrypted_password == login_password
+    encrypted_password == Digest::MD5.hexdigest(login_password)
   end
 
 
 
   def encrypt_password
     unless password.blank?
-      self.encrypted_password = password
+      self.encrypted_password = Digest::MD5.hexdigest(password)
     end
   end
 

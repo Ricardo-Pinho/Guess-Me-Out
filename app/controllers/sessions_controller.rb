@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
 	def profile
 		#Profile Page
     session[:saved_location] = "profile"
-    @user = User.new(:admin =>@current_user.admin, :email =>@current_user.email, :name =>@current_user.name, :sex => @current_user.sex,:birthdate =>@current_user.birthdate, :location =>@current_user.location)
-	end
+    @user = User.new(:admin =>@current_user.admin, :email =>@current_user.email, :name =>@current_user.name, :sex => @current_user.sex,:birthdate =>@current_user.birthdate, :location =>@current_user.location, :credits =>@current_user.credits)
+  end
 
 	def login
 		#Login Form
@@ -37,8 +37,14 @@ class SessionsController < ApplicationController
 			session[:user_sex] = authorized_user.sex
 			session[:saved_location] = ""
 			session[:user_birthdate] =authorized_user.birthdate
-			flash[:notice] = "Welcome again, you logged in as #{authorized_user.username}"
-			redirect_to(:controller=>'home', :action => 'home')
+      user_avatar = Avatar.find_by_user_id(authorized_user.id)
+      if user_avatar
+        session[:user_avatar] = user_avatar.id
+      else
+        session[:user_avatar] = -1
+      end
+      flash[:notice] = "Welcome again, you logged in as #{authorized_user.username}"
+      redirect_to(:controller=>'home', :action => 'home')
 
 
 		else
@@ -53,10 +59,10 @@ class SessionsController < ApplicationController
 			authorized_user = User.authenticate(params[:email],params[:password])
 			if authorized_user
 				@user = User.find(authorized_user.id)
-				
+				@user.update_attribute(:authentication,SecureRandom.hex)
 				session[:saved_location] = ""
 				format.json{
-					render :json => @user.to_json(:only=>[:name,:email,:birthdate,:id])
+					render :json => @user.to_json(:only=>[:id,:email,:name,:birthdate,:last_login,:sex,:credits,:location,:admin,:authentication])
 				}
 			else
 				format.json{

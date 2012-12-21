@@ -2,6 +2,7 @@ class CreateAvatars < ActiveRecord::Migration
   def change
     create_table :avatars do |t|
       t.string :name
+      t.string :svg
       t.references :user
       t.timestamps
     end

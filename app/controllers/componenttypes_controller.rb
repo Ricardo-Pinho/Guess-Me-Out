@@ -1,4 +1,7 @@
 class ComponenttypesController < ApplicationController
+
+  before_filter :authenticate_user, :except => [:index, :gettypebycolor, :show, :getsvg_android]
+
   # GET /componenttypes
   # GET /componenttypes.json
   def index

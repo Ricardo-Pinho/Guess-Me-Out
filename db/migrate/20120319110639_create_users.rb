@@ -11,6 +11,7 @@ class CreateUsers < ActiveRecord::Migration
 		t.integer :credits
 		t.string :location
 		t.integer :admin
+    t.string :authentication
       	t.timestamps
     end
   end

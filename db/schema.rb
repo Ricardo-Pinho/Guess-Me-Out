@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121127184508) do
+ActiveRecord::Schema.define(:version => 20121221175802) do
 
   create_table "avatarcomponents", :force => true do |t|
     t.integer  "avatar_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20121127184508) do
 
   create_table "avatars", :force => true do |t|
     t.string   "name"
+    t.string   "svg"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -52,6 +53,18 @@ ActiveRecord::Schema.define(:version => 20121127184508) do
 
   add_index "componenttypes", ["component_id"], :name => "index_componenttypes_on_component_id"
 
+  create_table "usercomponents", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "component_id"
+    t.integer  "componenttype_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "usercomponents", ["component_id"], :name => "index_usercomponents_on_component_id"
+  add_index "usercomponents", ["componenttype_id"], :name => "index_usercomponents_on_componenttype_id"
+  add_index "usercomponents", ["user_id"], :name => "index_usercomponents_on_user_id"
+
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email"
@@ -63,6 +76,7 @@ ActiveRecord::Schema.define(:version => 20121127184508) do
     t.integer  "credits"
     t.string   "location"
     t.integer  "admin"
+    t.string   "authentication"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
