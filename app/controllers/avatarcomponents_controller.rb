@@ -32,8 +32,8 @@ class AvatarcomponentsController < ApplicationController
   
   def getavatarsvg
 		respond_to do |format|
-			@avatarcomponents = Avatarcomponent.find_by_sql("select avatarcomponents.componenttype_id, avatarcomponents.component_id, componenttypes.svg  from avatarcomponents, componenttypes, avatars where componenttypes.id=avatarcomponents.componenttype_id and avatarcomponents.avatar_id=avatars.id and avatars.user_id="+params[:userid])
-      format.json { render :json => @avatarcomponents.to_json(:only=>[:component_id,:componenttype_id,:svg]) }
+			@avatarcomponents = Avatarcomponent.find_by_sql("select avatarcomponents.componenttype_id, avatarcomponents.component_id, componenttypes.svg, avatarcomponents.id  from avatarcomponents, componenttypes, avatars where componenttypes.id=avatarcomponents.componenttype_id and avatarcomponents.avatar_id=avatars.id and avatars.user_id="+params[:userid])
+      format.json { render :json => @avatarcomponents.to_json() }
     end
   end
 
@@ -108,11 +108,9 @@ class AvatarcomponentsController < ApplicationController
 		respond_to do |format|
 			@avatarcomponent = Avatarcomponent.find(params[:avatarcomponentid])
       if @avatarcomponent.update_attribute(:componenttype_id, params[:componenttypeid])
-        format.html { redirect_to @avatarcomponent, notice: 'Avatarcomponent was successfully updated.' }
-        format.json { render json: @avatarcomponent }
+        format.json { render :json => "{\"avatar\": \"changed\"}" }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @avatarcomponent.errors, status: :unprocessable_entity }
+        format.json { render :json => "{\"avatar\": \"not-changed\"}" }
       end
     end
   end
