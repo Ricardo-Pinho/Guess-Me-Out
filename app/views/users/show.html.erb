@@ -1,4 +1,4 @@
-<div id="content">
+<div id="content" xmlns="http://www.w3.org/1999/html">
 
   <% if @user.errors.any? %>
       <ul class="Signup_Errors">
@@ -10,10 +10,11 @@
 
   <%= form_for(:user, :url => "edit") do |f| %>
       <h2 class='User_Header'><%=@user.username%>'s profile </h2>
-
+      <%if @user_avatar %>
       <div id="avatar">
         <%= image_tag( "avatars/" + @user.email + ".jpg") %>
       </div>
+      <%end%>
       <p>
         <b>Last Login:</b>
         <%= @user.last_login %>
@@ -144,8 +145,8 @@
 
      <%if session[:user_admin]==1 %>
 
-        <%= link_to 'Destroy', @user, confirm: 'Are you sure?', method: :delete %>
-
+        <p><%= link_to 'Destroy', @user, confirm: 'Are you sure?', method: :delete %> </p>
+       <p> <%= link_to 'Create/Edit Avatar', :controller => :avatars, :action => :new, :userid=>@user.id %> </p>
       <%end%>
 
 

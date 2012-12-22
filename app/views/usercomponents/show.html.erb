@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @usercomponent.user %>
+</p>
+
+<p>
+  <b>Component:</b>
+  <%= @usercomponent.component %>
+</p>
+
+<p>
+  <b>Componenttype:</b>
+  <%= @usercomponent.componenttype %>
+</p>
+
+
+<%= link_to 'Edit', edit_usercomponent_path(@usercomponent) %> |
+<%= link_to 'Back', usercomponents_path %>

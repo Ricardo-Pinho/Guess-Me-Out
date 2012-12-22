@@ -1,16 +1,21 @@
 <div id="content">
 
   <% if @user.errors.any? %>
-  <ul class="Signup_Errors">
-    <% for message_error in @user.errors.full_messages %>
-      <li>* <%= message_error %></li>
-      <% end %>
-  </ul>
+      <ul class="Signup_Errors">
+        <% for message_error in @user.errors.full_messages %>
+            <li>* <%= message_error %></li>
+        <% end %>
+      </ul>
   <% end %>
-  
+
   <%= form_for(:user, :url => {:controller => 'users', :action => 'edit'}) do |f| %>
   <h2 class='User_Header'><%=@current_user.username%>'s profile </h2>
-	<p>
+  <%if session[:user_avatar] %>
+      <div id="avatar">
+        <%= image_tag( "avatars/" + @current_user.email + ".jpg") %>
+      </div>
+  <%end%>
+    <p>
 	  <b>Last Login:</b>
 	  <%= @current_user.last_login %>
 	</p>
@@ -131,4 +136,5 @@
       <%= f.submit "Edit Selected Fields" %>
     <% end %>
     </div>
+
   </div>

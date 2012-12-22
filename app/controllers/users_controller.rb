@@ -25,6 +25,7 @@
   
   def show
 	@user = User.find( params[:id] )
+  @user_avatar = Avatar.find_by_user_id( @user.id )
 	session[:saved_location] = ""
 	respond_to do |format|
 		format.html
@@ -53,9 +54,10 @@
 				
 				@existance = User.where("email = ?", @user.email);
 				if @existance.empty?
+					@user.update_attribute(:authentication,SecureRandom.hex)
 					if @user.save!
 						format.json{
-							render :json => @user.to_json(:only=>[:name,:email,:birthdate,:id])
+							render :json => @user.to_json(:only=>[:name,:email,:birthdate,:id,:authentication])
 						}
 					else
 						format.json{
@@ -77,73 +79,48 @@
     else
       @user=User.find_by_username(@user_edit.username)
     end
-    @flash_notice=""
-    flash[:color]= "valid"
-
-    if (@user_edit.email!=@user.email)
-      @user.email=@user_edit.email
-      @flash_notice <<"Email edited. "
-    end
-
-    if (@user_edit.name!=@user.name)
-        @user.name=@user_edit.name
-        @flash_notice << "Name edited. "
-    end
 
     if (@user_edit.password!="")
       if (@user_edit.password==@user_edit.password_confirmation)
-        @user.password=@user_edit.password
-        @user.encrypted_password=@user_edit.password
-        @flash_notice << "Password edited. "
       else
         flash[:color]= "invalid"
-        @flash_notice << "Password Confirmation does not match the initial Password. "
+        flash[:notice] = "Password Confirmation does not match the initial Password. "
+        if (session[:saved_location] == "profile")
+          session[:saved_location] = ""
+          redirect_to(:controller=>'sessions', :action => 'profile')
+          return
+        else
+          redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
+          return
+        end
       end
     end
 
-    if (@user_edit.birthdate!=@user.birthdate)
-      @user.birthdate=@user_edit.birthdate
-      @flash_notice << "Birthdate edited. "
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        flash[:notice] = "User Edited Successfully"
+        flash[:color]= "valid"
+        if (session[:saved_location] == "profile")
+          session[:saved_location] = ""
+          redirect_to(:controller=>'sessions', :action => 'profile')
+          return
+        else
+          redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
+          return
+        end
+      else
+        flash.now[:notice] = "Form is invalid"
+        flash.now[:color]= "invalid"
+        if (session[:saved_location] == "profile")
+          session[:saved_location] = ""
+          render "sessions/profile"
+          return
+        else
+          render "show"
+          return
+        end
+      end
     end
-
-    if (@user_edit.sex!=@user.sex)
-      @user.sex=@user_edit.sex
-      @flash_notice << "Sex edited. "
-    end
-
-    if (@user_edit.location!=@user.location)
-      @user.location=@user_edit.location
-      @flash_notice << "Location edited. "
-    end
-
-    if (@user_edit.admin!=@user.admin)
-    @user.admin=@user_edit.admin
-    @flash_notice << "Status edited. "
-    end
-
-    if (@user_edit.credits!=@user.credits)
-      @user.credits=@user_edit.credits
-      @flash_notice << "Status edited. "
-    end
-
-	if @user.save
-		flash[:notice] = @flash_notice
-		if (session[:saved_location] == "profile")
-		session[:saved_location] = ""
-		redirect_to(:controller=>'sessions', :action => 'profile')
-		else
-			redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
-		end
-		else
-			flash[:notice] = "Form is invalid"
-			flash[:color]= "invalid"
-			if (session[:saved_location] == "profile")
-			session[:saved_location] = ""
-			redirect_to(:controller=>'sessions', :action => 'profile')
-			else
-			redirect_to(:controller=>'users', :action => 'show', :id =>@user.id)
-		end
-	end
   end
 
   
