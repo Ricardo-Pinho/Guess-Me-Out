@@ -1,3 +1,4 @@
+
 var svgNS = "http://www.w3.org/2000/svg";  
 var path="http://localhost:3000/";
 var avatar;
@@ -230,79 +231,83 @@ function changeShirtType( ch)
 }
 
 $(document).ready(function() {
-	skinColor=1;
-	eyeColor=1;
-	hairColor=1;
-	hairType=1;
-	moustacheType=1;
-	noseType=1;
-	mouthType=1;
-	shirtType=1;
-	shirtColor=1;
-	avatar=parseInt($("svg").attr('id'));
-	$.getJSON(path+"getavatar.json",{avatarid:avatar},
-		function(data) {
-		var comp;
-		$.each(data,function (index, value){
-			comp=value.component_id;
-			
-			if (comp==1)
-			{ 
-				hairTypeID2=value.id;
-				hairType=value.color;
-			}
-			if (comp==2) 
-			{ 
-				hairColorID2=value.id;
-				hairColor=value.color;
-			}
-			if (comp==3) 
-			{ 
-				skinColorID2=value.id;
-				skinColor=value.color
-			}
-			if (comp==4) 
-			{ 
-				eyeColorID2=value.id;
-				eyeColor=value.color;
-			}
-			if (comp==5) 
-			{ 
-				moustacheTypeID2=value.id;
-				moustacheType=value.color;
-			}
-			if (comp==6) 
-			{ 
-				noseTypeID2=value.id;
-				noseType=value.color;
-			}
-			if (comp==7) 
-			{ 
-				mouthTypeID2=value.id;
-				mouthType=value.color;
-			}
-			if (comp==8) 
-			{ 
-				shirtTypeID2=value.id;
-				shirtType=value.color;
-			}
-			if (comp==9) 
-			{ 
-				shirtColorID2=value.id;
-				shirtColor=value.color;
-			}
-		});
-		changeEyeColor(0);
-		changeSkinColor(0);	
-		changeHairColor(0);
-		changeShirtColor(0);	
-		changeHairType(0);	
-		changeMoustacheType(0);
-		changeNoseType(0);
-		changeMouthType(0);
-		changeShirtType(0);
-	});
 	
+	$("svg").hide();
+	avatar=parseInt($("svg").attr('id'));
+	if (avatar>0){
+		skinColor=1;
+		eyeColor=1;
+		hairColor=1;
+		hairType=1;
+		moustacheType=1;
+		noseType=1;
+		mouthType=1;
+		shirtType=1;
+		shirtColor=1;
+		$.getJSON(path+"getavatar.json",{avatarid:avatar},
+			function(data) {
+			var comp;
+			$.each(data,function (index, value){
+				comp=value.component_id;
+				
+				if (comp==1)
+				{ 
+					hairTypeID2=value.id;
+					hairType=value.color;
+				}
+				if (comp==2) 
+				{ 
+					hairColorID2=value.id;
+					hairColor=value.color;
+				}
+				if (comp==3) 
+				{ 
+					skinColorID2=value.id;
+					skinColor=value.color
+				}
+				if (comp==4) 
+				{ 
+					eyeColorID2=value.id;
+					eyeColor=value.color;
+				}
+				if (comp==5) 
+				{ 
+					moustacheTypeID2=value.id;
+					moustacheType=value.color;
+				}
+				if (comp==6) 
+				{ 
+					noseTypeID2=value.id;
+					noseType=value.color;
+				}
+				if (comp==7) 
+				{ 
+					mouthTypeID2=value.id;
+					mouthType=value.color;
+				}
+				if (comp==8) 
+				{ 
+					shirtTypeID2=value.id;
+					shirtType=value.color;
+				}
+				if (comp==9) 
+				{ 
+					shirtColorID2=value.id;
+					shirtColor=value.color;
+				}
+			});
+			changeEyeColor(0);
+			changeSkinColor(0);	
+			changeHairColor(0);
+			changeShirtColor(0);	
+			changeHairType(0);	
+			changeMoustacheType(0);
+			changeNoseType(0);
+			changeMouthType(0);
+			changeShirtType(0);
+		});
+	}	
+	$("svg").show();
 	
 	
 	
@@ -320,3 +325,4 @@ $(document).ready(function() {
 	});
 	
 });
+ 
