@@ -1,37 +1,41 @@
+
 var svgNS = "http://www.w3.org/2000/svg";  
 var path="http://localhost:3000/";
 var avatar;
+function SVGElement(id,svg){
+	this.ID=id;
+	this.svg=svg;
+}
+function SVGComponent(){
+	this.types=new Array();
+	this.i=0;
+	this.avcompid=0;
+	function add(id,svg)
+	{
+		this.types.push(new SVGElement(id,svg));
+	}
+	function locate(componenttypeID)
+	{
+		for (var i=0;i<types.length;i++)
+		{
+			if (types[i].ID==componenttypeID)
+			{
+				this.i=i;
+				break;
+			}
+		}
+	}
+}
 var skinColor;
-var skinColorRGB;
-var skinColorID;
-var skinColorID2;
 var eyeColor;
-var eyeColorRGB;
-var eyeColorID;
-var eyeColorID2;
 var hairColor;
-var hairColorRGB;
-var hairColorID;
-var hairColorID2;
 var hairType;
-var hairTypeID;
-var hairTypeID2;
 var moustacheType;
-var moustacheTypeID;
-var moustacheTypeID2;
 var noseType;
-var noseTypeID;
-var noseTypeID2;
 var mouthType;
-var mouthTypeID;
-var mouthTypeID2;
 var shirtType;
-var shirtTypeID;
-var shirtTypeID2;
 var shirtColor;
-var shirtColorRGB;
-var shirtColorID;
-var shirtColorID2;
+
 
 
 
@@ -230,80 +234,81 @@ function changeShirtType( ch)
 }
 
 $(document).ready(function() {
-	skinColor=1;
-	eyeColor=1;
-	hairColor=1;
-	hairType=1;
-	moustacheType=1;
-	noseType=1;
-	mouthType=1;
-	shirtType=1;
-	shirtColor=1;
+	
+	$("svg").hide();
 	avatar=parseInt($("svg").attr('id'));
-	$.getJSON(path+"getavatar.json",{avatarid:avatar},
-		function(data) {
-		var comp;
-		$.each(data,function (index, value){
-			comp=value.component_id;
-			
-			if (comp==1)
-			{ 
-				hairTypeID2=value.id;
-				hairType=value.color;
-			}
-			if (comp==2) 
-			{ 
-				hairColorID2=value.id;
-				hairColor=value.color;
-			}
-			if (comp==3) 
-			{ 
-				skinColorID2=value.id;
-				skinColor=value.color
-			}
-			if (comp==4) 
-			{ 
-				eyeColorID2=value.id;
-				eyeColor=value.color;
-			}
-			if (comp==5) 
-			{ 
-				moustacheTypeID2=value.id;
-				moustacheType=value.color;
-			}
-			if (comp==6) 
-			{ 
-				noseTypeID2=value.id;
-				noseType=value.color;
-			}
-			if (comp==7) 
-			{ 
-				mouthTypeID2=value.id;
-				mouthType=value.color;
-			}
-			if (comp==8) 
-			{ 
-				shirtTypeID2=value.id;
-				shirtType=value.color;
-			}
-			if (comp==9) 
-			{ 
-				shirtColorID2=value.id;
-				shirtColor=value.color;
-			}
+	if (avatar>0){
+		$.getJSON(path+"getavatarsvg.json",{avatarid:avatar},function(data) {
+			$("svg").innerHTML=data.svg;
 		});
-		changeEyeColor(0);
-		changeSkinColor(0);	
-		changeHairColor(0);
-		changeShirtColor(0);	
-		changeHairType(0);	
-		changeMoustacheType(0);
-		changeNoseType(0);
-		changeMouthType(0);
-		changeShirtType(0);
-	});
+		
+	}	
+	$("svg").show();
 	
-	
+	if ($("#editsvg")!=null)
+	{
+		skinColor=new SVGComponent();
+		eyeColor=new SVGComponent();
+		hairColor=new SVGComponent();
+		hairType=new SVGComponent();
+		moustacheType=new SVGComponent();
+		noseType=new SVGComponent();
+		mouthType=new SVGComponent();
+		shirtType=new SVGComponent();
+		shirtColor=new SVGComponent();
+		$.getJSON(path+"getsvgs.json",	function(data) {
+			var comp;
+			$.each(data,function (index, value){
+				comp=value.component_id;
+				
+				if (comp==1)
+				{ 
+					hairTypeID2=value.id;
+					hairType=value.color;
+				}
+				if (comp==2) 
+				{ 
+					hairColorID2=value.id;
+					hairColor=value.color;
+				}
+				if (comp==3) 
+				{ 
+					skinColorID2=value.id;
+					skinColor=value.color
+				}
+				if (comp==4) 
+				{ 
+					eyeColorID2=value.id;
+					eyeColor=value.color;
+				}
+				if (comp==5) 
+				{ 
+					moustacheTypeID2=value.id;
+					moustacheType=value.color;
+				}
+				if (comp==6) 
+				{ 
+					noseTypeID2=value.id;
+					noseType=value.color;
+				}
+				if (comp==7) 
+				{ 
+					mouthTypeID2=value.id;
+					mouthType=value.color;
+				}
+				if (comp==8) 
+				{ 
+					shirtTypeID2=value.id;
+					shirtType=value.color;
+				}
+				if (comp==9) 
+				{ 
+					shirtColorID2=value.id;
+					shirtColor=value.color;
+				}
+			});
+		});
+	}
 	
 	
 	$("#save").click(function(){
@@ -320,3 +325,4 @@ $(document).ready(function() {
 	});
 	
 });
+ 

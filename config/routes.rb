@@ -22,6 +22,7 @@ UserAuth::Application.routes.draw do
   match "statistics", :to => 'home#statistics'
   match "profile", :to => 'sessions#profile'
   match "avatar", :to => 'avatars#show'
+  match "getavatar2", :to=>'avatars#getavatar'
   match "getavatar", :to => 'avatarcomponents#getavatar'
   match "getavatarsvg", :to => 'avatarcomponents#getavatarsvg'
   match "gettypebycolor", :to => 'componenttypes#gettypebycolor'
