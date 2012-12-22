@@ -54,9 +54,10 @@
 				
 				@existance = User.where("email = ?", @user.email);
 				if @existance.empty?
+					@user.update_attribute(:authentication,SecureRandom.hex)
 					if @user.save!
 						format.json{
-							render :json => @user.to_json(:only=>[:name,:email,:birthdate,:id])
+							render :json => @user.to_json(:only=>[:name,:email,:birthdate,:id,:authentication])
 						}
 					else
 						format.json{
