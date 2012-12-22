@@ -1,6 +1,6 @@
 <div id="content">
 	<h1>Editing avatar</h1>
-	
+	<div id="editsvg">
 	<div id="left">
 	<svg version="1.1" baseProfile="basic"
 	 id=<%=@avatar.id%> xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -55,8 +55,8 @@
     </svg>
 	<p><a id="save">save</a></p>
 
-	<%= link_to 'Show', @avatar %> |
-	<%= link_to 'Back', avatars_path %>
+	
+	</div>
 	</div>
 	<div id=left>
 	<p><button onclick="changeSkinColor(-1);"><-</button>cor pele<button onclick="changeSkinColor(1);">-></button></p>
@@ -69,5 +69,6 @@
 	<p><button onclick="changeShirtType(-1);"><-</button>tipo shirt<button onclick="changeShirtType(1);">-></button></p>
 	<p><button onclick="changeShirtColor(-1);"><-</button>cor shirt<button onclick="changeShirtColor(1);">-></button></p>
 	</div>
-	
+	<%= link_to 'Show', @avatar %> |
+	<%= link_to 'Back', avatars_path %>
 </div>
