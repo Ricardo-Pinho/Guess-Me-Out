@@ -38,8 +38,7 @@ class ComponenttypesController < ApplicationController
 		respond_to do |format|
 			@componentid = params[:componentid]
 			@componenttype = Componenttype.all( :conditions=> ["component_id like ?", @componentid])
-      format.html # show.html.erb
-      format.json { render json: @componenttype.to_json(:only=>[:component_id,:color,:svg,:id]) }
+      format.json { render json: @componenttype.to_json(:only=>[:component_id,:color,:svg,:id,:name]) }
     end	
 	end
 
