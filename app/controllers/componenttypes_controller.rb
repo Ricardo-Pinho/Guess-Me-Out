@@ -17,7 +17,9 @@ class ComponenttypesController < ApplicationController
   # GET /componenttypes/1.json
   def show
     @componenttype = Componenttype.find(params[:id])
-
+    if session[:user_id]
+      @usercomponents = Usercomponent.all( :conditions=> ["user_id = ?", + session[:user_id]])
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @componenttype }
