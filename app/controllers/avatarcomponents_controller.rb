@@ -27,7 +27,7 @@ class AvatarcomponentsController < ApplicationController
 
   def getavatar
 		respond_to do |format|
-			@avatarcomponents = Avatarcomponent.find_by_sql("select avatarcomponents.id as id, componenttypes.component_id as component_id, componenttypes.color as color  from avatarcomponents, componenttypes where componenttypes.id=avatarcomponents.componenttype_id and avatarcomponents.avatar_id="+params[:avatarid])
+			@avatarcomponents = Avatarcomponent.find_by_sql("select avatarcomponents.id as id, componenttypes.id as componenttype_id, componenttypes.component_id as component_id, componenttypes.color as color  from avatarcomponents, componenttypes where componenttypes.id=avatarcomponents.componenttype_id and avatarcomponents.avatar_id="+params[:avatarid])
       format.json { render json: @avatarcomponents }
     end
   end
