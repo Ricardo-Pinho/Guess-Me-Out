@@ -480,6 +480,6 @@ svg {
 }
 
 
-#left { float:left }
-#right { float:right }
-#omaior { height: 1024px;}
+.editsvg { float:left }
+.left{float:left}
+.omaior { height: 1024px;}
