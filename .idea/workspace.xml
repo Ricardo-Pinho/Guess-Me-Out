@@ -11,9 +11,7 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\test\functional\tits_controller_test.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\test\unit\helpers\tits_helper_test.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/avatars_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/avatars_controller.rb" />
     </list>
     <ignored path="Guess Me Out.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +34,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="avatars_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="avatars_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/avatars_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="39" selection-start="468" selection-end="523" vertical-scroll-proportion="0.0">
+            <state line="54" column="38" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.7228739">
               <folding />
             </state>
           </provider>
@@ -63,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="shop_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/shop_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="8" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0733813">
+            <state line="3" column="8" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,7 +145,6 @@
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20120319110639_create_users.rb" />
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/avatars_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/controllers/componenttypes_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/avatarcomponents_controller.rb" />
@@ -155,6 +152,7 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/shop_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/avatars_controller.rb" />
       </list>
     </option>
   </component>
@@ -675,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/avatars_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="39" selection-start="468" selection-end="523" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/componenttypes_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="81" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
@@ -698,7 +689,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/shop_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="8" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0733813">
+        <state line="3" column="8" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/avatars_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="38" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.7228739">
           <folding />
         </state>
       </provider>

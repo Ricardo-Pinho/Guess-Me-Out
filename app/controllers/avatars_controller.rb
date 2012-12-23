@@ -53,7 +53,6 @@ class AvatarsController < ApplicationController
   # GET /avatars/1/edit
   def edit
     @avatar = Avatar.find(params[:id])
-    @avatar = Avatar.find(params[:id])
     if @avatar.user_id!=@current_user.id && @current_user.admin!=1
       flash.now[:notice] = "Avatar does not belong to you!"
       flash.now[:color]= "invalid"
