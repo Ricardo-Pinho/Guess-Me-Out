@@ -9,26 +9,26 @@ function SVGElement(id,svg){
 function SVGComponent(){
 	this.types=new Array();
 	this.i=0;
-	this.avcompid=0;
-	function add(id,svg)
+	this.avcompid=0;	
+}
+SVGComponent.prototype.add=function(id,svg)
+{
+	this.types.push(new SVGElement(id,svg));
+}
+SVGComponent.prototype.locate= function (componenttypeID)
+{
+	for (var i=0;i<this.types.length;i++)
 	{
-		this.types.push(new SVGElement(id,svg));
-	}
-	function locate(componenttypeID)
-	{
-		for (var i=0;i<types.length;i++)
+		if (this.types[i].ID==componenttypeID)
 		{
-			if (types[i].ID==componenttypeID)
-			{
-				this.i=i;
-				break;
-			}
+			this.i=i;
+			break;
 		}
 	}
-	function typeid()
-	{
-		return types[i].ID;
-	}
+}
+SVGComponent.prototype.typeid=function()
+{
+	return this.types[i].ID;
 }
 var skinColor;
 var eyeColor;
@@ -209,12 +209,14 @@ function changeShirtType( ch)
 
 function addType(data,type,comp)
 {
-	
+	for (var i=0;i<data.length;i++)
+		type.add(data[i].id,data[i].svg);
 }
 
 function addColor(data,type,comp)
 {
-
+	for (var i=0;i<data.length;i++)
+		type.add(data[i].id,data[i].svg);
 }
 
 $(document).ready(function() {
@@ -225,7 +227,8 @@ $(document).ready(function() {
 		avatar=parseInt($("svg:eq("+i+")").attr('id'));
 		if (avatar>0){
 			$.getJSON(path+"getavatar2.json",{id:avatar},function(data) {
-				$("svg:eq("+i+")").innerHTML=data.svg;
+				document.getElementById("1").innerHTML=data.svg; //aki nao da para usar jQuery por causa do innerHTML do svg
+				
 			});
 			
 		}	
@@ -283,7 +286,7 @@ $(document).ready(function() {
 				}
 				if (comp==5) 
 				{ 
-					moustache.avcompid=value.id;
+					moustacheType.avcompid=value.id;
 					moustacheType.locate(value.componenttype_id);
 				}
 				if (comp==6) 
