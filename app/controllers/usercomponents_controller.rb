@@ -1,6 +1,6 @@
 class UsercomponentsController < ApplicationController
 
-  before_filter :authenticate_user, :except => [:index, :show]
+  before_filter :authenticate_user, :except => [:index, :show, :getsvgs_android]
 
   # GET /usercomponents
   # GET /usercomponents.json
@@ -83,4 +83,16 @@ class UsercomponentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  
+ 
+	
+	def getsvgs_android
+		respond_to do |format|
+			
+			@usercomponent = Usercomponent.find_by_sql("select componenttypes.id as id, componenttypes.color, componenttypes.svg, componenttypes.name,componenttypes.component_id from componenttypes, usercomponents where componenttypes.id=usercomponents.componenttype_id and componenttypes.component_id="+params[:componentid]+" and usercomponents.user_id="+params[:userid])
+			format.json { render json: @usercomponent.to_json() }
+		end	
+	end
+	
 end

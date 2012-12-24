@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Guess Me Out</title>
@@ -29,8 +30,9 @@
           <div></div>
         <% end %> -->
         <%= link_to image_tag("logo_horizontal_t2.png", :class => 'logo_image'), {:action => 'home', :controller => 'home'} %>
+        <noscript><p><b style="color: red">You need to have Javascript enabled to access the whole website</b></p></noscript>
       </div>
-    
+
       <div class="tab">
 
         <%if url_for(params)=="/"%>
@@ -73,6 +75,11 @@
           <%= link_to content_tag(:div, "Help", :class => 'tab_unselected') , :help, class: "tab_links" %>
         <%end%>
 
+        <%if url_for(params)=="/shop"%>
+            <%= link_to content_tag(:div, "Shop", :class => 'tab_selected') , :shop, class: "tab_links" %>
+        <%else%>
+            <%= link_to content_tag(:div, "Shop", :class => 'tab_unselected') , :shop, class: "tab_links" %>
+        <%end%>
 
         <div id="search">
           <%= form_for(:search_query, :url => {:controller => 'users', :action => 'search'}) do |f| %>

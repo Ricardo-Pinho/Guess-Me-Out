@@ -17,7 +17,7 @@ class AvatarsController < ApplicationController
   # GET /avatars/1.json
   def show
     @avatar = Avatar.find(params[:id])
-    @avatarcomponents = Avatarcomponent.all( :conditions=> ["avatar_id like ?", + @avatar.id])
+    @avatarcomponents = Avatarcomponent.all( :conditions=> ["avatar_id = ?", + @avatar.id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @avatarcomponents}
@@ -53,13 +53,19 @@ class AvatarsController < ApplicationController
   # GET /avatars/1/edit
   def edit
     @avatar = Avatar.find(params[:id])
-    @avatar = Avatar.find(params[:id])
     if @avatar.user_id!=@current_user.id && @current_user.admin!=1
       flash.now[:notice] = "Avatar does not belong to you!"
       flash.now[:color]= "invalid"
       render action: "show"
       return
     end
+  end
+  
+  def getavatar
+	respond_to do |format|
+		@avatar = Avatar.find(params[:id])
+		format.json { render json: @avatar }
+	end	
   end
 	
   # POST /avatars
@@ -93,7 +99,7 @@ class AvatarsController < ApplicationController
     return
   end
   @avatar=@avatar2
-	@cTypeHair = Avatarcomponent.new()
+  @cTypeHair = Avatarcomponent.new()
 	@cHairColor = Avatarcomponent.new()
 	@cShirtColor = Avatarcomponent.new()
 	@cTypeSkin = Avatarcomponent.new()
@@ -193,12 +199,14 @@ class AvatarsController < ApplicationController
     end
   end
 	
+
 	
 	def create_avatar_android
 		respond_to do |format|
 			@avatarC = Avatar.new()
 			@avatarC.name = params[:name]
 			@avatarC.user_id = params[:userID]
+			 
 			@cTypeHair = Avatarcomponent.new()
 			@cHairColor = Avatarcomponent.new()
 			@cShirtColor = Avatarcomponent.new()
