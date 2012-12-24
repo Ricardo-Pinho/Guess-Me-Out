@@ -10,6 +10,7 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\development.sqlite3" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\test\functional\tits_controller_test.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\test\unit\helpers\tits_helper_test.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="Guess Me Out.iws" />
@@ -36,7 +37,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/componenttypes/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="9" selection-start="888" selection-end="888" vertical-scroll-proportion="-18.653847">
+            <state line="34" column="79" selection-start="958" selection-end="958" vertical-scroll-proportion="-18.653847">
               <folding />
             </state>
           </provider>
@@ -72,8 +73,10 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="0.27952167">
-              <folding />
+            <state line="11" column="1" selection-start="322" selection-end="4445" vertical-scroll-proportion="0.28506097">
+              <folding>
+                <element signature="n#style#0;n#b#0;n#p#0;n#noscript#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,10 +132,10 @@
         <option value="$PROJECT_DIR$/app/views/shop/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/components/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/componenttypes_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/componenttypes/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/shop_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/usercomponents_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/home.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/componenttypes/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
@@ -831,13 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/componenttypes/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="9" selection-start="888" selection-end="888" vertical-scroll-proportion="-18.653847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="186" column="0" selection-start="6406" selection-end="7184" vertical-scroll-proportion="0.0">
@@ -880,10 +876,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/componenttypes/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="79" selection-start="958" selection-end="958" vertical-scroll-proportion="-18.653847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="0.27952167">
-          <folding />
+        <state line="11" column="1" selection-start="322" selection-end="4445" vertical-scroll-proportion="0.28506097">
+          <folding>
+            <element signature="n#style#0;n#b#0;n#p#0;n#noscript#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
