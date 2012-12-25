@@ -4,8 +4,10 @@ class CreateComponenttypes < ActiveRecord::Migration
       t.integer :color
       t.string :name
       t.integer :price
-      t.string :svg
+      t.blob :svg
       t.references :component
+	  t.text :test1
+	  t.blob :test2
 
       t.timestamps
     end
