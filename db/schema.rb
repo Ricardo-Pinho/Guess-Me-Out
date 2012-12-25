@@ -45,8 +45,10 @@ ActiveRecord::Schema.define(:version => 20121221175802) do
     t.integer  "color"
     t.string   "name"
     t.integer  "price"
-    t.string   "svg"
+    t.text     "svg"
     t.integer  "component_id"
+    t.text     "test1"
+    t.string   "test2"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
