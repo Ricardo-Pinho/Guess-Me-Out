@@ -30,6 +30,10 @@ SVGComponent.prototype.typeid=function()
 {
 	return this.types[this.i].ID;
 }
+SVGComponent.prototype.lastindex=function()
+{
+	return this.types.length-1;
+}
 var skinColor;
 var eyeColor;
 var hairColor;
@@ -64,7 +68,7 @@ function changeSkinColor(ch)
 
 function changeEyeColor(ch)
 {
-	if (ch!=-1) skinColor.i=ch;
+	if (ch!=-1) eyeColor.i=ch;
 	var myEyes=document.getElementsByClassName("Eye_Color")[0];
 	var elem=eyeColor.types[eyeColor.i];
 	for(var j=0; j<myEyes.children.length; j++) 
@@ -76,7 +80,7 @@ function changeEyeColor(ch)
 function changeShirtColor(ch)
 {
 	var myShirt=document.getElementsByClassName("Tshirt")[0].firstChild;
-	if (ch!=-1) skinColor.i=ch;
+	if (ch!=-1) shirtColor.i=ch;
 	var elem=shirtColor.types[shirtColor.i];
 	myShirt.setAttribute("fill",elem.svg);	
 }
@@ -85,7 +89,7 @@ function changeHairColor( ch)
 {
 	var myHair= document.getElementsByClassName("Hair")[0];
 	var myMoustache= document.getElementsByClassName("Moustache")[0];
-	if (ch!=-1) skinColor.i=ch;
+	if (ch!=-1) hairColor.i=ch;
 	var elem=hairColor.types[hairColor.i];
 
 	for(var j=0; j<myHair.children.length; j++) 
@@ -98,7 +102,7 @@ function changeHairColor( ch)
 function changeHairType( ch)
 {
 	var myHair= document.getElementsByClassName("Hair")[0];
-	if (ch!=-1) skinColor.i=ch;
+	if (ch!=-1) hairType.i=ch;
 	var elem=hairType.types[hairType.i];
 	myHair.innerHTML=elem.svg;
 	for(var j=0; j<myHair.children.length; j++)
@@ -108,7 +112,7 @@ function changeHairType( ch)
 function changeMoustacheType( ch)
 {
 	var myMoustache= document.getElementsByClassName("Moustache")[0];
-	if (ch!=-1) skinColor.i=ch;
+	if (ch!=-1) moustacheType.i=ch;
 	var elem=moustacheType.types[moustacheType.i];
 	myMoustache.innerHTML=elem.svg;
 	for(var j=0; j<myMoustache.children.length; j++) 
@@ -119,7 +123,7 @@ function changeMoustacheType( ch)
 function changeMouthType( ch)
 {
 	var myMouth= document.getElementsByClassName("Mouth")[0];
-	if (ch!=-1) skinColor.i=ch;
+	if (ch!=-1) mouthType.i=ch;
 	var elem=mouthType.types[mouthType.i];
 	myMouth.innerHTML=elem.svg;		
 }
@@ -127,7 +131,7 @@ function changeMouthType( ch)
 function changeNoseType( ch)
 {
 	var myNose= document.getElementsByClassName("Nose")[0];
-	if (ch!=-1) skinColor.i=ch;
+	if (ch!=-1) noseType.i=ch;
 	var elem=noseType.types[noseType.i];
 	myNose.innerHTML=elem.svg;
 	for(var j=0; j<myNose.children.length; j++) 
@@ -138,13 +142,13 @@ function changeNoseType( ch)
 function changeShirtType( ch)
 {
 	var myShirt= document.getElementsByClassName("Tshirt")[0];
-	if (ch!=-1) skinColor.i=ch;
+	if (ch!=-1) shirtType.i=ch;
 	var elem=shirtType.types[shirtType.i];
 	myShirt.innerHTML=elem.svg;
 	myShirt.children[0].setAttribute("fill",shirtColor.types[skinColor.i].svg);		
 }
 
-//INSTRUCTION funcion changecomponent (type or color)
+//INSTRUCTION funcion changeCompName(ch)
 
 
 function addType(data,type,comp)
@@ -153,9 +157,9 @@ function addType(data,type,comp)
 	{
 		type.add(data[i].id,data[i].svg);
 		if (comp!="")
-		{
-			if (data[i].svg=="")$(".component."+comp).append($('<svg class="svgpreview" version="1.1" baseProfile="basic" data-component='+data[i].component_id+' data-type='+data[i].id+'  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve"> <circle id="svg_1" r="180" cy="256" cx="256" stroke-width="47" stroke="#4c4c4c" fill="#ff0000" fill-opacity="0"/> <line fill="none" stroke="#4c4c4c" stroke-width="51" fill-opacity="0" x1="135.5" y1="385.99999" x2="380.49999" y2="117" id="svg_4"/></svg>'));
-			else $(".component."+comp).append($('<svg class="svgpreview" version="1.1" baseProfile="basic" data-component='+data[i].component_id+' data-type='+data[i].id+'  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve">'+data[i].svg+'</svg>'));
+		{	
+			if (data[i].svg=="")$(".component."+comp).append($('<div class="svgpreview"><svg class="svgpreview" version="1.1" baseProfile="basic" data-component='+data[i].component_id+' data-type='+type.lastindex()+'  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve"> <circle id="svg_1" r="180" cy="256" cx="256" stroke-width="47" stroke="#4c4c4c" fill="#ff0000" fill-opacity="0"/> <line fill="none" stroke="#4c4c4c" stroke-width="51" fill-opacity="0" x1="135.5" y1="385.99999" x2="380.49999" y2="117" id="svg_4"/></svg></div>'));
+			else $(".component."+comp).append($('<div class="svgpreview"><svg class="svgpreview" version="1.1" baseProfile="basic" data-component='+data[i].component_id+' data-type='+type.lastindex()+'  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve">'+data[i].svg+'</svg></div>'));
 		}
 	}
 }
@@ -167,7 +171,7 @@ function addColor(data,type,comp)
 		type.add(data[i].id,data[i].svg);
 		if (comp!="")
 		{
-			
+			$(".component."+comp).append($('<div class="svgpreview"><svg class="svgpreview" version="1.1" baseProfile="basic" data-component='+data[i].component_id+' data-type='+type.lastindex()+'  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve"><rect ry="90" rx="90" id="svg_1" height="392" width="392" y="60" x="60" stroke-width="19" stroke="#000000" fill="'+data[i].svg+'"/></svg></div>'));
 		}
 	}
 }
@@ -215,6 +219,53 @@ $(document).ready(function() {
 				}).filter(':first').click();
 				
 				
+				$(document).on("click",'div.svgpreview',function(event){
+					
+					var comp=$(this).children(":first").attr("data-component");
+					var type=$(this).children(":first").attr("data-type");
+				
+					if (comp==1)
+					{ 
+						changeHairType(type);
+					}
+					if (comp==2) 
+					{ 
+						changeHairColor(type);
+					}
+					if (comp==3) 
+					{ 
+						changeSkinColor(type);
+					}
+					if (comp==4) 
+					{ 
+						changeEyeColor(type);
+					}
+					if (comp==5) 
+					{ 
+						changeMoustacheType(type);
+					}
+					if (comp==6) 
+					{ 
+						changeNoseType(type);
+					}
+					if (comp==7) 
+					{ 
+						changeMouthType(type);
+					}
+					if (comp==8) 
+					{ 
+						changeShirtType(type);
+					}
+					if (comp==9) 
+					{ 
+						changeShirtColor(type);
+					}
+					/* //INSTRUCTION if (comp==componentID) 
+					{ 
+						changeCompName(type);
+					}*/
+					return false;
+				});
 				
 				$("#save").click(function(){
 					//$.getJSON(path+"updateavatarsvg.json", { avatarid: avatar, svg:  document.getElementById(avatar).innerHTML }, function(json) {});
@@ -230,7 +281,11 @@ $(document).ready(function() {
 					//INSTRUCTION $.getJSON(path+"updatecomponent.json", { avatarcomponentid: newcomponent.avcompid, componenttypeid: newcomponent.typeid()  }, function(json) {});
 					return false;
 				});
-		
+				
+				
+				
+				
+				
 				
 				
 			}
@@ -301,7 +356,7 @@ $(document).ready(function() {
 						shirtColor.avcompid=value.id;
 						shirtColor.locate(value.componenttype_id);
 					}
-					/*//INSTRUCTION if (comp==componentID) 
+					/* //INSTRUCTION if (comp==componentID) 
 					{ 
 						newcomponent.avcompid=value.id;
 						newcomponent.locate(value.componenttype_id);
@@ -320,12 +375,14 @@ $(document).ready(function() {
 				changeNoseType(-1);
 				changeMouthType(-1);
 				changeShirtType(-1);
-				//INSTRUCTION functionname(-1);
+				//INSTRUCTION changeCompName(-1);
 			});
 			
 		}
 			
 	}
+	
+	
 	
 });
  
