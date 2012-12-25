@@ -145,7 +145,7 @@ function changeShirtType( ch)
 	if (ch!=-1) shirtType.i=ch;
 	var elem=shirtType.types[shirtType.i];
 	myShirt.innerHTML=elem.svg;
-	myShirt.children[0].setAttribute("fill",shirtColor.types[skinColor.i].svg);		
+	myShirt.children[0].setAttribute("fill",shirtColor.types[shirtColor.i].svg);		
 }
 
 //INSTRUCTION funcion changeCompName(ch)
