@@ -249,6 +249,37 @@ $(document).ready(function() {
 				$.getJSON(path+"svgs_user_android",{userid:user,componentid:7},function(data){addType(data,mouthType,"mouthType");});
 				$.getJSON(path+"svgs_user_android",{userid:user,componentid:8},function(data){addType(data,shirtType,"shirtType");});
 				$.getJSON(path+"svgs_user_android",{userid:user,componentid:9},function(data){addColor(data,shirtColor,"shirtColor");});
+				
+				
+				$(function () {
+					var tabContainers = $('div.tabs > div');
+					
+					$('div.tabs ul.tabNavigation a').click(function () {
+						tabContainers.hide().filter(this.hash).show();
+						
+						$('div.tabs ul.tabNavigation a').removeClass('selected');
+						$(this).addClass('selected');
+						
+						return false;
+					}).filter(':first').click();
+				});
+				
+				
+				$("#save").click(function(){
+					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: hairType.avcompid, componenttypeid: hairType.typeid()  }, function(json) {});
+					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: hairColor.avcompid, componenttypeid: hairColor.typeid()  }, function(json) {});
+					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: skinColor.avcompid, componenttypeid: skinColor.typeid()  }, function(json) {});
+					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: eyeColor.avcompid, componenttypeid: eyeColor.typeid()  }, function(json) {});
+					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: moustacheType.avcompid, componenttypeid: moustacheType.typeid()  }, function(json) {});
+					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: noseType.avcompid, componenttypeid: noseType.typeid()  }, function(json) {});
+					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: mouthType.avcompid, componenttypeid: mouthType.typeid()  }, function(json) {});
+					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtType.avcompid, componenttypeid: shirtType.typeid()  }, function(json) {});
+					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtColor.avcompid, componenttypeid: shirtColor.typeid()  }, function(json) {});
+					//$.getJSON(path+"updateavatarsvg.json", { avatarid: avatar, svg:  document.getElementById(avatar).innerHTML }, function(json) {});
+				});
+		
+				
+				
 			}
 			else
 			{
@@ -331,23 +362,7 @@ $(document).ready(function() {
 			});
 			
 		}
-		
-		
-		
-		$("#save").click(function(){
 			
-			$.getJSON(path+"updatecomponent.json", { avatarcomponentid: hairType.avcompid, componenttypeid: hairType.typeid()  }, function(json) {});
-			$.getJSON(path+"updatecomponent.json", { avatarcomponentid: hairColor.avcompid, componenttypeid: hairColor.typeid()  }, function(json) {});
-			$.getJSON(path+"updatecomponent.json", { avatarcomponentid: skinColor.avcompid, componenttypeid: skinColor.typeid()  }, function(json) {});
-			$.getJSON(path+"updatecomponent.json", { avatarcomponentid: eyeColor.avcompid, componenttypeid: eyeColor.typeid()  }, function(json) {});
-			$.getJSON(path+"updatecomponent.json", { avatarcomponentid: moustacheType.avcompid, componenttypeid: moustacheType.typeid()  }, function(json) {});
-			$.getJSON(path+"updatecomponent.json", { avatarcomponentid: noseType.avcompid, componenttypeid: noseType.typeid()  }, function(json) {});
-			$.getJSON(path+"updatecomponent.json", { avatarcomponentid: mouthType.avcompid, componenttypeid: mouthType.typeid()  }, function(json) {});
-			$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtType.avcompid, componenttypeid: shirtType.typeid()  }, function(json) {});
-			$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtColor.avcompid, componenttypeid: shirtColor.typeid()  }, function(json) {});
-			//$.getJSON(path+"updateavatarsvg.json", { avatarid: avatar, svg:  document.getElementById(avatar).innerHTML }, function(json) {});
-		});
-		
 	}
 	
 });

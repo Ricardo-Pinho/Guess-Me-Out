@@ -1,7 +1,7 @@
 
 
 <div id="content">
-	
+	<h1><%=@avatar.name%></h1>
 	<svg version="1.1" baseProfile="basic"
 	 data-avatar=<%=@avatar.id%> xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="256px" height="256px"
@@ -9,7 +9,7 @@
 		
 		
     </svg>
-
+	<p></p>
   <%if session[:user_admin]==1 || session[:user_avatar]==@avatar.id%>
 	<%= link_to 'Edit', edit_avatar_path(@avatar) %> |
   <%end%>
