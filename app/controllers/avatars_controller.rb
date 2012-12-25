@@ -43,7 +43,6 @@ class AvatarsController < ApplicationController
       end
     end
     @avatar = Avatar.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @avatar }
@@ -141,8 +140,11 @@ class AvatarsController < ApplicationController
 		@cTypeShirt.componenttype_id = 16
 		@cShirtColor.componenttype_id = 17
 		if @cTypeHair.save and @cTypeSkin.save and @cTypeEyes.save and @cTypeNose.save and @cTypeMouth.save and @cTypeFacial.save and @cTypeShirt.save and @cHairColor.save and @cShirtColor.save
-      flash.now[:notice] = "Avatar created Successfully"
-      flash.now[:color]= "valid"
+		flash[:notice] = "Avatar created Successfully"
+		flash[:color]= "valid"
+		if @avatar.user_id==session[:user_id]
+			session[:user_avatar]=@avatar.id
+		end
 			redirect_to @avatar
 			return
     else
@@ -191,10 +193,11 @@ class AvatarsController < ApplicationController
       render action: "show"
       return
     end
+	Avatarcomponent.destroy_all(:avatar_id=> @avatar.id)
     @avatar.destroy
-
+	session[:user_avatar]=-1
     respond_to do |format|
-      format.html { redirect_to avatars_url }
+      format.html { redirect_to avatars_url } #need to change this later when search is made
       format.json { head :no_content }
     end
   end
