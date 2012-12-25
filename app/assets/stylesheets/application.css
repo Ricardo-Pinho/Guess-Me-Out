@@ -516,12 +516,11 @@ div#credits{
 	background-color: #E3E8EF;
 	display: none;
 }
-.svgpreview
+div.svgpreview
 {
 	float:left;
 	width:100px;
-	margin-left:20px;
-	margin-top:20px;
+	padding:10px;
 	height:100px;
 }
 
