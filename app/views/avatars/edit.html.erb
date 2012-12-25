@@ -1,28 +1,25 @@
 <div id="content">
 	<h1>Editing avatar</h1>
-	<div class="editsvg" data-user=<%=@avatar.user_id%>>
-	<svg version="1.1" baseProfile="basic"
-	 id=<%=@avatar.id%> xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px"
-	 viewBox="0 0 512 512" xml:space="preserve">
-		
-		
-    </svg>
-	<p></p>
-
-	
+	<div class="editsvg" >
+	<div class="svgwindow">
+		<svg version="1.1" baseProfile="basic"
+		 data-user=<%=@avatar.user_id%> data-avatar=<%=@avatar.id%> xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="256px" height="256px"
+		 viewBox="0 0 512 512" xml:space="preserve"></svg>	
+	<p></p>	
 	<a href="#" id="save">Save</a> |
 	<%= link_to 'Back', avatars_path %>
 	</div>
-	<div class=left>
-	<p><button onclick="changeSkinColor(-1);"><-</button>cor pele<button onclick="changeSkinColor(1);">-></button></p>
-	<p><button onclick="changeHairColor(-1);"><-</button>cor cabelo<button onclick="changeHairColor(1);">-></button></p>
-	<p><button onclick="changeHairType(-1);"><-</button>tipo de cabelo<button onclick="changeHairType(1);">-></button></p>
-	<p><button onclick="changeEyeColor(-1);"><-</button>cor olhos<button onclick="changeEyeColor(1);">-></button></p>
-	<p><button onclick="changeMoustacheType(-1);"><-</button>bigode<button onclick="changeMoustacheType(1);">-></button></p>
-	<p><button onclick="changeNoseType(-1);"><-</button>nariz<button onclick="changeNoseType(1);">-></button></p>
-	<p><button onclick="changeMouthType(-1);"><-</button>boca<button onclick="changeMouthType(1);">-></button></p>
-	<p><button onclick="changeShirtType(-1);"><-</button>tipo shirt<button onclick="changeShirtType(1);">-></button></p>
-	<p><button onclick="changeShirtColor(-1);"><-</button>cor shirt<button onclick="changeShirtColor(1);">-></button></p>
+	<div class="compnav">
+		<p><button onclick="changeSkinColor(-1);"><-</button>cor pele<button onclick="changeSkinColor(1);">-></button></p>
+		<p><button onclick="changeHairColor(-1);"><-</button>cor cabelo<button onclick="changeHairColor(1);">-></button></p>
+		<p><button onclick="changeHairType(-1);"><-</button>tipo de cabelo<button onclick="changeHairType(1);">-></button></p>
+		<p><button onclick="changeEyeColor(-1);"><-</button>cor olhos<button onclick="changeEyeColor(1);">-></button></p>
+		<p><button onclick="changeMoustacheType(-1);"><-</button>bigode<button onclick="changeMoustacheType(1);">-></button></p>
+		<p><button onclick="changeNoseType(-1);"><-</button>nariz<button onclick="changeNoseType(1);">-></button></p>
+		<p><button onclick="changeMouthType(-1);"><-</button>boca<button onclick="changeMouthType(1);">-></button></p>
+		<p><button onclick="changeShirtType(-1);"><-</button>tipo shirt<button onclick="changeShirtType(1);">-></button></p>
+		<p><button onclick="changeShirtColor(-1);"><-</button>cor shirt<button onclick="changeShirtColor(1);">-></button></p>
+	</div>
 	</div>
 </div>

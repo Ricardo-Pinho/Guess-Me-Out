@@ -422,18 +422,29 @@ div#credits{
     }
 }
 
-svg {
+/*svg {
   background-image: url('manequin.png');
   background-size: 100%;
   width: 256px;
   height: 256px;
-}
+}*/
 
 @media only screen and (min-width: 980px) {
 
 }
 
 
-.editsvg { float:left }
-.left{float:left}
+.editsvg { float:none }
+.svgwindow {float:left; height:360px;}
+.compnav{
+
+}
+.compnav p{
+    display:inline;
+	background-color: #E3E8EF;
+}
+.compnav.selected{
+	background-color: #EEF2F8;
+}
 .omaior { height: 1024px;}
+
