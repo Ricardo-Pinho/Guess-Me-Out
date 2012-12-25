@@ -485,23 +485,43 @@ div#credits{
 
 .editsvg { float:none }
 .svgwindow {float:left; height:360px;}
+.comp{
+	width: 500px;
+	float:left;
+}
 .compnav{
 	width: 120px;
 	float:left;
 }
-.compnav p,.compnav a{
+.compnav a{
     display:block;
-	width: 120px;
+	width: 100px;
+	padding-right: 20px;
+	line-height: 30px;
 	color: #000000;
 	font-size: 0.85em;
-	text-align: center;
-	line-height: 20px;
+	text-align: right;
+	margin:0px;
     text-decoration: none;
+	background-color: #FAFAFA;
+	float:left;
+}
+.compnav a.selected{
+	background-color: #E3E8EF;;
+}
+.component { 
+	float:left;
+	width:380px;
+	height: 270px;
 	background-color: #E3E8EF;
-	
+	display: none;
 }
-.compnav.selected{
-	background-color: #EEF2F8;
+.svgpreview
+{
+	float:left;
+	width:100px;
+	margin-left:20px;
+	margin-top:20px;
+	height:100px;
 }
-.omaior { height: 1024px;}
 
