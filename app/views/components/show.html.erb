@@ -5,6 +5,7 @@
   <%= @component.name %>
 </p>
 
-
+<%if session[:user_admin]==1%>
 <%= link_to 'Edit', edit_component_path(@component) %> |
-<%= link_to 'Back', components_path %>
+<%end%>
+<%= link_to 'Back to Shop', shop_path %>

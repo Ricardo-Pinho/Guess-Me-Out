@@ -1,0 +1,419 @@
+<div id="content" xmlns="http://www.w3.org/1999/html">
+
+<h1>Shop</h1>
+<%if session[:user_id]%>
+<p>Credits: <%= session[:user_credits]%>.00 Coins</p>
+<%end%>
+
+  <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+    <tr style="height:27px">
+      <td id="tab0" onclick="selectionTab('0');" style="width:9%);" class="primeiraTab" align="center">
+        <label id="detalhesAlarmeTabLabel0" class="labelFormularioValor">All</label>
+      </td>
+      <td id="tab1" onclick="selectionTab('1');" style="width:9%);" class="meioTab" align="center">
+        <label id="detalhesAlarmeTabLabel1" class="labelFormularioValor">Hair Styles</label>
+      </td>
+      <td id="tab2" onclick="selectionTab('2');" style="width:10%);" class="meioTab" align="center">
+        <label id="detalhesAlarmeTabLabel2" class="labelFormularioValor">Hair Color</label>
+      </td>
+      <td id="tab3" onclick="selectionTab('3');" style="width:10%);" class="meioTab" align="center">
+        <label id="detalhesAlarmeTabLabel3" class="labelFormularioValor">Skin</label>
+      </td>
+      <td id="tab4" onclick="selectionTab('4');" style="width:10%);" class="meioTab" align="center">
+        <label id="detalhesAlarmeTabLabel4" class="labelFormularioValor">EyeColor</label>
+      </td>
+      <td id="tab5" onclick="selectionTab('5');" style="width:10%);" class="meioTab" align="center">
+        <label id="detalhesAlarmeTabLabel5" class="labelFormularioValor">Moustache</label>
+      </td>
+      <td id="tab6" onclick="selectionTab('6');" style="width:10%);" class="meioTab" align="center">
+        <label id="detalhesAlarmeTabLabel6" class="labelFormularioValor">Nose</label>
+      </td>
+      <td id="tab7" onclick="selectionTab('7');" style="width:10%);" class="meioTab" align="center">
+        <label id="detalhesAlarmeTabLabel7" class="labelFormularioValor">Mouth</label>
+      </td>
+      <td id="tab8" onclick="selectionTab('8');" style="width:10%);" class="meioTab" align="center">
+        <label id="detalhesAlarmeTabLabel8" class="labelFormularioValor">Shirt</label>
+      </td>
+      <td id="tab9" onclick="selectionTab('9');" style="width:10%);" class="ultimaTab" align="center">
+        <label id="detalhesAlarmeTabLabel9" class="labelFormularioValor">Shirt Color</label>
+      </td>
+    </tr>
+    <tr style="height:27px">
+      <td colspan="10">
+        <div id="contentTab0" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+             <% @componenttypes.each do |componenttype| %>
+                <p>
+                <span><%= raw(componenttype.svg) %></span>
+                <span>Name: <%= componenttype.name %></span>
+                <span>|Component: <%= Component.find(componenttype.component).name %></span>
+                <%if session[:user_id]%>
+                    <%check=false%>
+                    <% @usercomponents.each do |usercomponent| %>
+                        <%if usercomponent.componenttype_id==componenttype.id%>
+                          <%check=true%>
+                          <span>| You Already Own this Item</span>
+                          <span>|<%= link_to 'Enlarge', componenttype %></span>
+                        <%end%>
+                    <%end%>
+                    <%if check==false%>
+                      <span>| Price: <%= componenttype.price %>.00</span>
+                      <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                <%else%>
+                  <span>| Price: <%= componenttype.price %>.00</span>
+                  <span>|<%= link_to 'Buy', componenttype %></span>
+                <%end%>
+                <%if session[:user_admin]==1%>
+                    <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                    <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                </p>
+              <%else%>
+              </p>
+             <%end%>
+          <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+        <div id="contentTab1" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+          <% @componenttypes.each do |componenttype| %>
+              <%if componenttype.component_id==1%>
+                  <p>
+                    <span><%= raw(componenttype.svg) %></span>
+                    <span>Name: <%= componenttype.name %></span>
+                    <%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>| You Already Own this Item</span>
+                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                    <%if session[:user_admin]==1%>
+                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                        </p>
+                    <%else%>
+                        </p>
+                    <%end%>
+              <%end%>
+            <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+        <div id="contentTab2" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+          <% @componenttypes.each do |componenttype| %>
+              <%if componenttype.component_id==2%>
+                  <p>
+                    <span><%= raw(componenttype.svg) %></span>
+                    <span>Name: <%= componenttype.name %></span>
+                    <%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>| You Already Own this Item</span>
+                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                    <%if session[:user_admin]==1%>
+                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                        </p>
+                    <%else%>
+                        </p>
+                    <%end%>
+              <%end%>
+          <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+        <div id="contentTab3" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+          <% @componenttypes.each do |componenttype| %>
+              <%if componenttype.component_id==3%>
+                  <p>
+                    <span><%= raw(componenttype.svg) %></span>
+                    <span>Name: <%= componenttype.name %></span>
+                    <%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>| You Already Own this Item</span>
+                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                    <%if session[:user_admin]==1%>
+                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                        </p>
+                    <%else%>
+                        </p>
+                    <%end%>
+              <%end%>
+          <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+        <div id="contentTab4" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+          <% @componenttypes.each do |componenttype| %>
+              <%if componenttype.component_id==4%>
+                  <p>
+                    <span><%= raw(componenttype.svg) %></span>
+                    <span>Name: <%= componenttype.name %></span>
+                    <%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>| You Already Own this Item</span>
+                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                    <%if session[:user_admin]==1%>
+                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                        </p>
+                    <%else%>
+                        </p>
+                    <%end%>
+              <%end%>
+          <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+        <div id="contentTab5" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+          <% @componenttypes.each do |componenttype| %>
+              <%if componenttype.component_id==5%>
+                  <p>
+                    <span><%= raw(componenttype.svg) %></span>
+                    <span>Name: <%= componenttype.name %></span>
+                    <%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>| You Already Own this Item</span>
+                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                    <%if session[:user_admin]==1%>
+                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                        </p>
+                    <%else%>
+                        </p>
+                    <%end%>
+              <%end%>
+          <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+        <div id="contentTab6" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+          <% @componenttypes.each do |componenttype| %>
+              <%if componenttype.component_id==6%>
+                  <p>
+                    <span><%= raw(componenttype.svg) %></span>
+                    <span>Name: <%= componenttype.name %></span>
+                    <%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>| You Already Own this Item</span>
+                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                    <%if session[:user_admin]==1%>
+                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                        </p>
+                    <%else%>
+                        </p>
+                    <%end%>
+              <%end%>
+          <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+        <div id="contentTab7" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+          <% @componenttypes.each do |componenttype| %>
+              <%if componenttype.component_id==7%>
+                  <p>
+                    <span><%= raw(componenttype.svg) %></span>
+                    <span>Name: <%= componenttype.name %></span>
+                    <%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>| You Already Own this Item</span>
+                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                    <%if session[:user_admin]==1%>
+                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                        </p>
+                    <%else%>
+                        </p>
+                    <%end%>
+              <%end%>
+          <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+        <div id="contentTab8" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+          <% @componenttypes.each do |componenttype| %>
+              <%if componenttype.component_id==8%>
+                  <p>
+                    <span><%= raw(componenttype.svg) %></span>
+                    <span>Name: <%= componenttype.name %></span>
+                    <%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>| You Already Own this Item</span>
+                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                    <%if session[:user_admin]==1%>
+                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                        </p>
+                    <%else%>
+                        </p>
+                    <%end%>
+              <%end%>
+          <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+        <div id="contentTab9" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
+          <% @componenttypes.each do |componenttype| %>
+              <%if componenttype.component_id==9%>
+                  <p>
+                    <span><%= raw(componenttype.svg) %></span>
+                    <span>Name: <%= componenttype.name %></span>
+                    <%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>| You Already Own this Item</span>
+                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%>
+                    <%if session[:user_admin]==1%>
+                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+                        </p>
+                    <%else%>
+                        </p>
+                    <%end%>
+              <%end%>
+          <%end%>
+          <%if session[:user_admin]%>
+              <br />
+              <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+          <%end%>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+</div>

@@ -1,6 +1,6 @@
 class UsercomponentsController < ApplicationController
 
-  before_filter :authenticate_user, :except => [:index, :show]
+  before_filter :authenticate_user, :except => [:index, :show, :getsvgs_android]
 
   # GET /usercomponents
   # GET /usercomponents.json
