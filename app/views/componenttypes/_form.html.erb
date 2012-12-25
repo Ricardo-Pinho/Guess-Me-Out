@@ -27,14 +27,6 @@
     <%= f.label :svg %><br />
     <%= f.text_area :svg %>
   </div>
-    <div class="field">
-    <%= f.label :test1 %><br />
-    <%= f.text_area :test1 %>
-  </div>
-    <div class="field">
-    <%= f.label :test2 %><br />
-    <%= f.text_area :test2 %>
-  </div>
   <div class="field">
     <%= f.label :Component %><br />
     <%= collection_select(:componenttype, :component_id, Component.find(:all), :id, :name) %>

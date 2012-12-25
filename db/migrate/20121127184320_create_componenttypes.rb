@@ -6,8 +6,6 @@ class CreateComponenttypes < ActiveRecord::Migration
       t.integer :price
       t.text :svg
       t.references :component
-	  t.text :test1
-	  t.string :test2
 
       t.timestamps
     end
