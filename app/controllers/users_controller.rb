@@ -215,6 +215,11 @@
 
 	def create
 		@user = User.new(params[:user])
+    if @user.username=="admin"
+      @user.admin=1
+    else
+      @user.admin=0
+    end
 		if @user.save
       @cTypeHair = Usercomponent.new()
       @cHairColor = Usercomponent.new()
@@ -323,6 +328,13 @@
     @user = User.find(params[:id])
     @loggeduser=User.find_by_username(@current_user.username)
     if @user.email!=@loggeduser.email
+      Usercomponent.destroy_all(:user_id=> @user.id)
+      @avatar=Avatar.find_by_user_id(@user.id)
+      if @avatar
+        Avatarcomponent.destroy_all(:avatar_id=> @avatar.id)
+        @avatar.destroy
+      end
+
       @user.destroy
       flash[:color]= "valid"
       flash[:notice] = "User was deleted"

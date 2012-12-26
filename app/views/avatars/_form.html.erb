@@ -16,6 +16,7 @@
       <%= f.label :name %><br />
       <%= f.text_field :name %>
     </div>
+	
     <% if @user %>
     <%= f.hidden_field(:user_id, :value => @user.id) %>
     <%else%>

@@ -1,5 +1,5 @@
 class Avatar < ActiveRecord::Base
-	attr_accessible :name,:user,:user_id, :svg
+	attr_accessible :name,:user,:user_id, :svg,:id, :avatar
   belongs_to :user
   has_many :avatarcomponents
 

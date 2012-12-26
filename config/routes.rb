@@ -27,6 +27,7 @@ UserAuth::Application.routes.draw do
   match "getavatar", :to => 'avatarcomponents#getavatar'
   match "getavatarsvg", :to => 'avatarcomponents#getavatarsvg'
   match "updatecomponent", :to => 'avatarcomponents#updatecomponent'
+  match "updateavatar", :to => 'avatars#update'
   match "create_avatarcomponent", :to => 'avatarcomponents#createavatarcomponent'
   match "notshow_android", :to => 'users#notshow_android'
   match "new_android", :to => 'users#new_android'

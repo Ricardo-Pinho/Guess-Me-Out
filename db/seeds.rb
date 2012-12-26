@@ -6,9 +6,50 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Component.delete_all
-Componenttype.delete_all
 
+
+
+User.create!(:username=>'admin', :name=>'admin', :email=>'admin@admin.pt', :password=>'123456', :credits=>9001, :admin=>1)
+
+Usercomponent.create!(:user_id=>1, :component_id=>1, :componenttype_id=>1)
+Usercomponent.create!(:user_id=>1, :component_id=>1, :componenttype_id=>2)
+Usercomponent.create!(:user_id=>1, :component_id=>2, :componenttype_id=>3)
+Usercomponent.create!(:user_id=>1, :component_id=>2, :componenttype_id=>4)
+Usercomponent.create!(:user_id=>1, :component_id=>3, :componenttype_id=>5)
+Usercomponent.create!(:user_id=>1, :component_id=>3, :componenttype_id=>6)
+Usercomponent.create!(:user_id=>1, :component_id=>4, :componenttype_id=>7)
+Usercomponent.create!(:user_id=>1, :component_id=>4, :componenttype_id=>8)
+Usercomponent.create!(:user_id=>1, :component_id=>4, :componenttype_id=>9)
+Usercomponent.create!(:user_id=>1, :component_id=>4, :componenttype_id=>10)
+Usercomponent.create!(:user_id=>1, :component_id=>4, :componenttype_id=>11)
+Usercomponent.create!(:user_id=>1, :component_id=>5, :componenttype_id=>12)
+Usercomponent.create!(:user_id=>1, :component_id=>5, :componenttype_id=>13)
+Usercomponent.create!(:user_id=>1, :component_id=>6, :componenttype_id=>14)
+Usercomponent.create!(:user_id=>1, :component_id=>7, :componenttype_id=>15)
+Usercomponent.create!(:user_id=>1, :component_id=>8, :componenttype_id=>16)
+Usercomponent.create!(:user_id=>1, :component_id=>9, :componenttype_id=>17)
+Usercomponent.create!(:user_id=>1, :component_id=>9, :componenttype_id=>18)
+
+User.create!(:username=>'test', :name=>'test', :email=>'test@test.pt', :password=>'123456', :credits=>0, :admin=>0)
+
+Usercomponent.create!(:user_id=>2, :component_id=>1, :componenttype_id=>1)
+Usercomponent.create!(:user_id=>2, :component_id=>1, :componenttype_id=>2)
+Usercomponent.create!(:user_id=>2, :component_id=>2, :componenttype_id=>3)
+Usercomponent.create!(:user_id=>2, :component_id=>2, :componenttype_id=>4)
+Usercomponent.create!(:user_id=>2, :component_id=>3, :componenttype_id=>5)
+Usercomponent.create!(:user_id=>2, :component_id=>3, :componenttype_id=>6)
+Usercomponent.create!(:user_id=>2, :component_id=>4, :componenttype_id=>7)
+Usercomponent.create!(:user_id=>2, :component_id=>4, :componenttype_id=>8)
+Usercomponent.create!(:user_id=>2, :component_id=>4, :componenttype_id=>9)
+Usercomponent.create!(:user_id=>2, :component_id=>4, :componenttype_id=>10)
+Usercomponent.create!(:user_id=>2, :component_id=>4, :componenttype_id=>11)
+Usercomponent.create!(:user_id=>2, :component_id=>5, :componenttype_id=>12)
+Usercomponent.create!(:user_id=>2, :component_id=>5, :componenttype_id=>13)
+Usercomponent.create!(:user_id=>2, :component_id=>6, :componenttype_id=>14)
+Usercomponent.create!(:user_id=>2, :component_id=>7, :componenttype_id=>15)
+Usercomponent.create!(:user_id=>2, :component_id=>8, :componenttype_id=>16)
+Usercomponent.create!(:user_id=>2, :component_id=>9, :componenttype_id=>17)
+Usercomponent.create!(:user_id=>2, :component_id=>9, :componenttype_id=>18)
 
 Component.create([{name: 'Hair'}, {name: 'HairColor'}, {name: 'Skin'}, {name: 'EyeColor'}, {name: 'Moustache'}, {name: 'Nose'}, {name: 'Mouth'}, {name: 'Shirt'}, {name: 'ShirtColor'}])
 
