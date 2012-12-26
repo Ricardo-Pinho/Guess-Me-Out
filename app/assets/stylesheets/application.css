@@ -291,15 +291,9 @@ padding-bottom: 5px;
 .container {margin-bottom: 0px;}
 
 #rightpane{
-  width: 50%;
-  text-align: right;
   padding-left: 10px;
   float: right;
-
 }
-  #rightpane img.smartphone {
-    width: 250px;
-  }
 
 #leftpane {
   width: 100%;
@@ -463,12 +457,6 @@ div#credits{
   #leftpane{
     width: 100%;
   }
-  #rightpane{
-    width: 50%;
-  }
-    #rightpane img.smartphone{
-      width: 50%;
-    }
 }
 
 /*svg {
