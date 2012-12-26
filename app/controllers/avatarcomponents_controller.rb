@@ -105,8 +105,6 @@ class AvatarcomponentsController < ApplicationController
   end
 
 
-  # PUT /avatarcomponents/1
-  # PUT /avatarcomponents/1.json
   def updatecomponent
 		respond_to do |format|
 			@avatarcomponent = Avatarcomponent.find(params[:avatarcomponentid])
