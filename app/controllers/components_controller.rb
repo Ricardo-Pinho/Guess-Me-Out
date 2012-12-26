@@ -1,5 +1,6 @@
 class ComponentsController < ApplicationController
 
+  before_filter :save_login_state, :only => [:new, :edit, :create, :update, :destroy]
   before_filter :authenticate_user, :except => [:index, :show]
 
   # GET /components
@@ -76,6 +77,7 @@ class ComponentsController < ApplicationController
   # DELETE /components/1.json
   def destroy
     @component = Component.find(params[:id])
+    Componenttype.destroy_all(:component_id=>@component.id)
     @component.destroy
 
     respond_to do |format|

@@ -266,23 +266,33 @@ $(document).ready(function() {
 					}*/
 					return false;
 				});
-				
+
+
 				$("#save").click(function(){
 					//$.getJSON(path+"updateavatarsvg.json", { avatarid: avatar, svg:  document.getElementById(avatar).innerHTML }, function(json) {});
-					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: hairType.avcompid, componenttypeid: hairType.typeid()  }, function(json) {});
-					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: hairColor.avcompid, componenttypeid: hairColor.typeid()  }, function(json) {});
-					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: skinColor.avcompid, componenttypeid: skinColor.typeid()  }, function(json) {});
-					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: eyeColor.avcompid, componenttypeid: eyeColor.typeid()  }, function(json) {});
-					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: moustacheType.avcompid, componenttypeid: moustacheType.typeid()  }, function(json) {});
-					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: noseType.avcompid, componenttypeid: noseType.typeid()  }, function(json) {});
-					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: mouthType.avcompid, componenttypeid: mouthType.typeid()  }, function(json) {});
-					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtType.avcompid, componenttypeid: shirtType.typeid()  }, function(json) {});
-					$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtColor.avcompid, componenttypeid: shirtColor.typeid()  }, function(json) {});
+
+
+					$var=$.getJSON(path+"updatecomponent.json", { avatarcomponentid: hairType.avcompid, componenttypeid: hairType.typeid()  }, function(json) {});
+					$var+=$.getJSON(path+"updatecomponent.json", { avatarcomponentid: hairColor.avcompid, componenttypeid: hairColor.typeid()  }, function(json) {});
+					$var+=$.getJSON(path+"updatecomponent.json", { avatarcomponentid: skinColor.avcompid, componenttypeid: skinColor.typeid()  }, function(json) {});
+					$var+=$.getJSON(path+"updatecomponent.json", { avatarcomponentid: eyeColor.avcompid, componenttypeid: eyeColor.typeid()  }, function(json) {});
+					$var+=$.getJSON(path+"updatecomponent.json", { avatarcomponentid: moustacheType.avcompid, componenttypeid: moustacheType.typeid()  }, function(json) {});
+					$var+=$.getJSON(path+"updatecomponent.json", { avatarcomponentid: noseType.avcompid, componenttypeid: noseType.typeid()  }, function(json) {});
+					$var+=$.getJSON(path+"updatecomponent.json", { avatarcomponentid: mouthType.avcompid, componenttypeid: mouthType.typeid()  }, function(json) {});
+					$var+=$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtType.avcompid, componenttypeid: shirtType.typeid()  }, function(json) {});
+					$var+=$.getJSON(path+"updatecomponent.json", { avatarcomponentid: shirtColor.avcompid, componenttypeid: shirtColor.typeid()  }, function(json) {});
+
+					window.setTimeout(function()
+					{ 
+						anotherfun(); 
+					}, 200); 
 					//INSTRUCTION $.getJSON(path+"updatecomponent.json", { avatarcomponentid: newcomponent.avcompid, componenttypeid: newcomponent.typeid()  }, function(json) {});
-					return false;
 				});
 				
-				
+				function anotherfun()
+				{
+					$(".edit_avatar").submit();
+				}
 				
 				
 				

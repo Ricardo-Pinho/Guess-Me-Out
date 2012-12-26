@@ -7,8 +7,22 @@
 		 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="256px" height="256px"
 		 viewBox="0 0 512 512" xml:space="preserve"></svg>	
 	<p></p>	
-	<a href="#save" id="save">Save</a> |
-	<%= link_to 'Back', avatars_path %>
+	  <%= form_for(@avatar) do |f| %>
+
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+	
+    <% if @user %>
+    <%= f.hidden_field(:user_id, :value => @user.id) %>
+    <%else%>
+    <%= f.hidden_field(:user_id, :value => session[:user_id]) %>
+    <%end%>
+    <div class="actions", id="save">
+      	<a href="#save" id="save">Save</a>  |    <%= link_to 'Back', @avatar %>
+    </div>
+  <% end %>
 	</div>
 	<div class="comp">
 		<div class="compnav">
@@ -54,4 +68,16 @@
 		
 	</div>
 	</div>
+	<p></p>
+	      <% if @avatar.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@avatar.errors.count, "error") %> prohibited this avatar from being saved:</h2>
+
+        <ul>
+        <% @avatar.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
 </div>

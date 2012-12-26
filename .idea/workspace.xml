@@ -2,16 +2,146 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64b121d4-c05b-487c-b0b1-da80a4e37370" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\app\assets\javascripts\tits.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\app\assets\stylesheets\tits.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\app\controllers\tits_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\app\helpers\tits_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\app\views\tits\index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\development.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\test\functional\tits_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess Me Out\test\unit\helpers\tits_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\app\assets\javascripts\tits.js.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\app\assets\stylesheets\tits.css.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\app\controllers\tits_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\app\helpers\tits_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\app\views\tits\index.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\128773281749417353 - Cópia.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\128773281749417353.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Female.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Google_Play_Store_96.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Male.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Other.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-33c6a01902ab4696b523924fead54ce8.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-33c6a01902ab4696b523924fead54ce8.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-43f9cecb36bb3e63256108c104a9e1fc.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-43f9cecb36bb3e63256108c104a9e1fc.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-613e43921d26a70865010e7bc73d84ca.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-613e43921d26a70865010e7bc73d84ca.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars\test@test.pt.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\bkg.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\bkg2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\bkg_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\blackpixel.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\coffee-script-7fa376506e451a0e8613440eda43472f.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\coffee-script-7fa376506e451a0e8613440eda43472f.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\coffee-script.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\coffee-script.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar-405be1bc9d6a0b4af01a39be490dbf93.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar-405be1bc9d6a0b4af01a39be490dbf93.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\faceb.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\innersvg\innersvg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\innersvg\innersvg.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-59b63ac6aa9e42915ad70a8ff6c651d3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-59b63ac6aa9e42915ad70a8ff6c651d3.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui-de7b57bc0ab30c2b9353dfbe89a4eadd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui-de7b57bc0ab30c2b9353dfbe89a4eadd.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.min-62fab7113f99de8919f788dfe84039e5.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.min-62fab7113f99de8919f788dfe84039e5.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.min.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.min-fcfb9d96f1fd25bd554d91f850a9e172.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.min-fcfb9d96f1fd25bd554d91f850a9e172.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.min.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery_ujs-b622ae8bf8201d0766cc779998edfb9f.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery_ujs-b622ae8bf8201d0766cc779998edfb9f.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery_ujs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery_ujs.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\logo_horizontal_t2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\manequin.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\manifest.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\piechartimage.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\rails.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\scaffolds.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\scaffolds.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\search_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\smartphone.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\body_dark.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\body_light.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\hair_blond.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\hair_emo.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\moustache_blond.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\sunglasses_black.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\sunglasses_pink.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\tshirt_blue.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\tshirt_red.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\tshirt_red_plain.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tab_down.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tab_up.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\whitepixel.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\who-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\functional\tits_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\unit\helpers\tits_helper_test.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/avatarcomponents_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/avatarcomponents_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/avatars_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/avatars_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/components_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/components_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/avatar.rb" afterPath="$PROJECT_DIR$/app/models/avatar.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/avatars/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/avatars/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/avatars/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/avatars/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/help.html.erb" afterPath="$PROJECT_DIR$/app/views/home/help.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
     <ignored path="Guess Me Out.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,66 +164,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/componenttypes/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="79" selection-start="958" selection-end="958" vertical-scroll-proportion="-18.653847">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/shop_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="113" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usercomponents_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/usercomponents_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="26" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="1" selection-start="322" selection-end="4445" vertical-scroll-proportion="0.28506097">
-              <folding>
-                <element signature="n#style#0;n#b#0;n#p#0;n#noscript#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="-0.65384614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="avatars_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="avatars_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/avatars_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="1" selection-start="50" selection-end="135" vertical-scroll-proportion="0.0">
+            <state line="180" column="49" selection-start="5294" selection-end="5294" vertical-scroll-proportion="0.797654">
               <folding />
             </state>
           </provider>
@@ -102,7 +176,79 @@
       <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="0" selection-start="6406" selection-end="7184" vertical-scroll-proportion="0.0">
+            <state line="3" column="2" selection-start="53" selection-end="145" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="41" selection-start="1148" selection-end="1148" vertical-scroll-proportion="-12.807693">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/avatars/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="44" selection-start="950" selection-end="950" vertical-scroll-proportion="-14.384615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="components_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/components_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="84" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shop_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/shop_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="39" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shop/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="48" selection-start="823" selection-end="823" vertical-scroll-proportion="40.53846">
               <folding />
             </state>
           </provider>
@@ -121,11 +267,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/avatarcomponents_controller.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/avatars_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/shop/shop.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
@@ -137,6 +278,11 @@
         <option value="$PROJECT_DIR$/app/views/home/home.html.erb" />
         <option value="$PROJECT_DIR$/app/views/componenttypes/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/avatars/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/components_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/avatars_controller.rb" />
       </list>
     </option>
   </component>
@@ -179,6 +325,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,7 +340,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -203,21 +350,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -239,7 +372,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -250,6 +383,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="usercomponents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -257,7 +394,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -279,7 +416,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -290,10 +427,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sessions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -301,7 +434,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -323,7 +456,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -345,7 +478,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -367,7 +500,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -389,7 +522,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -411,7 +544,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Guess-Me-Out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="avatarcomponents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Guess-Me-Out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Guess-Me-Out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mailers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -425,7 +616,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -443,51 +634,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemId" value="Guess-Me-Out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -502,17 +649,16 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="ruby.project.structure" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Rails.Unnamed">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -702,27 +848,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837838" sideWeight="0.4913917" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.67027026" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27833572" sideWeight="0.6716216" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2826399" sideWeight="0.6716216" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5035868" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.49426112" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837838" sideWeight="0.4913917" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -778,86 +924,35 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/avatars/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/avatars/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/search.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/login_attempt_android.json.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="31" selection-start="116" selection-end="116" vertical-scroll-proportion="0.02514793">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/avatars/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sessions/profile.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1316568">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="0" selection-start="6406" selection-end="7184" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/avatars_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="1" selection-start="50" selection-end="135" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/shop_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="113" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1316568" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/componenttypes/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="79" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="42" selection-start="1306" selection-end="1306" vertical-scroll-proportion="-13.076923">
           <folding />
         </state>
       </provider>
@@ -869,26 +964,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="-0.65384614">
+        <state line="43" column="41" selection-start="1148" selection-end="1148" vertical-scroll-proportion="-12.807693">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/componenttypes/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/avatars/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="79" selection-start="958" selection-end="958" vertical-scroll-proportion="-18.653847">
+        <state line="22" column="44" selection-start="950" selection-end="950" vertical-scroll-proportion="-14.384615">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/shop/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="1" selection-start="322" selection-end="4445" vertical-scroll-proportion="0.28506097">
-          <folding>
-            <element signature="n#style#0;n#b#0;n#p#0;n#noscript#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="16" column="48" selection-start="823" selection-end="823" vertical-scroll-proportion="40.53846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="2" selection-start="53" selection-end="145" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/shop_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="39" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/components_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="84" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/avatars_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="49" selection-start="5294" selection-end="5294" vertical-scroll-proportion="0.797654">
+          <folding />
         </state>
       </provider>
     </entry>

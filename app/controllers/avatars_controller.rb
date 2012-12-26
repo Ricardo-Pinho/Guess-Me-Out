@@ -31,7 +31,7 @@ class AvatarsController < ApplicationController
       @user= User.find(params[:userid])
       @avatar = Avatar.find_by_user_id(@user.id)
       if @avatar
-        if @current_user.admin!=1
+        if session[:user_admin]!=1
           flash[:notice] = "User already has an avatar"
           flash[:color]= "invalid"
           redirect_to(:controller=>'users', :action => 'show', :id => @user.id)
@@ -43,7 +43,6 @@ class AvatarsController < ApplicationController
       end
     end
     @avatar = Avatar.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @avatar }
@@ -71,28 +70,28 @@ class AvatarsController < ApplicationController
   # POST /avatars
   # POST /avatars.json
   def create
-  @avatar = Avatar.find_by_user_id(@current_user.id)
-  if @avatar && @current_user.admin!=1
-    flash.now[:notice] = "User already has an avatar"
+  @avatar = Avatar.find_by_user_id(session[:user_id])
+  if @avatar && session[:user_admin]!=1
+    flash.now[:notice] = "You already have an avatar"
     flash.now[:color]= "invalid"
     render action: "new"
     return
   end
   @avatar2 = Avatar.new(params[:avatar])
   @avatar = Avatar.find_by_user_id(@avatar2.user_id)
-  if @avatar && @current_user.admin!=1
+  if @avatar && session[:user_admin]!=1
     flash.now[:notice] = "User already has an avatar"
     flash.now[:color]= "invalid"
     render action: "new"
     return
   end
-  if @avatar2.user_id!=@current_user.id && @current_user.admin!=1
+  if @avatar2.user_id!=session[:user_id] && session[:user_admin]!=1
     flash.now[:notice] = "Can't create an avatar for another user"
     flash.now[:color]= "invalid"
     render action: "new"
     return
   end
-  if @avatar && @avatar2.user_id==@current_user.id && @current_user.admin==1
+  if @avatar && @avatar2.user_id==session[:user_id] && session[:user_admin]!=1
     flash.now[:notice] = "Can't create more than 1 avatar per user"
     flash.now[:color]= "invalid"
     render action: "new"
@@ -141,8 +140,11 @@ class AvatarsController < ApplicationController
 		@cTypeShirt.componenttype_id = 16
 		@cShirtColor.componenttype_id = 17
 		if @cTypeHair.save and @cTypeSkin.save and @cTypeEyes.save and @cTypeNose.save and @cTypeMouth.save and @cTypeFacial.save and @cTypeShirt.save and @cHairColor.save and @cShirtColor.save
-      flash.now[:notice] = "Avatar created Successfully"
-      flash.now[:color]= "valid"
+		flash[:notice] = "Avatar created Successfully"
+		flash[:color]= "valid"
+		if @avatar.user_id==session[:user_id]
+			session[:user_avatar]=@avatar.id
+		end
 			redirect_to @avatar
 			return
     else
@@ -164,14 +166,20 @@ class AvatarsController < ApplicationController
   # PUT /avatars/1.json
   def update
     @avatar = Avatar.find(params[:id])
-    if @avatar.user_id!=@current_user.id && @current_user.admin!=1
+    if @avatar.user_id!=session[:user_id] && session[:user_admin]!=1
       flash.now[:notice] = "Avatar does not belong to you!"
       flash.now[:color]= "invalid"
       render action: "show"
       return
     end
+    if @avatar.user_id != session[:user_id]
+      @var=@avatar.user_id
+    end
     respond_to do |format|
       if @avatar.update_attributes(params[:avatar])
+        if @var
+          @avatar.update_attribute(:user_id, @var)
+        end
         format.html { redirect_to @avatar, notice: 'Avatar was successfully updated.' }
         format.json { head :no_content }
       else
@@ -191,10 +199,11 @@ class AvatarsController < ApplicationController
       render action: "show"
       return
     end
-    @avatar.destroy
-
+	Avatarcomponent.destroy_all(:avatar_id=> @avatar.id)
+  @avatar.destroy
+	session[:user_avatar]=-1
     respond_to do |format|
-      format.html { redirect_to avatars_url }
+      format.html { redirect_to avatars_url } #need to change this later when search is made
       format.json { head :no_content }
     end
   end

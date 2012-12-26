@@ -51,7 +51,11 @@
         <%end%>
 
         <%if url_for(params).match("/avatars/")%>
-          <%= link_to content_tag(:div, "Avatar", :class => 'tab_selected') , new_avatar_path, class: "tab_links" %>
+				<%if session[:user_avatar]!=-1 %>
+                    <%= link_to content_tag(:div, "Avatar", :class => 'tab_selected') , "/avatars/"+session[:user_avatar].to_s, class: "tab_links" %>
+                <%else%>
+                    <%= link_to content_tag(:div, "Avatar", :class => 'tab_selected') , new_avatar_path, class: "tab_links" %>
+                <%end%>
         <%else%>
                 <%if session[:user_avatar]!=-1 %>
                     <%= link_to content_tag(:div, "Avatar", :class => 'tab_unselected') , "/avatars/"+session[:user_avatar].to_s, class: "tab_links" %>
