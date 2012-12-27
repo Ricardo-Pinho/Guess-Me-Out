@@ -2,7 +2,7 @@
    class UsersController < ApplicationController
 
   before_filter :save_login_state, :only => [:new, :create, :notshow_android, :create_android]
-  before_filter :authenticate_user, :except => [:new, :create, :show, :notshow_android, :create_android, :new_android]
+  before_filter :authenticate_user, :except => [:new, :create, :search, :show, :notshow_android, :create_android, :new_android]
 
 
   def new
@@ -15,8 +15,7 @@
   end
 
   def search
-    @query = User.new(params[:search_query])
-    @users = User.all( :conditions=> ["username like ?","%" + @query.username  + "%"])
+    @users = User.all( :conditions=> ["username like ?","%" + params[:name]  + "%"])
     respond_to do |format|
     format.html
     format.json
@@ -197,7 +196,7 @@
           return
         end
       else
-        flash.now[:notice] = "Form is invalid"
+        flash.now[:notice] = "There were errors in your form"
         flash.now[:color]= "invalid"
         if (session[:saved_location] == "profile")
           session[:saved_location] = ""
@@ -316,7 +315,7 @@
         render "new"
       end
 		else
-			flash.now[:notice] = "Form is invalid"
+			flash.now[:notice] = "Sign up was not successfull"
 			flash.now[:color]= "invalid"
 			render "new"
 		end

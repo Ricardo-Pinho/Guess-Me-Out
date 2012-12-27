@@ -2,7 +2,6 @@
   <h2>User search results</h2>
     <%if @users.empty? %>
       <p class="emtpy_results">Unfortunately, no user matches your search. Try harder.</p>
-      <% end %>
     <%else%>
       <% @users.each do |user| %>
         <div class="user_search">
@@ -46,4 +45,5 @@
         <% end %>
         </div>
       <%end%>
+  <% end %>
 </div>

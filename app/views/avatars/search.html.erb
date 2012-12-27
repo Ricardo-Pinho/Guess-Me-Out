@@ -1,0 +1,18 @@
+<div id="content">
+  <h2>Avatar search results</h2>
+  <%if @avatars.empty? %>
+      <p class="emtpy_results">Unfortunately, no avatar matches your search. Try harder.</p>
+
+  <%else%>
+  <% @avatars.each do |avatar| %>
+      <div class="user_search">
+        <div id="svg">
+          SVG goes here
+        </div>
+        <div id="name">
+          <%= link_to avatar.name, :controller => 'avatars', :action => 'show', :id => avatar %>
+        </div>
+      </div>
+  <%end%>
+  <% end %>
+</div>

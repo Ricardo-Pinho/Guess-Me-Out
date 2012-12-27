@@ -1,0 +1,28 @@
+<div id="content">
+  <h2>Component search results</h2>
+  <%if @components.empty? %>
+      <p class="emtpy_results">Unfortunately, no component matches your search. Try harder.</p>
+
+  <%else%>
+  <% @components.each do |component| %>
+      <div class="user_search">
+        <div id="name">
+          <%= component.name %>
+          (<%= link_to 'See All the Items of this Component', :controller => 'components', :action => 'show', :id => component %>)
+        </div>
+        <% if session[:user_admin]==1 %>
+        <tab></tab>
+        <%= link_to 'Show', component %>
+        |<%= link_to 'Edit', edit_component_path(component) %>
+        |<%= link_to 'Destroy', component, confirm: 'Are you sure?', method: :delete %>
+        <%end%>
+      </div>
+      <br />
+  <%end%>
+      <% if session[:user_admin]==1 %>
+      <br />
+
+      <%= link_to 'New Component', new_component_path %>
+      <%end%>
+  <% end %>
+</div>

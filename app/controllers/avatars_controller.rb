@@ -1,15 +1,14 @@
 class AvatarsController < ApplicationController
 
-  before_filter :authenticate_user, :except => [:index, :show, :create_avatar_android]
+  before_filter :authenticate_user, :except => [:search, :show, :create_avatar_android]
 
   # GET /avatars
   # GET /avatars.json
-  def index
-    @avatars = Avatar.all
-
+  def search
+    @avatars = Avatar.all( :conditions=> ["name like ?","%" + params[:name]  + "%"])
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @avatars }
+      format.html
+      format.json
     end
   end
 
@@ -193,10 +192,10 @@ class AvatarsController < ApplicationController
   # DELETE /avatars/1.json
   def destroy
     @avatar = Avatar.find(params[:id])
-    if @avatar.user_id!=@current_user.id && @current_user.admin!=1
-      flash.now[:notice] = "Avatar does not belong to you!s"
-      flash.now[:color]= "invalid"
-      render action: "show"
+    if session[:user_admin]!=1
+      flash[:notice] = "Only admins can destroy avatars!"
+      flash[:color]= "invalid"
+      redirect_to(:controller => 'home', :action => 'home')
       return
     end
 	Avatarcomponent.destroy_all(:avatar_id=> @avatar.id)

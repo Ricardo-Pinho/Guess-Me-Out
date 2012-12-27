@@ -1,0 +1,43 @@
+<div id="content">
+  <h2>Item search results</h2>
+  <%if @componenttypes.empty? %>
+      <p class="emtpy_results">Unfortunately, no item matches your search. Try harder.</p>
+
+  <%else%>
+    <% @componenttypes.each do |componenttype| %>
+        <p>
+          <span><%= raw(componenttype.svg) %></span>
+          <span>Name: <%= componenttype.name %></span>
+          <span>|Component: <%= Component.find(componenttype.component).name %></span>
+          <%if session[:user_id]%>
+              <%check=false%>
+              <% @usercomponents.each do |usercomponent| %>
+                  <%if usercomponent.componenttype_id==componenttype.id%>
+                      <%check=true%>
+                      <span>| You Already Own this Item</span>
+                      <span>|<%= link_to 'Enlarge', componenttype %></span>
+                  <%end%>
+              <%end%>
+              <%if check==false%>
+                  <span>| Price: <%= componenttype.price %>.00</span>
+                  <span>|<%= link_to 'Buy', componenttype %></span>
+              <%end%>
+          <%else%>
+              <span>| Price: <%= componenttype.price %>.00</span>
+              <span>|<%= link_to 'Buy', componenttype %></span>
+          <%end%>
+          <%if session[:user_admin]==1%>
+              <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+              <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+              </p>
+          <%else%>
+              </p>
+          <%end%>
+    <%end%>
+    <%if session[:user_admin]%>
+        <br />
+        <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+    <%end%>
+      <%= link_to 'Go to Shop', shop_path %>
+  <% end %>
+</div>
