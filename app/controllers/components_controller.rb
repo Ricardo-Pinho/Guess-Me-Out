@@ -9,7 +9,7 @@ class ComponentsController < ApplicationController
     @components = Component.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # search.html.erb
       format.json { render json: @components }
     end
   end

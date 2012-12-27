@@ -8,7 +8,7 @@ class ComponenttypesController < ApplicationController
     @componenttypes = Componenttype.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # search.html.erb
       format.json { render json: @componenttypes }
     end
   end
@@ -48,7 +48,12 @@ class ComponenttypesController < ApplicationController
   # GET /componenttypes/new.json
   def new
     @componenttype = Componenttype.new
-
+    if session[:user_admin]!=1
+      flash[:notice] = "Only admins can create Componenttypes!"
+      flash[:color]= "invalid"
+      redirect_to(:controller => 'home', :action => 'home')
+      return
+    end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @componenttype }
@@ -57,6 +62,12 @@ class ComponenttypesController < ApplicationController
 
   # GET /componenttypes/1/edit
   def edit
+    if session[:user_admin]!=1
+      flash[:notice] = "Only admins can edit Componenttypes!"
+      flash[:color]= "invalid"
+      redirect_to(:controller => 'home', :action => 'home')
+      return
+    end
     @componenttype = Componenttype.find(params[:id])
   end
 
@@ -64,6 +75,12 @@ class ComponenttypesController < ApplicationController
   # POST /componenttypes.json
   def create
     @componenttype = Componenttype.new(params[:componenttype])
+    if session[:user_admin]!=1
+      flash[:notice] = "Only admins can edit Componenttypes!"
+      flash[:color]= "invalid"
+      redirect_to(:controller => 'home', :action => 'home')
+      return
+    end
     respond_to do |format|
       if @componenttype.save
         format.html { redirect_to @componenttype, notice: 'Componenttype was successfully created.' }
@@ -79,7 +96,12 @@ class ComponenttypesController < ApplicationController
   # PUT /componenttypes/1.json
   def update
     @componenttype = Componenttype.find(params[:id])
-
+    if session[:user_admin]!=1
+      flash[:notice] = "Only admins can update Componenttypes!"
+      flash[:color]= "invalid"
+      redirect_to(:controller => 'home', :action => 'home')
+      return
+    end
     respond_to do |format|
       if @componenttype.update_attributes(params[:componenttype])
         format.html { redirect_to @componenttype, notice: 'Componenttype was successfully updated.' }
@@ -95,6 +117,12 @@ class ComponenttypesController < ApplicationController
   # DELETE /componenttypes/1.json
   def destroy
     @componenttype = Componenttype.find(params[:id])
+    if session[:user_admin]!=1
+      flash[:notice] = "Only admins can destroy Componenttypes!"
+      flash[:color]= "invalid"
+      redirect_to(:controller => 'home', :action => 'home')
+      return
+    end
     @componenttype.destroy
 
     respond_to do |format|

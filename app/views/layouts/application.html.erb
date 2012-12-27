@@ -5,6 +5,7 @@
     <link href='http://fonts.googleapis.com/css?family=Orienta' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <script type="text/javascript" src="http://jk.revolvermaps.com/r.js"></script>
     <%= csrf_meta_tags %>
   </head>
 
@@ -86,9 +87,10 @@
         <%end%>
 
         <div id="search">
-          <%= form_for(:search_query, :url => {:controller => 'users', :action => 'search'}) do |f| %>
-            <%= f.text_field :username %>
-            <%= f.submit "" %>
+          <%= form_tag({:controller => "home", :action => "search"}, :method => "get") do %>
+            <%= text_field_tag 'name', nil, :placeholder => 'Search Stuff'%>
+            <%= select_tag :searchtype, grouped_options_for_select('Choose what to Search' => ['All', 'Users', 'Avatars', 'Components', 'Items']) %>
+            <%= submit_tag '' %>
           <% end %>
 
         </div>
