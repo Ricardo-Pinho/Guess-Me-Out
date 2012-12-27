@@ -11,8 +11,7 @@
     </svg>
 	<p></p>
   <%if session[:user_admin]==1 || session[:user_avatar]==@avatar.id%>
-	<%= link_to 'Edit', edit_avatar_path(@avatar) %> |
+	<%= link_to 'Edit', edit_avatar_path(@avatar) %>
   <%end%>
-	<%= link_to 'Back', avatars_path %>
 
 </div>

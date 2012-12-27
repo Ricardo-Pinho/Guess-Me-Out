@@ -2,7 +2,7 @@
   <h2>Avatar search results</h2>
   <%if @avatars.empty? %>
       <p class="emtpy_results">Unfortunately, no avatar matches your search. Try harder.</p>
-  <% end %>
+
   <%else%>
   <% @avatars.each do |avatar| %>
       <div class="user_search">
@@ -14,4 +14,5 @@
         </div>
       </div>
   <%end%>
+  <% end %>
 </div>

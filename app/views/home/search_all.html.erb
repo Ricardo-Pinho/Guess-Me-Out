@@ -1,0 +1,133 @@
+<div id="content">
+  <h2>User search results</h2>
+  <%if @users.empty? %>
+      <p class="emtpy_results">Unfortunately, no user matches your search. Try harder.</p>
+  <%else%>
+  <% @users.each do |user| %>
+      <div class="user_search">
+        <div id="username">
+          <%if user.sex.blank? %>
+          <%else%>
+              <%= image_tag(user.sex + ".png", :title => user.sex) %>
+          <%end%>
+          <%= link_to user.username, :controller => 'users', :action => 'show', :id => user %>
+        </div>
+        <span id="name">
+          <%if user.name.blank? %>
+          <%else%>
+            <span>Name:</span><%= user.name %>
+          <%end%>
+        </span>
+        <span id="location">
+          <%if user.location.blank? %>
+          <%else%>
+            <span>From:</span><%= user.location %>
+          <%end%>
+        </span>
+        <span id="birth">
+        <%if user.birthdate.blank? %>
+          <%else%>
+          <span>Birth:</span><%= user.birthdate %>
+        <%end%>
+        </span>
+        <%if session[:user_admin]==1 %>
+          <span id="credits">
+              <span>Credits:</span><%= user.credits %>
+          </span>
+          <span id="status">
+            <span>Status:</span>
+            <%if user.admin==1 %>
+              Admin
+            <%else%>
+              User
+            <%end%>
+          </span>
+        <% end %>
+      </div>
+  <%end%>
+  <% end %>
+  <p>-------------------------------------------------------------------------------------------------------------</p>
+  <h2>Avatar search results</h2>
+  <%if @avatars.empty? %>
+      <p class="emtpy_results">Unfortunately, no avatar matches your search. Try harder.</p>
+
+  <%else%>
+  <% @avatars.each do |avatar| %>
+      <div class="user_search">
+        <div id="svg">
+          SVG goes here
+        </div>
+        <div id="name">
+          <%= link_to avatar.name, :controller => 'avatars', :action => 'show', :id => avatar %>
+        </div>
+      </div>
+  <%end%>
+  <% end %>
+  <p>-------------------------------------------------------------------------------------------------------------</p>
+  <h2>Component search results</h2>
+  <%if @components.empty? %>
+      <p class="emtpy_results">Unfortunately, no component matches your search. Try harder.</p>
+
+  <%else%>
+  <% @components.each do |component| %>
+      <div class="user_search">
+        <div id="name">
+          <%= component.name %>
+          (<%= link_to 'See All the Items of this Component', :controller => 'components', :action => 'show', :id => component %>)
+        </div>
+        <% if session[:user_admin]==1 %>
+            <tab></tab>
+            <%= link_to 'Show', component %>
+            |<%= link_to 'Edit', edit_component_path(component) %>
+            |<%= link_to 'Destroy', component, confirm: 'Are you sure?', method: :delete %>
+        <%end%>
+      </div>
+      <br />
+  <%end%>
+      <% if session[:user_admin]==1 %>
+      <br />
+
+      <%= link_to 'New Component', new_component_path %>
+      <%end %>
+  <% end %>
+  <p>-------------------------------------------------------------------------------------------------------------</p>
+  <h2>Item search results</h2>
+  <%if @componenttypes.empty? %>
+      <p class="emtpy_results">Unfortunately, no item matches your search. Try harder.</p>
+  <%else%>
+  <% @componenttypes.each do |componenttype| %>
+      <p>
+        <span><%= raw(componenttype.svg) %></span>
+        <span>Name: <%= componenttype.name %></span>
+        <span>|Component: <%= Component.find(componenttype.component).name %></span>
+        <%if session[:user_id]%>
+            <%check=false%>
+            <% @usercomponents.each do |usercomponent| %>
+                <%if usercomponent.componenttype_id==componenttype.id%>
+                    <%check=true%>
+                    <span>| You Already Own this Item</span>
+                    <span>|<%= link_to 'Enlarge', componenttype %></span>
+                <%end%>
+            <%end%>
+            <%if check==false%>
+                <span>| Price: <%= componenttype.price %>.00</span>
+                <span>|<%= link_to 'Buy', componenttype %></span>
+            <%end%>
+        <%else%>
+            <span>| Price: <%= componenttype.price %>.00</span>
+            <span>|<%= link_to 'Buy', componenttype %></span>
+        <%end%>
+        <%if session[:user_admin]==1%>
+            <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+            <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
+            </p>
+        <%else%>
+            </p>
+        <%end%>
+  <%end%>
+  <%if session[:user_admin]%>
+      <br />
+      <span><%= link_to 'New Componenttype', new_componenttype_path %></span>
+  <%end%>
+  <% end %>
+</div>

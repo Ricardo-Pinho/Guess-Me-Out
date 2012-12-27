@@ -89,7 +89,7 @@
         <div id="search">
           <%= form_tag({:controller => "home", :action => "search"}, :method => "get") do %>
             <%= text_field_tag 'name', nil, :placeholder => 'Search Stuff'%>
-            <%= select_tag :searchtype, grouped_options_for_select('Choose what to Search' => ['All', 'Users', 'Avatars', 'Components', 'Items']) %>
+            <%= select_tag :searchtype, grouped_options_for_select('Search Type' => ['All', 'Users', 'Avatars', 'Components', 'Items']) %>
             <%= submit_tag '' %>
           <% end %>
 

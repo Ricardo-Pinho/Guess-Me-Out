@@ -5,11 +5,10 @@ class AvatarsController < ApplicationController
   # GET /avatars
   # GET /avatars.json
   def search
-    @avatars = Avatars.all( :conditions=> ["name like ?","%" + params[:name]  + "%"])
+    @avatars = Avatar.all( :conditions=> ["name like ?","%" + params[:name]  + "%"])
     respond_to do |format|
       format.html
       format.json
-    end
     end
   end
 

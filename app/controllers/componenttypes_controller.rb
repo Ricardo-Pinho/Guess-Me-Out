@@ -1,15 +1,17 @@
 class ComponenttypesController < ApplicationController
 
-  before_filter :authenticate_user, :except => [:index, :gettypebycolor, :show, :getsvgs_android]
+  before_filter :authenticate_user, :except => [:search, :gettypebycolor, :show, :getsvgs_android]
 
   # GET /componenttypes
   # GET /componenttypes.json
-  def index
-    @componenttypes = Componenttype.all
-
+  def search
+    @componenttypes = Componenttype.all( :conditions=> ["name like ?","%" + params[:name]  + "%"])
+    if session[:user_id]
+      @usercomponents = Usercomponent.all( :conditions=> ["user_id = ?", + session[:user_id]])
+    end
     respond_to do |format|
-      format.html # search.html.erb
-      format.json { render json: @componenttypes }
+      format.html
+      format.json
     end
   end
 
@@ -126,7 +128,9 @@ class ComponenttypesController < ApplicationController
     @componenttype.destroy
 
     respond_to do |format|
-      format.html { redirect_to componenttypes_url }
+      flash[:notice] = "Item Deleted"
+      flash[:color]= "valid"
+      format.html { redirect_to shop_url }
       format.json { head :no_content }
     end
   end

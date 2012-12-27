@@ -114,15 +114,21 @@ div.logo{
     border-radius: 3px;
     height: 20px;
     box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.15) inset;
-    margin: auto;
-    margin-top: 5px;
-    width: auto;
+    margin: 5px;
+    width: 29%;
   }
 
   div#search input{
       border: none;
       background: rgba(0,0,0,0);
+      width: 45%;
+      text-align:center;
   }
+div#search select{
+    border: none;
+    background: rgba(0,0,0,0.1);
+    height:auto;
+}
 
     div#search input[type="text"]{
       
@@ -131,6 +137,7 @@ div.logo{
 
     div#search input[type="submit"]{
       background-image: url('search_icon.png');
+      cursor:pointer;
       width: 20px;
     }
 

@@ -196,7 +196,7 @@
           return
         end
       else
-        flash.now[:notice] = "Form is invalid"
+        flash.now[:notice] = "There were errors in your form"
         flash.now[:color]= "invalid"
         if (session[:saved_location] == "profile")
           session[:saved_location] = ""
@@ -315,7 +315,7 @@
         render "new"
       end
 		else
-			flash.now[:notice] = "Form is invalid"
+			flash.now[:notice] = "Sign up was not successfull"
 			flash.now[:color]= "invalid"
 			render "new"
 		end

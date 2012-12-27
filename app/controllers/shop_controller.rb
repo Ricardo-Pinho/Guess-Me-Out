@@ -12,7 +12,7 @@ class ShopController < ApplicationController
   def buy
     @componenttype = Componenttype.find(params[:id])
     @user=User.find(session[:user_id])
-    @credits=@user.credits-@componenttype.price
+    @credits=@user.credits - @componenttype.price
     @usercomponent = Usercomponent.new()
     @usercomponent.user_id=@user.id
     @usercomponent.component_id=@componenttype.component_id
@@ -25,6 +25,7 @@ class ShopController < ApplicationController
     end
     respond_to do |format|
       if @user.update_attribute(:credits,@credits) and @usercomponent.save!
+        session[:user_credits]=@credits
         flash[:notice] = "Item Bought Successfully. Thank you!"
         flash[:color]= "valid"
           redirect_to(:controller=>'shop', :action => 'shop')

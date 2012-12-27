@@ -27,7 +27,7 @@ UserAuth::Application.routes.draw do
   match "search_avatars", :to=>'avatars#search'
   match "search_components", :to=>'components#search'
   match "search_items", :to=>'componenttypes#search'
-  match "search_all", :to=>'componenttypes#search_all'
+  match "search_all", :to=>'home#search_all'
   match "getavatar2", :to=>'avatars#getavatar'
   match "getavatar", :to => 'avatarcomponents#getavatar'
   match "getavatarsvg", :to => 'avatarcomponents#getavatarsvg'
