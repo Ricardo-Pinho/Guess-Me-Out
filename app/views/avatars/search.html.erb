@@ -6,11 +6,44 @@
   <%else%>
   <% @avatars.each do |avatar| %>
       <div class="user_search">
-        <div id="svg">
-          SVG goes here
-        </div>
+        <div class="svgwindow">
+          <svg version="1.1" baseProfile="basic"
+               data-avatar=<%=avatar.id%> xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+          viewBox="0 0 512 512" xml:space="preserve">
+
+          </svg>
+          <p></p>
+
+        <%= hidden_field_tag('skin_ctype_id', "") %>
+        <%= hidden_field_tag('skin_comp_id',"") %>
+
+        <%= hidden_field_tag('hair_ctype_id',"") %>
+        <%= hidden_field_tag('hair_comp_id',"") %>
+
+        <%= hidden_field_tag('hair_type_ctype_id',"") %>
+        <%= hidden_field_tag('hair_type_comp_id',"") %>
+
+        <%= hidden_field_tag('eye_color_ctype_id',"") %>
+        <%= hidden_field_tag('eye_color_comp_id',"") %>
+
+        <%= hidden_field_tag('moustache_ctype_id',"") %>
+        <%= hidden_field_tag('moustache_comp_id',"") %>
+
+        <%= hidden_field_tag('nose_ctype_id',"") %>
+        <%= hidden_field_tag('nose_comp_id',"") %>
+
+        <%= hidden_field_tag('mouth_ctype_id',"") %>
+        <%= hidden_field_tag('mouth_comp_id',"") %>
+
+        <%= hidden_field_tag('shirttype_ctype_id',"") %>
+        <%= hidden_field_tag('shirttype_comp_id',"") %>
+
+        <%= hidden_field_tag('shirtcolor_ctype_id',"") %>
+        <%= hidden_field_tag('shirtcolor_comp_id',"") %>
         <div id="name">
           <%= link_to avatar.name, :controller => 'avatars', :action => 'show', :id => avatar %>
+        </div>
         </div>
       </div>
   <%end%>

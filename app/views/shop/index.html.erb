@@ -1,10 +1,11 @@
-<div id="content" xmlns="http://www.w3.org/1999/html">
+<div id="content" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+     xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 
 <h1>Shop</h1>
 <%if session[:user_id]%>
 <p>Credits: <%= session[:user_credits]%>.00 Coins</p>
 <%end%>
-
+ <div class="shop">
   <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
     <tr style="height:27px">
       <td id="tab0" onclick="selectionTab('0');" style="width:9%);" class="primeiraTab" align="center">
@@ -42,34 +43,50 @@
       <td colspan="10">
         <div id="contentTab0" class="divTab" style="overflow-y:auto;width:99.8%;display:none;">
              <% @componenttypes.each do |componenttype| %>
-                <p>
-                <span><%= raw(componenttype.svg) %></span>
-                <span>Name: <%= componenttype.name %></span>
-                <span>|Component: <%= Component.find(componenttype.component).name %></span>
-                <%if session[:user_id]%>
-                    <%check=false%>
-                    <% @usercomponents.each do |usercomponent| %>
-                        <%if usercomponent.componenttype_id==componenttype.id%>
-                          <%check=true%>
-                          <span>| You Already Own this Item</span>
-                          <span>|<%= link_to 'Enlarge', componenttype %></span>
-                        <%end%>
-                    <%end%>
-                    <%if check==false%>
-                      <span>| Price: <%= componenttype.price %>.00</span>
-                      <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
+              <p>
+                <%if componenttype.component_id==1 || componenttype.component_id==5 || componenttype.component_id==6 || componenttype.component_id==7 || componenttype.component_id==8%>
+                  <div class="svgwindow">
+                    <svg version="1.1" baseProfile="basic"
+                         id="svg3883" inkscape:version="0.48.2 r9819" sodipodi:docname="moustache_blond.svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+                         viewBox="0 0 512 512" xml:space="preserve">
+                      <sodipodi:namedview  inkscape:window-y="-8" inkscape:current-layer="svg3883" id="namedview5348" inkscape:window-x="54" inkscape:window-height="746" inkscape:window-width="1304" inkscape:pageshadow="2" inkscape:pageopacity="0" inkscape:window-maximized="1" guidetolerance="10" inkscape:cy="263.48919" gridtolerance="10" inkscape:cx="248.84127" inkscape:zoom="0.921875" objecttolerance="10" showgrid="false" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff">
+                      </sodipodi:namedview><%= raw(componenttype.svg) %></svg>
+                  </div>
                 <%else%>
-                  <span>| Price: <%= componenttype.price %>.00</span>
-                  <span>|<%= link_to 'Buy', componenttype %></span>
+                  <div class="svgpreview">
+                    <svg version="1.1" baseProfile="basic"  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve">
+                      <rect ry="90" rx="90" id="svg_1" height="392" width="392" y="60" x="60" stroke-width="19" stroke="#000000" fill="<%= raw(componenttype.svg) %>"/></svg>
+                  </div>
                 <%end%>
-                <%if session[:user_admin]==1%>
-                    <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                    <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
                 </p>
-              <%else%>
-              </p>
-             <%end%>
+              <%if session[:user_admin]!=1%>
+                  <br/>
+              <%end%>
+                  <p><span>Name: <%= componenttype.name %></span></p>
+                  <p>Component: <%= Component.find(componenttype.component).name %></p>
+                  <p><%if session[:user_id]%>
+                        <%check=false%>
+                        <% @usercomponents.each do |usercomponent| %>
+                            <%if usercomponent.componenttype_id==componenttype.id%>
+                                <%check=true%>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
+                            <%end%>
+                        <%end%>
+                        <%if check==false%>
+                            <span>Price: <%= componenttype.price %>.00</span>
+                            <span>|<%= link_to 'Buy', componenttype %></span>
+                        <%end%>
+                    <%else%>
+                        <span>Price: <%= componenttype.price %>.00</span>
+                        <span>|<%= link_to 'Buy', componenttype %></span>
+                    <%end%></p>
+                  <%if session[:user_admin]==1%>
+                      <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
+                  <%end%>
+                  <br/>
           <%end%>
           <%if session[:user_admin]%>
               <br />
@@ -80,32 +97,41 @@
           <% @componenttypes.each do |componenttype| %>
               <%if componenttype.component_id==1%>
                   <p>
-                    <span><%= raw(componenttype.svg) %></span>
-                    <span>Name: <%= componenttype.name %></span>
-                    <%if session[:user_id]%>
+                  <div class="svgwindow">
+                    <svg version="1.1" baseProfile="basic"
+                         id="svg3883" inkscape:version="0.48.2 r9819" sodipodi:docname="moustache_blond.svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+                         viewBox="0 0 512 512" xml:space="preserve">
+                      <sodipodi:namedview  inkscape:window-y="-8" inkscape:current-layer="svg3883" id="namedview5348" inkscape:window-x="54" inkscape:window-height="746" inkscape:window-width="1304" inkscape:pageshadow="2" inkscape:pageopacity="0" inkscape:window-maximized="1" guidetolerance="10" inkscape:cy="263.48919" gridtolerance="10" inkscape:cx="248.84127" inkscape:zoom="0.921875" objecttolerance="10" showgrid="false" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff">
+                      </sodipodi:namedview><%= raw(componenttype.svg) %></svg>
+                  </div></p>
+                  <br/>
+                  <%if session[:user_admin]!=1%>
+                      <br/>
+                  <%end%>
+                    <p><span>Name: <%= componenttype.name %></span></p>
+                    <p><%if session[:user_id]%>
                         <%check=false%>
                         <% @usercomponents.each do |usercomponent| %>
                             <%if usercomponent.componenttype_id==componenttype.id%>
                                 <%check=true%>
-                                <span>| You Already Own this Item</span>
-                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
                             <%end%>
                         <%end%>
                         <%if check==false%>
-                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>Price: <%= componenttype.price %>.00</span>
                             <span>|<%= link_to 'Buy', componenttype %></span>
                         <%end%>
                     <%else%>
-                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>Price: <%= componenttype.price %>.00</span>
                         <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
+                    <%end%></p>
                     <%if session[:user_admin]==1%>
-                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
-                        </p>
-                    <%else%>
-                        </p>
+                        <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
                     <%end%>
+                  <br/>
               <%end%>
             <%end%>
           <%if session[:user_admin]%>
@@ -117,32 +143,35 @@
           <% @componenttypes.each do |componenttype| %>
               <%if componenttype.component_id==2%>
                   <p>
-                    <span><%= raw(componenttype.svg) %></span>
-                    <span>Name: <%= componenttype.name %></span>
-                    <%if session[:user_id]%>
+                  <div class="svgpreview">
+                    <svg version="1.1" baseProfile="basic"  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve">
+                    <rect ry="90" rx="90" id="svg_1" height="392" width="392" y="60" x="60" stroke-width="19" stroke="#000000" fill="<%= raw(componenttype.svg) %>"/></svg>
+                  </div>
+                  </p>
+                  <br/>
+                  <p><span>Name: <%= componenttype.name %></span></p>
+                  <p><%if session[:user_id]%>
                         <%check=false%>
                         <% @usercomponents.each do |usercomponent| %>
                             <%if usercomponent.componenttype_id==componenttype.id%>
                                 <%check=true%>
-                                <span>| You Already Own this Item</span>
-                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
                             <%end%>
                         <%end%>
                         <%if check==false%>
-                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>Price: <%= componenttype.price %>.00</span>
                             <span>|<%= link_to 'Buy', componenttype %></span>
                         <%end%>
                     <%else%>
-                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>Price: <%= componenttype.price %>.00</span>
                         <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
-                    <%if session[:user_admin]==1%>
-                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
-                        </p>
-                    <%else%>
-                        </p>
-                    <%end%>
+                    <%end%></p>
+                  <%if session[:user_admin]==1%>
+                      <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
+                  <%end%>
+                  <br/>
               <%end%>
           <%end%>
           <%if session[:user_admin]%>
@@ -154,32 +183,35 @@
           <% @componenttypes.each do |componenttype| %>
               <%if componenttype.component_id==3%>
                   <p>
-                    <span><%= raw(componenttype.svg) %></span>
-                    <span>Name: <%= componenttype.name %></span>
-                    <%if session[:user_id]%>
+                  <div class="svgpreview">
+                    <svg version="1.1" baseProfile="basic"  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve">
+                      <rect ry="90" rx="90" id="svg_1" height="392" width="392" y="60" x="60" stroke-width="19" stroke="#000000" fill="<%= raw(componenttype.svg) %>"/></svg>
+                  </div>
+                  </p>
+                  <br/>
+                  <p><span>Name: <%= componenttype.name %></span></p>
+                  <p><%if session[:user_id]%>
                         <%check=false%>
                         <% @usercomponents.each do |usercomponent| %>
                             <%if usercomponent.componenttype_id==componenttype.id%>
                                 <%check=true%>
-                                <span>| You Already Own this Item</span>
-                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
                             <%end%>
                         <%end%>
                         <%if check==false%>
-                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>Price: <%= componenttype.price %>.00</span>
                             <span>|<%= link_to 'Buy', componenttype %></span>
                         <%end%>
                     <%else%>
-                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>Price: <%= componenttype.price %>.00</span>
                         <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
-                    <%if session[:user_admin]==1%>
-                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
-                        </p>
-                    <%else%>
-                        </p>
-                    <%end%>
+                    <%end%></p>
+                  <%if session[:user_admin]==1%>
+                      <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
+                  <%end%>
+                  <br/>
               <%end%>
           <%end%>
           <%if session[:user_admin]%>
@@ -191,32 +223,35 @@
           <% @componenttypes.each do |componenttype| %>
               <%if componenttype.component_id==4%>
                   <p>
-                    <span><%= raw(componenttype.svg) %></span>
-                    <span>Name: <%= componenttype.name %></span>
-                    <%if session[:user_id]%>
+                  <div class="svgpreview">
+                    <svg version="1.1" baseProfile="basic"  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve">
+                      <rect ry="90" rx="90" id="svg_1" height="392" width="392" y="60" x="60" stroke-width="19" stroke="#000000" fill="<%= raw(componenttype.svg) %>"/></svg>
+                  </div>
+                  </p>
+                  <br/>
+                  <p><span>Name: <%= componenttype.name %></span></p>
+                  <p><%if session[:user_id]%>
                         <%check=false%>
                         <% @usercomponents.each do |usercomponent| %>
                             <%if usercomponent.componenttype_id==componenttype.id%>
                                 <%check=true%>
-                                <span>| You Already Own this Item</span>
-                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
                             <%end%>
                         <%end%>
                         <%if check==false%>
-                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>Price: <%= componenttype.price %>.00</span>
                             <span>|<%= link_to 'Buy', componenttype %></span>
                         <%end%>
                     <%else%>
-                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>Price: <%= componenttype.price %>.00</span>
                         <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
-                    <%if session[:user_admin]==1%>
-                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
-                        </p>
-                    <%else%>
-                        </p>
-                    <%end%>
+                    <%end%></p>
+                  <%if session[:user_admin]==1%>
+                      <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
+                  <%end%>
+                  <br/>
               <%end%>
           <%end%>
           <%if session[:user_admin]%>
@@ -228,32 +263,41 @@
           <% @componenttypes.each do |componenttype| %>
               <%if componenttype.component_id==5%>
                   <p>
-                    <span><%= raw(componenttype.svg) %></span>
-                    <span>Name: <%= componenttype.name %></span>
-                    <%if session[:user_id]%>
+                  <div class="svgwindow">
+                    <svg version="1.1" baseProfile="basic"
+                         id="svg3883" inkscape:version="0.48.2 r9819" sodipodi:docname="moustache_blond.svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+                         viewBox="0 0 512 512" xml:space="preserve">
+                      <sodipodi:namedview  inkscape:window-y="-8" inkscape:current-layer="svg3883" id="namedview5348" inkscape:window-x="54" inkscape:window-height="746" inkscape:window-width="1304" inkscape:pageshadow="2" inkscape:pageopacity="0" inkscape:window-maximized="1" guidetolerance="10" inkscape:cy="263.48919" gridtolerance="10" inkscape:cx="248.84127" inkscape:zoom="0.921875" objecttolerance="10" showgrid="false" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff">
+                      </sodipodi:namedview><%= raw(componenttype.svg) %></svg>
+                  </div></p>
+                  <br/>
+                  <%if session[:user_admin]!=1%>
+                      <br/>
+                  <%end%>
+                  <p><span>Name: <%= componenttype.name %></span></p>
+                  <p><%if session[:user_id]%>
                         <%check=false%>
                         <% @usercomponents.each do |usercomponent| %>
                             <%if usercomponent.componenttype_id==componenttype.id%>
                                 <%check=true%>
-                                <span>| You Already Own this Item</span>
-                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
                             <%end%>
                         <%end%>
                         <%if check==false%>
-                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>Price: <%= componenttype.price %>.00</span>
                             <span>|<%= link_to 'Buy', componenttype %></span>
                         <%end%>
                     <%else%>
-                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>Price: <%= componenttype.price %>.00</span>
                         <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
-                    <%if session[:user_admin]==1%>
-                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
-                        </p>
-                    <%else%>
-                        </p>
-                    <%end%>
+                    <%end%></p>
+                  <%if session[:user_admin]==1%>
+                      <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
+                  <%end%>
+                  <br/>
               <%end%>
           <%end%>
           <%if session[:user_admin]%>
@@ -265,32 +309,41 @@
           <% @componenttypes.each do |componenttype| %>
               <%if componenttype.component_id==6%>
                   <p>
-                    <span><%= raw(componenttype.svg) %></span>
-                    <span>Name: <%= componenttype.name %></span>
-                    <%if session[:user_id]%>
+                  <div class="svgwindow">
+                    <svg version="1.1" baseProfile="basic"
+                         id="svg3883" inkscape:version="0.48.2 r9819" sodipodi:docname="moustache_blond.svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+                         viewBox="0 0 512 512" xml:space="preserve">
+                      <sodipodi:namedview  inkscape:window-y="-8" inkscape:current-layer="svg3883" id="namedview5348" inkscape:window-x="54" inkscape:window-height="746" inkscape:window-width="1304" inkscape:pageshadow="2" inkscape:pageopacity="0" inkscape:window-maximized="1" guidetolerance="10" inkscape:cy="263.48919" gridtolerance="10" inkscape:cx="248.84127" inkscape:zoom="0.921875" objecttolerance="10" showgrid="false" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff">
+                      </sodipodi:namedview><%= raw(componenttype.svg) %></svg>
+                  </div></p>
+                  <br/>
+                  <%if session[:user_admin]!=1%>
+                      <br/>
+                  <%end%>
+                  <p><span>Name: <%= componenttype.name %></span></p>
+                  <p><%if session[:user_id]%>
                         <%check=false%>
                         <% @usercomponents.each do |usercomponent| %>
                             <%if usercomponent.componenttype_id==componenttype.id%>
                                 <%check=true%>
-                                <span>| You Already Own this Item</span>
-                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
                             <%end%>
                         <%end%>
                         <%if check==false%>
-                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>Price: <%= componenttype.price %>.00</span>
                             <span>|<%= link_to 'Buy', componenttype %></span>
                         <%end%>
                     <%else%>
-                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>Price: <%= componenttype.price %>.00</span>
                         <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
-                    <%if session[:user_admin]==1%>
-                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
-                        </p>
-                    <%else%>
-                        </p>
-                    <%end%>
+                    <%end%></p>
+                  <%if session[:user_admin]==1%>
+                      <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
+                  <%end%>
+                  <br/>
               <%end%>
           <%end%>
           <%if session[:user_admin]%>
@@ -302,32 +355,41 @@
           <% @componenttypes.each do |componenttype| %>
               <%if componenttype.component_id==7%>
                   <p>
-                    <span><%= raw(componenttype.svg) %></span>
-                    <span>Name: <%= componenttype.name %></span>
-                    <%if session[:user_id]%>
+                  <div class="svgwindow">
+                    <svg version="1.1" baseProfile="basic"
+                         id="svg3883" inkscape:version="0.48.2 r9819" sodipodi:docname="moustache_blond.svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+                         viewBox="0 0 512 512" xml:space="preserve">
+                      <sodipodi:namedview  inkscape:window-y="-8" inkscape:current-layer="svg3883" id="namedview5348" inkscape:window-x="54" inkscape:window-height="746" inkscape:window-width="1304" inkscape:pageshadow="2" inkscape:pageopacity="0" inkscape:window-maximized="1" guidetolerance="10" inkscape:cy="263.48919" gridtolerance="10" inkscape:cx="248.84127" inkscape:zoom="0.921875" objecttolerance="10" showgrid="false" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff">
+                      </sodipodi:namedview><%= raw(componenttype.svg) %></svg>
+                  </div></p>
+                  <br/>
+                  <%if session[:user_admin]!=1%>
+                      <br/>
+                  <%end%>
+                  <p><span>Name: <%= componenttype.name %></span></p>
+                  <p><%if session[:user_id]%>
                         <%check=false%>
                         <% @usercomponents.each do |usercomponent| %>
                             <%if usercomponent.componenttype_id==componenttype.id%>
                                 <%check=true%>
-                                <span>| You Already Own this Item</span>
-                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
                             <%end%>
                         <%end%>
                         <%if check==false%>
-                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>Price: <%= componenttype.price %>.00</span>
                             <span>|<%= link_to 'Buy', componenttype %></span>
                         <%end%>
                     <%else%>
-                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>Price: <%= componenttype.price %>.00</span>
                         <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
-                    <%if session[:user_admin]==1%>
-                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
-                        </p>
-                    <%else%>
-                        </p>
-                    <%end%>
+                    <%end%></p>
+                  <%if session[:user_admin]==1%>
+                      <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
+                  <%end%>
+                  <br/>
               <%end%>
           <%end%>
           <%if session[:user_admin]%>
@@ -339,32 +401,41 @@
           <% @componenttypes.each do |componenttype| %>
               <%if componenttype.component_id==8%>
                   <p>
-                    <span><%= raw(componenttype.svg) %></span>
-                    <span>Name: <%= componenttype.name %></span>
-                    <%if session[:user_id]%>
+                  <div class="svgwindow">
+                    <svg version="1.1" baseProfile="basic"
+                         id="svg3883" inkscape:version="0.48.2 r9819" sodipodi:docname="moustache_blond.svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+                         viewBox="0 0 512 512" xml:space="preserve">
+                      <sodipodi:namedview  inkscape:window-y="-8" inkscape:current-layer="svg3883" id="namedview5348" inkscape:window-x="54" inkscape:window-height="746" inkscape:window-width="1304" inkscape:pageshadow="2" inkscape:pageopacity="0" inkscape:window-maximized="1" guidetolerance="10" inkscape:cy="263.48919" gridtolerance="10" inkscape:cx="248.84127" inkscape:zoom="0.921875" objecttolerance="10" showgrid="false" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff">
+                      </sodipodi:namedview><%= raw(componenttype.svg) %></svg>
+                  </div></p>
+                  <br/>
+                  <%if session[:user_admin]!=1%>
+                      <br/>
+                  <%end%>
+                  <p><span>Name: <%= componenttype.name %></span></p>
+                  <p><%if session[:user_id]%>
                         <%check=false%>
                         <% @usercomponents.each do |usercomponent| %>
                             <%if usercomponent.componenttype_id==componenttype.id%>
                                 <%check=true%>
-                                <span>| You Already Own this Item</span>
-                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
                             <%end%>
                         <%end%>
                         <%if check==false%>
-                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>Price: <%= componenttype.price %>.00</span>
                             <span>|<%= link_to 'Buy', componenttype %></span>
                         <%end%>
                     <%else%>
-                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>Price: <%= componenttype.price %>.00</span>
                         <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
-                    <%if session[:user_admin]==1%>
-                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
-                        </p>
-                    <%else%>
-                        </p>
-                    <%end%>
+                    <%end%></p>
+                  <%if session[:user_admin]==1%>
+                      <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
+                  <%end%>
+                  <br/>
               <%end%>
           <%end%>
           <%if session[:user_admin]%>
@@ -376,32 +447,35 @@
           <% @componenttypes.each do |componenttype| %>
               <%if componenttype.component_id==9%>
                   <p>
-                    <span><%= raw(componenttype.svg) %></span>
-                    <span>Name: <%= componenttype.name %></span>
-                    <%if session[:user_id]%>
+                  <div class="svgpreview">
+                    <svg version="1.1" baseProfile="basic"  x="0px" y="0px" width="100px" height="100px"  viewBox="0 0 512 512" xml:space="preserve">
+                      <rect ry="90" rx="90" id="svg_1" height="392" width="392" y="60" x="60" stroke-width="19" stroke="#000000" fill="<%= raw(componenttype.svg) %>"/></svg>
+                  </div>
+                  </p>
+                  <br/>
+                  <p><span>Name: <%= componenttype.name %></span></p>
+                  <p><%if session[:user_id]%>
                         <%check=false%>
                         <% @usercomponents.each do |usercomponent| %>
                             <%if usercomponent.componenttype_id==componenttype.id%>
                                 <%check=true%>
-                                <span>| You Already Own this Item</span>
-                                <span>|<%= link_to 'Enlarge', componenttype %></span>
+                                <span>You Already Own this Item</span>
+                                <span>|<%= link_to 'Info', componenttype %></span>
                             <%end%>
                         <%end%>
                         <%if check==false%>
-                            <span>| Price: <%= componenttype.price %>.00</span>
+                            <span>Price: <%= componenttype.price %>.00</span>
                             <span>|<%= link_to 'Buy', componenttype %></span>
                         <%end%>
                     <%else%>
-                        <span>| Price: <%= componenttype.price %>.00</span>
+                        <span>Price: <%= componenttype.price %>.00</span>
                         <span>|<%= link_to 'Buy', componenttype %></span>
-                    <%end%>
-                    <%if session[:user_admin]==1%>
-                        <span>|<%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
-                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span>
-                        </p>
-                    <%else%>
-                        </p>
-                    <%end%>
+                    <%end%></p>
+                  <%if session[:user_admin]==1%>
+                      <p><span><%= link_to 'Edit', edit_componenttype_path(componenttype) %></span>
+                        <span>|<%= link_to 'Destroy', componenttype, confirm: 'Are you sure?', method: :delete %></span></p>
+                  <%end%>
+                  <br/>
               <%end%>
           <%end%>
           <%if session[:user_admin]%>
@@ -412,7 +486,7 @@
       </td>
     </tr>
   </table>
-
+ </div>
 
 
 

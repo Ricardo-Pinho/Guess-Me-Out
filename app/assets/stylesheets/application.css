@@ -161,6 +161,12 @@ div#search select{
       margin-bottom: -5px;
     }
 
+
+
+div.avatar_search {
+    float: left;
+}
+
 div.social{
   height: 30px;
   float: right;
@@ -477,13 +483,35 @@ div#credits{
 
 }
 
+h1{
+    line-height:70%;
+}
+h3{
+    line-height:70%;
+}
 
 .editsvg { float:none }
-.svgwindow {float:left; height:360px;}
+.svgwindow {
+    float:left;
+    height:auto;
+    background-image: url('manequin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.svgwindow_user {
+    width:100%;
+
+}
 .comp{
-	width: 500px;
+	width: 580px;
 	float:left;
 }
+
+.save_avatar {
+    text-decoration:none;
+    color: #d08b13;
+}
+
 .compnav{
 	width: 120px;
 	float:left;
@@ -508,14 +536,33 @@ div#credits{
 	float:left;
 	width:380px;
 	height: 270px;
-	background-color: #E3E8EF;
+    background: -webkit-gradient(linear, left top, left bottom, from(#DFEEFF), to(#B4D4FF)); /* For Webkit Browsers */
+    background: -moz-linear-gradient(top, #DFEEFF, #B4D4FF); /* for Firefox */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DFEEFF', endColorstr='#B4D4FF'); /* for IE */
 	display: none;
 }
+
+svg.svgpreview {
+    cursor:pointer;
+}
+
 div.svgpreview
 {
 	float:left;
 	width:100px;
 	padding:10px;
 	height:100px;
+}
+
+div.svgpreviewshow
+{
+    float:left;
+    width:200px;
+    height:200px;
+}
+
+div#name
+{
+    text-align:center;
 }
 

@@ -6,10 +6,8 @@
   <%else%>
   <% @components.each do |component| %>
       <div class="user_search">
-        <div id="name">
           <%= component.name %>
           (<%= link_to 'See All the Items of this Component', :controller => 'components', :action => 'show', :id => component %>)
-        </div>
         <% if session[:user_admin]==1 %>
         <tab></tab>
         <%= link_to 'Show', component %>

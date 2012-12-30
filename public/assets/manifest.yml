@@ -11,6 +11,7 @@ bkg2.png: bkg2-4c62f8915829de50354dfb6bf558ea36.png
 bkg_white.png: bkg_white-0aae38f4ec30b6e9bfecb1a03e4cfc96.png
 blackpixel.png: blackpixel-8696854a2f7973722c1a675e091fbd2c.png
 faceb.png: faceb-1c29d8cdc45f8efc12efc5af9756017b.png
+guys.png: guys-5a786aaa46502b057cf7d060b51251cd.png
 logo_horizontal_t2.png: logo_horizontal_t2-d3b2b42d48349555a090c3537b18a495.png
 manequin.png: manequin-671aa839f014cee7e41aca2d9adf68a6.png
 piechartimage.png: piechartimage-9e6c400c60175af899a989c4580956c3.png
@@ -21,7 +22,7 @@ svg/body_dark.svg: svg/body_dark-974906ca5e75e32c24aeef709a3d2893.svg
 svg/body_light.svg: svg/body_light-d6095f5231892e6e653754276a720e45.svg
 svg/hair_blond.svg: svg/hair_blond-a0277324f945251056f927d920fc028e.svg
 svg/hair_emo.svg: svg/hair_emo-b14842bbda8fa0fe5bb017d466467bd5.svg
-svg/moustache_blond.svg: svg/moustache_blond-3f3ebcf022a982838d09b2a1c95300ef.svg
+svg/moustache_blond.svg: svg/moustache_blond-42c1d94301d3f285754e98f85a877704.svg
 svg/sunglasses_black.svg: svg/sunglasses_black-a2f6f07df409f8ecbdf9158d0be6109f.svg
 svg/sunglasses_pink.svg: svg/sunglasses_pink-c6fa68c480a1b0d862c34d8a42520be3.svg
 svg/tshirt_blue.svg: svg/tshirt_blue-6ded7b7682846fe0a4fbcb5b1687a76f.svg
@@ -31,12 +32,12 @@ tab_down.png: tab_down-f94445e0dbc17160b64f7724289a837f.png
 tab_up.png: tab_up-57f7567e757a4ed7d906a02e126174ae.png
 whitepixel.png: whitepixel-35e2c702d207c67c2a11fa453ca2a7ad.png
 who-logo.png: who-logo-3f60bf375c06aef7fcdbf321a0539d42.png
-application.js: application-c75d6438a3f07b08f1ec5981c6bc9d6f.js
+application.js: application-960e4e85e5a16cbb1db4962230b4c3d2.js
 avatarcomponents.js: avatarcomponents-3af39f1da6f167c2cbf453ed74daff3d.js
 avatars.js: avatars-3af39f1da6f167c2cbf453ed74daff3d.js
 components.js: components-3af39f1da6f167c2cbf453ed74daff3d.js
 componenttypes.js: componenttypes-3af39f1da6f167c2cbf453ed74daff3d.js
-editavatar.js: editavatar-636a07c4fe53564e2f7aa28d2424d22a.js
+editavatar.js: editavatar-39a2be10083e631600ddb11cf19b2c63.js
 home.js: home-3af39f1da6f167c2cbf453ed74daff3d.js
 innersvg/LICENSE: innersvg/LICENSE
 innersvg/innersvg.js: innersvg/innersvg-1afb7f2528c4cb1c6408f16cebe41535.js
@@ -45,7 +46,7 @@ sessions.js: sessions-3af39f1da6f167c2cbf453ed74daff3d.js
 shop.js: shop-3af39f1da6f167c2cbf453ed74daff3d.js
 usercomponents.js: usercomponents-3af39f1da6f167c2cbf453ed74daff3d.js
 users.js: users-3af39f1da6f167c2cbf453ed74daff3d.js
-application.css: application-39ea0906879ff73f3c3ca83b24418428.css
+application.css: application-8059311ed47d25c2ee7da60537db4e0a.css
 avatarcomponents.css: avatarcomponents-7270767b2a9e9fff880aa5de378ca791.css
 avatars.css: avatars-7270767b2a9e9fff880aa5de378ca791.css
 components.css: components-7270767b2a9e9fff880aa5de378ca791.css

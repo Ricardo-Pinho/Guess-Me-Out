@@ -16,6 +16,7 @@ class AvatarsController < ApplicationController
   # GET /avatars/1.json
   def show
     @avatar = Avatar.find(params[:id])
+    @user = User.find(@avatar.id)
     @avatarcomponents = Avatarcomponent.all( :conditions=> ["avatar_id = ?", + @avatar.id])
     respond_to do |format|
       format.html # show.html.erb
@@ -164,21 +165,43 @@ class AvatarsController < ApplicationController
   # PUT /avatars/1
   # PUT /avatars/1.json
   def update
-    @avatar = Avatar.find(params[:id])
+    @avatar = Avatar.find(params[:avatar_id])
     if @avatar.user_id!=session[:user_id] && session[:user_admin]!=1
       flash.now[:notice] = "Avatar does not belong to you!"
       flash.now[:color]= "invalid"
       render action: "show"
       return
     end
-    if @avatar.user_id != session[:user_id]
-      @var=@avatar.user_id
-    end
+    @skin = Avatarcomponent.find(params[:skin_comp_id])
+
+    @hair = Avatarcomponent.find(params[:hair_comp_id])
+
+    @hair_color = Avatarcomponent.find(params[:hair_type_comp_id])
+
+    @eye_color = Avatarcomponent.find(params[:eye_color_comp_id])
+
+    @moustache = Avatarcomponent.find(params[:moustache_comp_id])
+
+    @nose = Avatarcomponent.find(params[:nose_comp_id])
+
+    @mouth = Avatarcomponent.find(params[:mouth_comp_id])
+
+    @shirttype = Avatarcomponent.find(params[:shirttype_comp_id])
+
+    @shirtcolor = Avatarcomponent.find(params[:shirtcolor_comp_id])
+
+
     respond_to do |format|
-      if @avatar.update_attributes(params[:avatar])
-        if @var
-          @avatar.update_attribute(:user_id, @var)
-        end
+      if  @avatar.update_attributes(:name=>params[:avatar_name]) and
+          @skin.update_attribute(:componenttype_id, params[:skin_ctype_id]) and
+          @hair.update_attribute(:componenttype_id, params[:hair_ctype_id]) and
+          @hair_color.update_attribute(:componenttype_id, params[:hair_type_ctype_id]) and
+          @eye_color.update_attribute(:componenttype_id, params[:eye_color_ctype_id]) and
+          @moustache.update_attribute(:componenttype_id, params[:moustache_ctype_id]) and
+          @nose.update_attribute(:componenttype_id, params[:nose_ctype_id]) and
+          @mouth.update_attribute(:componenttype_id, params[:mouth_ctype_id]) and
+          @shirttype.update_attribute(:componenttype_id, params[:shirttype_ctype_id]) and
+          @shirtcolor.update_attribute(:componenttype_id, params[:shirtcolor_ctype_id])
         format.html { redirect_to @avatar, notice: 'Avatar was successfully updated.' }
         format.json { head :no_content }
       else
