@@ -215,6 +215,9 @@ $(document).ready(function() {
 
             if ($(".editsvg").length>0)
             {
+                $.ajaxSetup({
+                    async: false
+                });
                 var user=parseInt($("svg:eq("+0+")").attr('data-user'));
                 $.getJSON(path+"svgs_user_android",{userid:user,componentid:1},function(data){addType(data,hairType,"hairType");});
                 $.getJSON(path+"svgs_user_android",{userid:user,componentid:2},function(data){addColor(data,hairColor,"hairColor");});
@@ -293,6 +296,9 @@ $(document).ready(function() {
             }
             else
             {
+                $.ajaxSetup({
+                    async: false
+                });
                 $.getJSON(path+"svgs_android",{componentid:1},function(data){addType(data,hairType,"");});
                 $.getJSON(path+"svgs_android",{componentid:2},function(data){addColor(data,hairColor,"");});
                 $.getJSON(path+"svgs_android",{componentid:3},function(data){addColor(data,skinColor,"");});
@@ -308,7 +314,7 @@ $(document).ready(function() {
         }
         if($(".editsvg").length>0)
         {
-            drawAvatar(i);
+            drawAvatar(0);
         }
         else{
             for(var i=0;i<$("svg").length;i++)
