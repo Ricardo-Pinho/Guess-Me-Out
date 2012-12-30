@@ -88,50 +88,7 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\functional\tits_controller_test.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\unit\helpers\tits_helper_test.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-8059311ed47d25c2ee7da60537db4e0a.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-8059311ed47d25c2ee7da60537db4e0a.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-ee336337c172af30d52dea3ef98580e2.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-ee336337c172af30d52dea3ef98580e2.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatarcomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/avatarcomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatarcomponents.js.gz" afterPath="$PROJECT_DIR$/public/assets/avatarcomponents.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatars-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/avatars-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatars.js.gz" afterPath="$PROJECT_DIR$/public/assets/avatars.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/coffee-script-7fa376506e451a0e8613440eda43472f.js.gz" afterPath="$PROJECT_DIR$/public/assets/coffee-script-7fa376506e451a0e8613440eda43472f.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/coffee-script.js.gz" afterPath="$PROJECT_DIR$/public/assets/coffee-script.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/components-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/components-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/components.js.gz" afterPath="$PROJECT_DIR$/public/assets/components.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/componenttypes-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/componenttypes-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/componenttypes.js.gz" afterPath="$PROJECT_DIR$/public/assets/componenttypes.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/editavatar.js.gz" afterPath="$PROJECT_DIR$/public/assets/editavatar.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/home-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/home-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/home.js.gz" afterPath="$PROJECT_DIR$/public/assets/home.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/innersvg/innersvg-1afb7f2528c4cb1c6408f16cebe41535.js.gz" afterPath="$PROJECT_DIR$/public/assets/innersvg/innersvg-1afb7f2528c4cb1c6408f16cebe41535.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/innersvg/innersvg.js.gz" afterPath="$PROJECT_DIR$/public/assets/innersvg/innersvg.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-59b63ac6aa9e42915ad70a8ff6c651d3.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-59b63ac6aa9e42915ad70a8ff6c651d3.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui-de7b57bc0ab30c2b9353dfbe89a4eadd.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui-de7b57bc0ab30c2b9353dfbe89a4eadd.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui.min-62fab7113f99de8919f788dfe84039e5.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui.min-62fab7113f99de8919f788dfe84039e5.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui.min.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui.min.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.min-fcfb9d96f1fd25bd554d91f850a9e172.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery.min-fcfb9d96f1fd25bd554d91f850a9e172.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.min.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery.min.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery_ujs-b622ae8bf8201d0766cc779998edfb9f.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery_ujs-b622ae8bf8201d0766cc779998edfb9f.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery_ujs.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery_ujs.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/node-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/node-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/node.js.gz" afterPath="$PROJECT_DIR$/public/assets/node.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sessions-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/sessions-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sessions.js.gz" afterPath="$PROJECT_DIR$/public/assets/sessions.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/shop-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/shop-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/shop.js.gz" afterPath="$PROJECT_DIR$/public/assets/shop.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/usercomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/usercomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/usercomponents.js.gz" afterPath="$PROJECT_DIR$/public/assets/usercomponents.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/users-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/users-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/users.js.gz" afterPath="$PROJECT_DIR$/public/assets/users.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/editavatar.js" afterPath="$PROJECT_DIR$/public/assets/editavatar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
     </list>
     <ignored path="Guess Me Out.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -207,7 +164,7 @@
       <file leaf-file-name="editavatar.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/editavatar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="80" selection-end="104" vertical-scroll-proportion="0.049853373">
+            <state line="432" column="1" selection-start="0" selection-end="21007" vertical-scroll-proportion="0.90029323">
               <folding />
             </state>
           </provider>
@@ -1217,7 +1174,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/editavatar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="80" selection-end="104" vertical-scroll-proportion="0.049853373">
+        <state line="432" column="1" selection-start="0" selection-end="21007" vertical-scroll-proportion="0.90029323">
           <folding />
         </state>
       </provider>
