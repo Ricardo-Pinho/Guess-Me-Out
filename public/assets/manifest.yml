@@ -32,12 +32,12 @@ tab_down.png: tab_down-f94445e0dbc17160b64f7724289a837f.png
 tab_up.png: tab_up-57f7567e757a4ed7d906a02e126174ae.png
 whitepixel.png: whitepixel-35e2c702d207c67c2a11fa453ca2a7ad.png
 who-logo.png: who-logo-3f60bf375c06aef7fcdbf321a0539d42.png
-application.js: application-36c9447a5b9f2219ed37ca1dced4b6fb.js
+application.js: application-7e3c45babbad11730ce06330eca89012.js
 avatarcomponents.js: avatarcomponents-f244abd5178f4fc3be6b074e3502259c.js
 avatars.js: avatars-f244abd5178f4fc3be6b074e3502259c.js
 components.js: components-f244abd5178f4fc3be6b074e3502259c.js
 componenttypes.js: componenttypes-f244abd5178f4fc3be6b074e3502259c.js
-editavatar.js: editavatar-9e95b7ca77919cae2c7d70907584108f.js
+editavatar.js: editavatar-81a08e1f4bea92a0d7107c58646694e8.js
 home.js: home-f244abd5178f4fc3be6b074e3502259c.js
 innersvg/LICENSE: innersvg/LICENSE
 innersvg/innersvg.js: innersvg/innersvg-001b2f5c991fdeacbea8f2363d386b86.js
