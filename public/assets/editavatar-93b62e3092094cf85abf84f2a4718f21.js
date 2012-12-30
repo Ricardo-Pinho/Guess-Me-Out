@@ -298,6 +298,8 @@ $(document).ready(function() {
             }
             else
             {
+                if($("svg").length==1)
+                {
                 $.when(
                 $.getJSON(path+"svgs_android",{componentid:1},function(data){addType(data,hairType,"");}),
                 $.getJSON(path+"svgs_android",{componentid:2},function(data){addColor(data,hairColor,"");}),
@@ -315,6 +317,22 @@ $(document).ready(function() {
                         }
                     }
                 );
+                }
+                else
+                {
+                    $.ajaxSetup({
+                        async: false
+                    });
+                    $.getJSON(path+"svgs_android",{componentid:1},function(data){addType(data,hairType,"");});
+                    $.getJSON(path+"svgs_android",{componentid:2},function(data){addColor(data,hairColor,"");});
+                    $.getJSON(path+"svgs_android",{componentid:3},function(data){addColor(data,skinColor,"");});
+                    $.getJSON(path+"svgs_android",{componentid:4},function(data){addColor(data,eyeColor,"");});
+                    $.getJSON(path+"svgs_android",{componentid:5},function(data){addType(data,moustacheType,"");});
+                    $.getJSON(path+"svgs_android",{componentid:6},function(data){addType(data,noseType,"");});
+                    $.getJSON(path+"svgs_android",{componentid:7},function(data){addType(data,mouthType,"");});
+                    $.getJSON(path+"svgs_android",{componentid:8},function(data){addType(data,shirtType,"");});
+                    $.getJSON(path+"svgs_android",{componentid:9},function(data){addColor(data,shirtColor,"");});
+                }
                 //INSTRUCTION $.getJSON(path+"svgs_android",{componentid:9},function(data){addColor(data,newcomponent,"");});
 
             }
