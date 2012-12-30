@@ -8,18 +8,6 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\app\controllers\tits_controller.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\app\helpers\tits_helper.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\app\views\tits\index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\128773281749417353 - Cópia-a316d2fa7ddbb6c29067551863a6b2aa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\128773281749417353 - Cópia.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\128773281749417353-a316d2fa7ddbb6c29067551863a6b2aa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\128773281749417353.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Female-7a9953cb2f679c2e699de13b9ef31ef5.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Female.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Google_Play_Store_96-cf738fcc3ec06bf4148b1c1bb001448a.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Google_Play_Store_96.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Male-7e1fd3353cd959dd11622b1b1a460671.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Male.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Other-6a6f03820caceb037177204bf15c5f6b.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\Other.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-02d6985aec130a4ada78b1eeef1f8c42.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-02d6985aec130a4ada78b1eeef1f8c42.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-33c6a01902ab4696b523924fead54ce8.js" afterPath="" />
@@ -32,64 +20,28 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-44e28818c5c6d0dd1a3353aec974ca0b.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-613e43921d26a70865010e7bc73d84ca.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-613e43921d26a70865010e7bc73d84ca.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-8059311ed47d25c2ee7da60537db4e0a.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-8059311ed47d25c2ee7da60537db4e0a.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-960e4e85e5a16cbb1db4962230b4c3d2.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-960e4e85e5a16cbb1db4962230b4c3d2.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-c75d6438a3f07b08f1ec5981c6bc9d6f.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-c75d6438a3f07b08f1ec5981c6bc9d6f.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-ee336337c172af30d52dea3ef98580e2.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application-ee336337c172af30d52dea3ef98580e2.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\application.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatarcomponents.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars\test@test.pt-413c967b1eb8ae90fe5831ab5c887d0d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\avatars\test@test.pt.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\bkg-ea437943e96cc5dda239c2a86414d849.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\bkg.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\bkg2-4c62f8915829de50354dfb6bf558ea36.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\bkg2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\bkg_white-0aae38f4ec30b6e9bfecb1a03e4cfc96.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\bkg_white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\blackpixel-8696854a2f7973722c1a675e091fbd2c.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\blackpixel.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\coffee-script-7fa376506e451a0e8613440eda43472f.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\coffee-script-7fa376506e451a0e8613440eda43472f.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\coffee-script.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\coffee-script.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\components.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\componenttypes.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar-0922d3945f7cb9036829ea3a7a33e6fc.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar-0922d3945f7cb9036829ea3a7a33e6fc.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar-269c3e7f295978c8aaccca77498c1e21.js" afterPath="" />
@@ -104,109 +56,27 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar-a3748dd09d2c1cfdbdf99fd4a598ee08.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\editavatar.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\faceb-1c29d8cdc45f8efc12efc5af9756017b.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\faceb.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\guys-5a786aaa46502b057cf7d060b51251cd.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\guys.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\home.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\innersvg\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\innersvg\innersvg-1afb7f2528c4cb1c6408f16cebe41535.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\innersvg\innersvg-1afb7f2528c4cb1c6408f16cebe41535.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\innersvg\innersvg.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\innersvg\innersvg.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-59b63ac6aa9e42915ad70a8ff6c651d3.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-59b63ac6aa9e42915ad70a8ff6c651d3.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui-de7b57bc0ab30c2b9353dfbe89a4eadd.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui-de7b57bc0ab30c2b9353dfbe89a4eadd.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.min-62fab7113f99de8919f788dfe84039e5.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.min-62fab7113f99de8919f788dfe84039e5.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery-ui.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.min-fcfb9d96f1fd25bd554d91f850a9e172.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.min-fcfb9d96f1fd25bd554d91f850a9e172.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery_ujs-b622ae8bf8201d0766cc779998edfb9f.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery_ujs-b622ae8bf8201d0766cc779998edfb9f.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery_ujs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\jquery_ujs.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\logo_horizontal_t2-d3b2b42d48349555a090c3537b18a495.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\logo_horizontal_t2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\manequin-671aa839f014cee7e41aca2d9adf68a6.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\manequin.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\manifest.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\node.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\piechartimage-9e6c400c60175af899a989c4580956c3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\piechartimage.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\rails-be8732dac73d845ac5b142c8fb5f9fb0.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\rails.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\scaffolds-0149f820dbdd285aa65e241569d8c256.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\scaffolds-0149f820dbdd285aa65e241569d8c256.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\scaffolds.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\scaffolds.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\search_icon-4070727b2b9d8d784702cc5a20775394.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\search_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\sessions.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\shop.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\smartphone-1e2c059c84fb61ba8fad309357462b09.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\smartphone.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\body_dark-974906ca5e75e32c24aeef709a3d2893.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\body_dark.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\body_light-d6095f5231892e6e653754276a720e45.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\body_light.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\hair_blond-a0277324f945251056f927d920fc028e.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\hair_blond.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\hair_emo-b14842bbda8fa0fe5bb017d466467bd5.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\hair_emo.svg" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\moustache_blond-3f3ebcf022a982838d09b2a1c95300ef.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\moustache_blond-42c1d94301d3f285754e98f85a877704.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\moustache_blond.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\sunglasses_black-a2f6f07df409f8ecbdf9158d0be6109f.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\sunglasses_black.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\sunglasses_pink-c6fa68c480a1b0d862c34d8a42520be3.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\sunglasses_pink.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\tshirt_blue-6ded7b7682846fe0a4fbcb5b1687a76f.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\tshirt_blue.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\tshirt_red-83b2b9cf154e9f8476463f96d6ac3e2f.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\tshirt_red.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\tshirt_red_plain-a485e4d75bc23eeebc204087411b0ad0.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\svg\tshirt_red_plain.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tab_down-f94445e0dbc17160b64f7724289a837f.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tab_down.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tab_up-57f7567e757a4ed7d906a02e126174ae.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tab_up.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
@@ -215,26 +85,14 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\usercomponents.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\users.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\whitepixel-35e2c702d207c67c2a11fa453ca2a7ad.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\whitepixel.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\who-logo-3f60bf375c06aef7fcdbf321a0539d42.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\who-logo.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\functional\tits_controller_test.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\unit\helpers\tits_helper_test.rb" afterPath="" />
     </list>
@@ -291,10 +149,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_all.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="search_all.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/search_all.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="2" selection-start="3349" selection-end="3370" vertical-scroll-proportion="1.1814024">
+            <state line="44" column="25" selection-start="1291" selection-end="1291" vertical-scroll-proportion="-28.76923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="365" column="4" selection-start="12396" selection-end="12396" vertical-scroll-proportion="0.38123167">
               <folding />
             </state>
           </provider>
@@ -1231,13 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shop/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="17" selection-start="2691" selection-end="6376" vertical-scroll-proportion="-45.115383">
@@ -1277,7 +1137,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/search_all.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="2" selection-start="3349" selection-end="3370" vertical-scroll-proportion="1.1814024">
+        <state line="44" column="25" selection-start="1291" selection-end="1291" vertical-scroll-proportion="-28.76923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="365" column="4" selection-start="12396" selection-end="12396" vertical-scroll-proportion="0.38123167">
           <folding />
         </state>
       </provider>
