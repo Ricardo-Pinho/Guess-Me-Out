@@ -9890,7 +9890,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 }).call(this);
 
 var svgNS = "http://www.w3.org/2000/svg";
-var path="http://localhost:3000/";
+var path="http://guessmeout.herokuapp.com/";
 var avatar;
 function SVGElement(id,svg){
 	this.ID=id;
