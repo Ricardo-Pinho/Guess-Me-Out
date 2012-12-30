@@ -38,7 +38,6 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\functional\tits_controller_test.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\unit\helpers\tits_helper_test.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" />
     </list>
     <ignored path="Guess Me Out.iws" />
     <ignored path=".idea/workspace.xml" />
