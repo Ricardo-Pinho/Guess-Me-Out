@@ -38,90 +38,7 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\functional\tits_controller_test.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\unit\helpers\tits_helper_test.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatarcomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/avatarcomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatarcomponents-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/avatarcomponents-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatarcomponents.css.gz" afterPath="$PROJECT_DIR$/public/assets/avatarcomponents.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatarcomponents.js.gz" afterPath="$PROJECT_DIR$/public/assets/avatarcomponents.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatars-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/avatars-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatars-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/avatars-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatars.css.gz" afterPath="$PROJECT_DIR$/public/assets/avatars.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/avatars.js.gz" afterPath="$PROJECT_DIR$/public/assets/avatars.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/coffee-script-7fa376506e451a0e8613440eda43472f.js.gz" afterPath="$PROJECT_DIR$/public/assets/coffee-script-7fa376506e451a0e8613440eda43472f.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/coffee-script.js.gz" afterPath="$PROJECT_DIR$/public/assets/coffee-script.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/components-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/components-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/components-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/components-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/components.css.gz" afterPath="$PROJECT_DIR$/public/assets/components.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/components.js.gz" afterPath="$PROJECT_DIR$/public/assets/components.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/componenttypes-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/componenttypes-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/componenttypes-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/componenttypes-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/componenttypes.css.gz" afterPath="$PROJECT_DIR$/public/assets/componenttypes.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/componenttypes.js.gz" afterPath="$PROJECT_DIR$/public/assets/componenttypes.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/editavatar.js.gz" afterPath="$PROJECT_DIR$/public/assets/editavatar.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/home-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/home-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/home-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/home-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/home.css.gz" afterPath="$PROJECT_DIR$/public/assets/home.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/home.js.gz" afterPath="$PROJECT_DIR$/public/assets/home.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/innersvg/innersvg-1afb7f2528c4cb1c6408f16cebe41535.js.gz" afterPath="$PROJECT_DIR$/public/assets/innersvg/innersvg-1afb7f2528c4cb1c6408f16cebe41535.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/innersvg/innersvg.js.gz" afterPath="$PROJECT_DIR$/public/assets/innersvg/innersvg.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-59b63ac6aa9e42915ad70a8ff6c651d3.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-59b63ac6aa9e42915ad70a8ff6c651d3.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui-de7b57bc0ab30c2b9353dfbe89a4eadd.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui-de7b57bc0ab30c2b9353dfbe89a4eadd.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui.min-62fab7113f99de8919f788dfe84039e5.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui.min-62fab7113f99de8919f788dfe84039e5.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui.min.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui.min.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.min-fcfb9d96f1fd25bd554d91f850a9e172.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery.min-fcfb9d96f1fd25bd554d91f850a9e172.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.min.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery.min.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery_ujs-b622ae8bf8201d0766cc779998edfb9f.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery_ujs-b622ae8bf8201d0766cc779998edfb9f.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery_ujs.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery_ujs.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/node-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/node-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/node-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/node-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/node.css.gz" afterPath="$PROJECT_DIR$/public/assets/node.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/node.js.gz" afterPath="$PROJECT_DIR$/public/assets/node.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/scaffolds-0149f820dbdd285aa65e241569d8c256.css.gz" afterPath="$PROJECT_DIR$/public/assets/scaffolds-0149f820dbdd285aa65e241569d8c256.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/scaffolds.css.gz" afterPath="$PROJECT_DIR$/public/assets/scaffolds.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sessions-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/sessions-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sessions-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/sessions-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sessions.css.gz" afterPath="$PROJECT_DIR$/public/assets/sessions.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sessions.js.gz" afterPath="$PROJECT_DIR$/public/assets/sessions.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/shop-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/shop-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/shop-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/shop-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/shop.css.gz" afterPath="$PROJECT_DIR$/public/assets/shop.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/shop.js.gz" afterPath="$PROJECT_DIR$/public/assets/shop.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/svg/moustache_blond.svg" afterPath="$PROJECT_DIR$/public/assets/svg/moustache_blond.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/usercomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/usercomponents-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/usercomponents-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/usercomponents-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/usercomponents.css.gz" afterPath="$PROJECT_DIR$/public/assets/usercomponents.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/usercomponents.js.gz" afterPath="$PROJECT_DIR$/public/assets/usercomponents.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/users-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="$PROJECT_DIR$/public/assets/users-3af39f1da6f167c2cbf453ed74daff3d.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/users-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="$PROJECT_DIR$/public/assets/users-7270767b2a9e9fff880aa5de378ca791.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/users.css.gz" afterPath="$PROJECT_DIR$/public/assets/users.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/users.js.gz" afterPath="$PROJECT_DIR$/public/assets/users.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/svg/moustache_blond.svg" afterPath="$PROJECT_DIR$/app/assets/images/svg/moustache_blond.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/avatars_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/avatars_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/avatars/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/avatars/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/avatars/search.html.erb" afterPath="$PROJECT_DIR$/app/views/avatars/search.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/avatars/show.html.erb" afterPath="$PROJECT_DIR$/app/views/avatars/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/components/search.html.erb" afterPath="$PROJECT_DIR$/app/views/components/search.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/components/show.html.erb" afterPath="$PROJECT_DIR$/app/views/components/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/componenttypes/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/componenttypes/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/componenttypes/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/componenttypes/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/componenttypes/search.html.erb" afterPath="$PROJECT_DIR$/app/views/componenttypes/search.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/componenttypes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/componenttypes/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/search_all.html.erb" afterPath="$PROJECT_DIR$/app/views/home/search_all.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/statistics.html.erb" afterPath="$PROJECT_DIR$/app/views/home/statistics.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/profile.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/profile.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shop/index.html.erb" afterPath="$PROJECT_DIR$/app/views/shop/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="$PROJECT_DIR$/public/assets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="$PROJECT_DIR$/public/assets/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/editavatar.js" afterPath="$PROJECT_DIR$/public/assets/editavatar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
     </list>
     <ignored path="Guess Me Out.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -179,7 +96,36 @@
       <file leaf-file-name="search_all.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/search_all.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="11" selection-start="7615" selection-end="7615" vertical-scroll-proportion="-23.923077">
+            <state line="99" column="2" selection-start="3349" selection-end="3370" vertical-scroll-proportion="-21.961538">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="componenttypes.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/componenttypes.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editavatar.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/editavatar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="192" column="34" selection-start="6919" selection-end="6919" vertical-scroll-proportion="4.785924">
               <folding />
             </state>
           </provider>
@@ -194,10 +140,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="statistics.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="statistics.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/statistics.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="95" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0777439">
+            <state line="3" column="95" selection-start="132" selection-end="132" vertical-scroll-proportion="-1.9615384">
               <folding />
             </state>
           </provider>
@@ -216,45 +162,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/components/search.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="130" selection-start="426" selection-end="426" vertical-scroll-proportion="-5.8846154">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/componenttypes/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="9" selection-start="986" selection-end="986" vertical-scroll-proportion="-24.192308">
-              <folding>
-                <marker date="1356849486844" expanded="true" signature="29:983" placeholder="do ... end" />
-                <marker date="1356849486844" expanded="true" signature="44:377" placeholder="if ... end" />
-                <marker date="1356849486844" expanded="true" signature="108:367" placeholder="..." />
-                <marker date="1356849486844" expanded="true" signature="238:356" placeholder="..." />
-                <marker date="1356849486844" expanded="true" signature="290:342" placeholder="do ... end" />
-                <marker date="1356849486844" expanded="true" signature="402:476" placeholder="..." />
-                <marker date="1356849486844" expanded="true" signature="498:568" placeholder="..." />
-                <marker date="1356849486844" expanded="true" signature="590:664" placeholder="..." />
-                <marker date="1356849486844" expanded="true" signature="686:753" placeholder="..." />
-                <marker date="1356849486844" expanded="true" signature="775:914" placeholder="..." />
-                <marker date="1356849486844" expanded="true" signature="946:975" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/componenttypes/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="16" selection-start="220" selection-end="220" vertical-scroll-proportion="-1.3076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/componenttypes/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="44" selection-start="1474" selection-end="1474" vertical-scroll-proportion="-7.1923075">
               <folding />
             </state>
           </provider>
@@ -295,9 +202,9 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/views/components/search.html.erb" />
         <option value="$PROJECT_DIR$/app/views/componenttypes/search.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/search_all.html.erb" />
         <option value="$PROJECT_DIR$/app/views/components/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/statistics.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/search_all.html.erb" />
       </list>
     </option>
   </component>
@@ -705,6 +612,28 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Guess Me Out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Guess-Me-Out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1001,20 +930,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/avatars/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="56" selection-end="56" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/componenttypes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="116" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/avatars/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="4" selection-start="784" selection-end="790" vertical-scroll-proportion="-9.153846">
@@ -1024,13 +939,6 @@
             <marker date="1356837788395" expanded="true" signature="-1:-1" placeholder="if ... end" />
             <marker date="1356837788395" expanded="true" signature="-1:-1" placeholder="do ... end" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/editavatar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="34" selection-start="6919" selection-end="6919" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,17 +953,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="9" selection-start="986" selection-end="986" vertical-scroll-proportion="-24.192308">
           <folding>
-            <marker date="1356849486844" expanded="true" signature="29:983" placeholder="do ... end" />
-            <marker date="1356849486844" expanded="true" signature="44:377" placeholder="if ... end" />
-            <marker date="1356849486844" expanded="true" signature="108:367" placeholder="..." />
-            <marker date="1356849486844" expanded="true" signature="238:356" placeholder="..." />
-            <marker date="1356849486844" expanded="true" signature="290:342" placeholder="do ... end" />
-            <marker date="1356849486844" expanded="true" signature="402:476" placeholder="..." />
-            <marker date="1356849486844" expanded="true" signature="498:568" placeholder="..." />
-            <marker date="1356849486844" expanded="true" signature="590:664" placeholder="..." />
-            <marker date="1356849486844" expanded="true" signature="686:753" placeholder="..." />
-            <marker date="1356849486844" expanded="true" signature="775:914" placeholder="..." />
-            <marker date="1356849486844" expanded="true" signature="946:975" placeholder="..." />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="do ... end" />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="if ... end" />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="do ... end" />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1356849486844" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1146,13 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/search_all.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="11" selection-start="7615" selection-end="7615" vertical-scroll-proportion="-23.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/components/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="9" selection-start="3695" selection-end="3695" vertical-scroll-proportion="-23.923077">
@@ -1162,7 +1063,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/statistics.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="95" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0777439">
+        <state line="3" column="95" selection-start="132" selection-end="132" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/search_all.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="2" selection-start="3349" selection-end="3370" vertical-scroll-proportion="-21.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/componenttypes.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/editavatar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="34" selection-start="6919" selection-end="6919" vertical-scroll-proportion="4.785924">
           <folding />
         </state>
       </provider>
