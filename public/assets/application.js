@@ -10235,65 +10235,65 @@ $(document).ready(function() {
 					{ 
 						hairType.avcompid=value.id;
 						hairType.locate(value.componenttype_id);
-                        (document.getElementById("hair_type_ctype_id")).value=hairType.typeid();
-                        (document.getElementById("hair_type_comp_id")).value=hairType.avcompid;
+                        //(document.getElementById("hair_type_ctype_id")).value=hairType.typeid();
+                        //(document.getElementById("hair_type_comp_id")).value=hairType.avcompid;
 
 					}
 					if (comp==2) 
 					{ 
 						hairColor.avcompid=value.id;
 						hairColor.locate(value.componenttype_id);
-                        (document.getElementById("hair_ctype_id")).value=hairColor.typeid();
-                        (document.getElementById("hair_comp_id")).value=hairColor.avcompid;
+                        //(document.getElementById("hair_ctype_id")).value=hairColor.typeid();
+                        //(document.getElementById("hair_comp_id")).value=hairColor.avcompid;
 					}
 					if (comp==3) 
 					{ 
 						skinColor.avcompid=value.id;
 						skinColor.locate(value.componenttype_id);
-                        (document.getElementById("skin_ctype_id")).value=skinColor.typeid();
-                        (document.getElementById("skin_comp_id")).value=skinColor.avcompid;
+                        //(document.getElementById("skin_ctype_id")).value=skinColor.typeid();
+                        //(document.getElementById("skin_comp_id")).value=skinColor.avcompid;
 					}
 					if (comp==4) 
 					{ 
 						eyeColor.avcompid=value.id;
 						eyeColor.locate(value.componenttype_id);
-                        (document.getElementById("eye_color_ctype_id")).value=eyeColor.typeid();
-                        (document.getElementById("eye_color_comp_id")).value=eyeColor.avcompid;
+                        //(document.getElementById("eye_color_ctype_id")).value=eyeColor.typeid();
+                        //(document.getElementById("eye_color_comp_id")).value=eyeColor.avcompid;
 					}
 					if (comp==5) 
 					{ 
 						moustacheType.avcompid=value.id;
 						moustacheType.locate(value.componenttype_id);
-                        (document.getElementById("moustache_ctype_id")).value=moustacheType.typeid();
-                        (document.getElementById("moustache_comp_id")).value=moustacheType.avcompid;
+                        //(document.getElementById("moustache_ctype_id")).value=moustacheType.typeid();
+                        //(document.getElementById("moustache_comp_id")).value=moustacheType.avcompid;
 					}
 					if (comp==6) 
 					{ 
 						noseType.avcompid=value.id;
 						noseType.locate(value.componenttype_id);
-                        (document.getElementById("nose_ctype_id")).value=noseType.typeid();
-                        (document.getElementById("nose_comp_id")).value=noseType.avcompid;
+                        //(document.getElementById("nose_ctype_id")).value=noseType.typeid();
+                        //(document.getElementById("nose_comp_id")).value=noseType.avcompid;
 					}
 					if (comp==7) 
 					{ 
 						mouthType.avcompid=value.id;
 						mouthType.locate(value.componenttype_id);
-                        (document.getElementById("mouth_ctype_id")).value=mouthType.typeid();
-                        (document.getElementById("mouth_comp_id")).value=mouthType.avcompid;
+                        //(document.getElementById("mouth_ctype_id")).value=mouthType.typeid();
+                        //(document.getElementById("mouth_comp_id")).value=mouthType.avcompid;
 					}
 					if (comp==8) 
 					{ 
 						shirtType.avcompid=value.id;
 						shirtType.locate(value.componenttype_id);
-                        (document.getElementById("shirttype_ctype_id")).value=shirtType.typeid();
-                        (document.getElementById("shirttype_comp_id")).value=shirtType.avcompid;
+                        //(document.getElementById("shirttype_ctype_id")).value=shirtType.typeid();
+                        //(document.getElementById("shirttype_comp_id")).value=shirtType.avcompid;
 					}
 					if (comp==9) 
 					{ 
 						shirtColor.avcompid=value.id;
 						shirtColor.locate(value.componenttype_id);
-                        (document.getElementById("shirtcolor_ctype_id")).value=shirtColor.typeid();
-                        (document.getElementById("shirtcolor_comp_id")).value=shirtColor.avcompid;
+                        //(document.getElementById("shirtcolor_ctype_id")).value=shirtColor.typeid();
+                        //(document.getElementById("shirtcolor_comp_id")).value=shirtColor.avcompid;
 					}
 					/* //INSTRUCTION if (comp==componentID) 
 					{ 
