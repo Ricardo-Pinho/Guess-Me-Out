@@ -392,7 +392,7 @@ div#credits{
         border-bottom: #A0C0E7 1px solid;
         border-top: #A0C0E7 1px solid; 
         background-color:#DFEEFF;
-        cursor:default;
+        cursor:pointer;
     }
  
     .meioTab
@@ -401,7 +401,7 @@ div#credits{
         border-bottom: #A0C0E7 1px solid;
         border-top: #A0C0E7 1px solid; 
         background-color:#DFEEFF;
-        cursor:default;
+        cursor:pointer;
     }
  
     .ultimaTab
@@ -411,7 +411,7 @@ div#credits{
         border-right: #A0C0E7 1px solid;
         border-top: #A0C0E7 1px solid;
         background-color:#DFEEFF;
-        cursor:default;
+        cursor:pointer;
     }
 
 
