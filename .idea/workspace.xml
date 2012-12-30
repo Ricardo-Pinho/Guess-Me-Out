@@ -82,7 +82,7 @@
       <file leaf-file-name="editavatar.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/editavatar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="308" column="27" selection-start="12259" selection-end="12259" vertical-scroll-proportion="0.55131966">
+            <state line="296" column="19" selection-start="11161" selection-end="11161" vertical-scroll-proportion="0.8504399">
               <folding />
             </state>
           </provider>
@@ -994,7 +994,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/editavatar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="308" column="27" selection-start="12259" selection-end="12259" vertical-scroll-proportion="0.55131966">
+        <state line="296" column="19" selection-start="11161" selection-end="11161" vertical-scroll-proportion="0.8504399">
           <folding />
         </state>
       </provider>
