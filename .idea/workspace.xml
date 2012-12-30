@@ -38,7 +38,7 @@
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\public\assets\tits.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\functional\tits_controller_test.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Ricardo\Desktop\Guess-Me-Out\test\unit\helpers\tits_helper_test.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/search_all.html.erb" afterPath="$PROJECT_DIR$/app/views/home/search_all.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" />
     </list>
     <ignored path="Guess Me Out.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,7 +125,7 @@
       <file leaf-file-name="editavatar.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/editavatar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="34" selection-start="6919" selection-end="6919" vertical-scroll-proportion="4.785924">
+            <state line="9" column="14" selection-start="197" selection-end="197" vertical-scroll-proportion="0.22434017">
               <folding />
             </state>
           </provider>
@@ -194,7 +194,6 @@
         <option value="$PROJECT_DIR$/app/controllers/avatars_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/avatars/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/avatars/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" />
         <option value="$PROJECT_DIR$/app/views/componenttypes/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shop/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/componenttypes/_form.html.erb" />
@@ -205,6 +204,7 @@
         <option value="$PROJECT_DIR$/app/views/components/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/statistics.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/search_all.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/editavatar.js" />
       </list>
     </option>
   </component>
@@ -1093,7 +1093,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/editavatar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="34" selection-start="6919" selection-end="6919" vertical-scroll-proportion="4.785924">
+        <state line="9" column="14" selection-start="197" selection-end="197" vertical-scroll-proportion="0.22434017">
           <folding />
         </state>
       </provider>
