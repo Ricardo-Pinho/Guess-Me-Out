@@ -215,19 +215,21 @@ $(document).ready(function() {
 
             if ($(".editsvg").length>0)
             {
-                $.ajaxSetup({
-                    async: false
-                });
                 var user=parseInt($("svg:eq("+0+")").attr('data-user'));
-                $.getJSON(path+"svgs_user_android",{userid:user,componentid:1},function(data){addType(data,hairType,"hairType");});
-                $.getJSON(path+"svgs_user_android",{userid:user,componentid:2},function(data){addColor(data,hairColor,"hairColor");});
-                $.getJSON(path+"svgs_user_android",{userid:user,componentid:3},function(data){addColor(data,skinColor,"skinColor");});
-                $.getJSON(path+"svgs_user_android",{userid:user,componentid:4},function(data){addColor(data,eyeColor,"eyeColor");});
-                $.getJSON(path+"svgs_user_android",{userid:user,componentid:5},function(data){addType(data,moustacheType,"moustacheType");});
-                $.getJSON(path+"svgs_user_android",{userid:user,componentid:6},function(data){addType(data,noseType,"noseType");});
-                $.getJSON(path+"svgs_user_android",{userid:user,componentid:7},function(data){addType(data,mouthType,"mouthType");});
-                $.getJSON(path+"svgs_user_android",{userid:user,componentid:8},function(data){addType(data,shirtType,"shirtType");});
-                $.getJSON(path+"svgs_user_android",{userid:user,componentid:9},function(data){addColor(data,shirtColor,"shirtColor");});
+                $.when(
+                $.getJSON(path+"svgs_user_android",{userid:user,componentid:1},function(data){addType(data,hairType,"hairType");}),
+                $.getJSON(path+"svgs_user_android",{userid:user,componentid:2},function(data){addColor(data,hairColor,"hairColor");}),
+                $.getJSON(path+"svgs_user_android",{userid:user,componentid:3},function(data){addColor(data,skinColor,"skinColor");}),
+                $.getJSON(path+"svgs_user_android",{userid:user,componentid:4},function(data){addColor(data,eyeColor,"eyeColor");}),
+                $.getJSON(path+"svgs_user_android",{userid:user,componentid:5},function(data){addType(data,moustacheType,"moustacheType");}),
+                $.getJSON(path+"svgs_user_android",{userid:user,componentid:6},function(data){addType(data,noseType,"noseType");}),
+                $.getJSON(path+"svgs_user_android",{userid:user,componentid:7},function(data){addType(data,mouthType,"mouthType");}),
+                $.getJSON(path+"svgs_user_android",{userid:user,componentid:8},function(data){addType(data,shirtType,"shirtType");}),
+                $.getJSON(path+"svgs_user_android",{userid:user,componentid:9},function(data){addColor(data,shirtColor,"shirtColor");})).done(
+                    function(){
+                            drawAvatar(0);
+                    }
+                );
                 //INSTRUCTION  $.getJSON(path+"svgs_user_android",{userid:user,componentid:X},function(data){addColor/Type(data,newcomponent,"<edit/shop  html class name>");});
 
                 var compdivs = $('.component');
@@ -296,18 +298,23 @@ $(document).ready(function() {
             }
             else
             {
-                $.ajaxSetup({
-                    async: false
-                });
-                $.getJSON(path+"svgs_android",{componentid:1},function(data){addType(data,hairType,"");});
-                $.getJSON(path+"svgs_android",{componentid:2},function(data){addColor(data,hairColor,"");});
-                $.getJSON(path+"svgs_android",{componentid:3},function(data){addColor(data,skinColor,"");});
-                $.getJSON(path+"svgs_android",{componentid:4},function(data){addColor(data,eyeColor,"");});
-                $.getJSON(path+"svgs_android",{componentid:5},function(data){addType(data,moustacheType,"");});
-                $.getJSON(path+"svgs_android",{componentid:6},function(data){addType(data,noseType,"");});
-                $.getJSON(path+"svgs_android",{componentid:7},function(data){addType(data,mouthType,"");});
-                $.getJSON(path+"svgs_android",{componentid:8},function(data){addType(data,shirtType,"");});
-                $.getJSON(path+"svgs_android",{componentid:9},function(data){addColor(data,shirtColor,"");});
+                $.when(
+                $.getJSON(path+"svgs_android",{componentid:1},function(data){addType(data,hairType,"");}),
+                $.getJSON(path+"svgs_android",{componentid:2},function(data){addColor(data,hairColor,"");}),
+                $.getJSON(path+"svgs_android",{componentid:3},function(data){addColor(data,skinColor,"");}),
+                $.getJSON(path+"svgs_android",{componentid:4},function(data){addColor(data,eyeColor,"");}),
+                $.getJSON(path+"svgs_android",{componentid:5},function(data){addType(data,moustacheType,"");}),
+                $.getJSON(path+"svgs_android",{componentid:6},function(data){addType(data,noseType,"");}),
+                $.getJSON(path+"svgs_android",{componentid:7},function(data){addType(data,mouthType,"");}),
+                $.getJSON(path+"svgs_android",{componentid:8},function(data){addType(data,shirtType,"");}),
+                $.getJSON(path+"svgs_android",{componentid:9},function(data){addColor(data,shirtColor,"");})).done(
+                    function(){
+                        for(var i=0;i<$("svg").length;i++)
+                        {
+                            drawAvatar(i);
+                        }
+                    }
+                );
                 //INSTRUCTION $.getJSON(path+"svgs_android",{componentid:9},function(data){addColor(data,newcomponent,"");});
 
             }
@@ -324,6 +331,15 @@ $(document).ready(function() {
         }
     }
 });
+
+function doAvatar()
+{
+    for(var i=0;i<$("svg").length;i++)
+    {
+        drawAvatar(i);
+    }
+}
+
 
     function drawAvatar(i){
         avatar=parseInt($("svg:eq("+i+")").attr('data-avatar'));
