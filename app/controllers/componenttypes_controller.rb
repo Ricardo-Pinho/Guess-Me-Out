@@ -40,8 +40,7 @@ class ComponenttypesController < ApplicationController
 	
 	def getsvgs_android
 		respond_to do |format|
-			@componentid = params[:componentid]
-			@componenttype = Componenttype.all( :conditions=> ["component_id like ?", @componentid])
+			@componenttype = Componenttype.all( :conditions=> ["component_id = ?", params[:componentid]])
       format.json { render json: @componenttype.to_json(:only=>[:component_id,:color,:svg,:id,:name]) }
     end	
 	end
