@@ -1,4 +1,4 @@
-
+//= require jquery
 var svgNS = "http://www.w3.org/2000/svg";  
 var path="http://guessmeout.herokuapp.com/";
 var avatar;

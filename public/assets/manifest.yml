@@ -37,7 +37,7 @@ avatarcomponents.js: avatarcomponents-3af39f1da6f167c2cbf453ed74daff3d.js
 avatars.js: avatars-3af39f1da6f167c2cbf453ed74daff3d.js
 components.js: components-3af39f1da6f167c2cbf453ed74daff3d.js
 componenttypes.js: componenttypes-3af39f1da6f167c2cbf453ed74daff3d.js
-editavatar.js: editavatar-a3748dd09d2c1cfdbdf99fd4a598ee08.js
+editavatar.js: editavatar-0922d3945f7cb9036829ea3a7a33e6fc.js
 home.js: home-3af39f1da6f167c2cbf453ed74daff3d.js
 innersvg/LICENSE: innersvg/LICENSE
 innersvg/innersvg.js: innersvg/innersvg-1afb7f2528c4cb1c6408f16cebe41535.js
@@ -47,17 +47,6 @@ shop.js: shop-3af39f1da6f167c2cbf453ed74daff3d.js
 usercomponents.js: usercomponents-3af39f1da6f167c2cbf453ed74daff3d.js
 users.js: users-3af39f1da6f167c2cbf453ed74daff3d.js
 application.css: application-8059311ed47d25c2ee7da60537db4e0a.css
-avatarcomponents.css: avatarcomponents-7270767b2a9e9fff880aa5de378ca791.css
-avatars.css: avatars-7270767b2a9e9fff880aa5de378ca791.css
-components.css: components-7270767b2a9e9fff880aa5de378ca791.css
-componenttypes.css: componenttypes-7270767b2a9e9fff880aa5de378ca791.css
-home.css: home-7270767b2a9e9fff880aa5de378ca791.css
-node.css: node-7270767b2a9e9fff880aa5de378ca791.css
-scaffolds.css: scaffolds-0149f820dbdd285aa65e241569d8c256.css
-sessions.css: sessions-7270767b2a9e9fff880aa5de378ca791.css
-shop.css: shop-7270767b2a9e9fff880aa5de378ca791.css
-usercomponents.css: usercomponents-7270767b2a9e9fff880aa5de378ca791.css
-users.css: users-7270767b2a9e9fff880aa5de378ca791.css
 jquery-ui.js: jquery-ui-de7b57bc0ab30c2b9353dfbe89a4eadd.js
 jquery-ui.min.js: jquery-ui.min-62fab7113f99de8919f788dfe84039e5.js
 jquery.js: jquery-59b63ac6aa9e42915ad70a8ff6c651d3.js
