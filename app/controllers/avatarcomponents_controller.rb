@@ -1,6 +1,8 @@
 class AvatarcomponentsController < ApplicationController
 
-  before_filter :authenticate_user, :except => [:index, :show, :getavatar, :getavatarsvg, :updatecomponent]
+
+  before_filter :save_login_state, :only => [:index, :show, :destroy, :new, :edit, :update, :create]
+  before_filter :authenticate_user, :except => [:getavatar, :getavatarsvg, :updatecomponent, :createavatarcomponent]
 
   # GET /avatarcomponents
   # GET /avatarcomponents.json
@@ -8,7 +10,7 @@ class AvatarcomponentsController < ApplicationController
     @avatarcomponents = Avatarcomponent.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # search.html.erb
       format.json { render json: @avatarcomponents }
     end
   end

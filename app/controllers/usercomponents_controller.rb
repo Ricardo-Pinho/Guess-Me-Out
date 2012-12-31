@@ -1,6 +1,7 @@
 class UsercomponentsController < ApplicationController
 
-  before_filter :authenticate_user, :except => [:index, :show, :getsvgs_android]
+  before_filter :save_login_state, :only => [:new, :edit, :create, :update, :destroy]
+  before_filter :authenticate_user, :except => [:getsvgs_android]
 
   # GET /usercomponents
   # GET /usercomponents.json
@@ -8,7 +9,7 @@ class UsercomponentsController < ApplicationController
     @usercomponents = Usercomponent.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # search.html.erb
       format.json { render json: @usercomponents }
     end
   end

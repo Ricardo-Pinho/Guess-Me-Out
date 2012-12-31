@@ -2,17 +2,45 @@
 
 <div id="content">
 	<h1><%=@avatar.name%></h1>
+    <h3>Avatar of <%=@user.name%></h3>
+    <div class="svgwindow">
 	<svg version="1.1" baseProfile="basic"
 	 data-avatar=<%=@avatar.id%> xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="256px" height="256px"
 	 viewBox="0 0 512 512" xml:space="preserve">
 		
-		
     </svg>
 	<p></p>
   <%if session[:user_admin]==1 || session[:user_avatar]==@avatar.id%>
-	<%= link_to 'Edit', edit_avatar_path(@avatar) %> |
+	<%= link_to 'Edit', edit_avatar_path(@avatar) %>
   <%end%>
-	<%= link_to 'Back', avatars_path %>
+    </div>
 
+
+  <%= hidden_field_tag('skin_ctype_id', "") %>
+  <%= hidden_field_tag('skin_comp_id',"") %>
+
+  <%= hidden_field_tag('hair_ctype_id',"") %>
+  <%= hidden_field_tag('hair_comp_id',"") %>
+
+  <%= hidden_field_tag('hair_type_ctype_id',"") %>
+  <%= hidden_field_tag('hair_type_comp_id',"") %>
+
+  <%= hidden_field_tag('eye_color_ctype_id',"") %>
+  <%= hidden_field_tag('eye_color_comp_id',"") %>
+
+  <%= hidden_field_tag('moustache_ctype_id',"") %>
+  <%= hidden_field_tag('moustache_comp_id',"") %>
+
+  <%= hidden_field_tag('nose_ctype_id',"") %>
+  <%= hidden_field_tag('nose_comp_id',"") %>
+
+  <%= hidden_field_tag('mouth_ctype_id',"") %>
+  <%= hidden_field_tag('mouth_comp_id',"") %>
+
+  <%= hidden_field_tag('shirttype_ctype_id',"") %>
+  <%= hidden_field_tag('shirttype_comp_id',"") %>
+
+  <%= hidden_field_tag('shirtcolor_ctype_id',"") %>
+  <%= hidden_field_tag('shirtcolor_comp_id',"") %>
 </div>

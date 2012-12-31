@@ -5,22 +5,51 @@
 		<svg version="1.1" baseProfile="basic"
 		 data-user=<%=@avatar.user_id%> data-avatar=<%=@avatar.id%> xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 		 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="256px" height="256px"
-		 viewBox="0 0 512 512" xml:space="preserve"></svg>	
-	<p></p>	
-	  <%= form_for(@avatar) do |f| %>
+		 viewBox="0 0 512 512" xml:space="preserve"></svg>
+	<p></p>
+      <%= form_tag({:controller => "avatars", :action => "update"}, :method => "put") do %>
 
     <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
+      <%= label_tag :name, "Name" %><br />
+      <%= text_field_tag :avatar_name, @avatar.name %>
     </div>
 	
     <% if @user %>
-    <%= f.hidden_field(:user_id, :value => @user.id) %>
+    <%= hidden_field_tag('user_id', @user.id) %>
     <%else%>
-    <%= f.hidden_field(:user_id, :value => session[:user_id]) %>
+    <%= hidden_field_tag('user_id', session[:user_id]) %>
     <%end%>
-    <div class="actions", id="save">
-      	<a href="#save" id="save">Save</a>  |    <%= link_to 'Back', @avatar %>
+    <%= hidden_field_tag('avatar_id', @avatar.id) %>
+
+    <%= hidden_field_tag('skin_ctype_id', "") %>
+    <%= hidden_field_tag('skin_comp_id',"") %>
+
+    <%= hidden_field_tag('hair_ctype_id',"") %>
+    <%= hidden_field_tag('hair_comp_id',"") %>
+
+    <%= hidden_field_tag('hair_type_ctype_id',"") %>
+    <%= hidden_field_tag('hair_type_comp_id',"") %>
+
+    <%= hidden_field_tag('eye_color_ctype_id',"") %>
+    <%= hidden_field_tag('eye_color_comp_id',"") %>
+
+    <%= hidden_field_tag('moustache_ctype_id',"") %>
+    <%= hidden_field_tag('moustache_comp_id',"") %>
+
+    <%= hidden_field_tag('nose_ctype_id',"") %>
+    <%= hidden_field_tag('nose_comp_id',"") %>
+
+    <%= hidden_field_tag('mouth_ctype_id',"") %>
+    <%= hidden_field_tag('mouth_comp_id',"") %>
+
+    <%= hidden_field_tag('shirttype_ctype_id',"") %>
+    <%= hidden_field_tag('shirttype_comp_id',"") %>
+
+    <%= hidden_field_tag('shirtcolor_ctype_id',"") %>
+    <%= hidden_field_tag('shirtcolor_comp_id',"") %>
+
+    <div class="actions">
+          <%= submit_tag 'Save Avatar' %>  |    <%= link_to 'Back', @avatar %>
     </div>
   <% end %>
 	</div>
@@ -68,9 +97,9 @@
 		
 	</div>
 	</div>
-	<p></p>
 	      <% if @avatar.errors.any? %>
       <div id="error_explanation">
+        <h2></h2>
         <h2><%= pluralize(@avatar.errors.count, "error") %> prohibited this avatar from being saved:</h2>
 
         <ul>

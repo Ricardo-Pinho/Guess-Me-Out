@@ -1,16 +1,15 @@
 class ComponentsController < ApplicationController
 
   before_filter :save_login_state, :only => [:new, :edit, :create, :update, :destroy]
-  before_filter :authenticate_user, :except => [:index, :show]
+  before_filter :authenticate_user, :except => [:search, :show]
 
   # GET /components
   # GET /components.json
-  def index
-    @components = Component.all
-
+  def search
+    @components = Component.all( :conditions=> ["name like ?","%" + params[:name]  + "%"])
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @components }
+      format.html
+      format.json
     end
   end
 
@@ -18,6 +17,10 @@ class ComponentsController < ApplicationController
   # GET /components/1.json
   def show
     @component = Component.find(params[:id])
+    @componenttypes = Componenttype.all(:conditions=>["component_id = ?", @component.id])
+    if session[:user_id]
+      @usercomponents = Usercomponent.all( :conditions=> ["user_id = ?", + session[:user_id]])
+    end
 
     respond_to do |format|
       format.html # show.html.erb
