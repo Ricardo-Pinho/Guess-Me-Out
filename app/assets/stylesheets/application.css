@@ -38,6 +38,10 @@ p {
   font-size: 0.8em;
 }
 
+p.FAQ, p.FAQ ul li {
+  font-size: 1.2em;
+}
+
 
 .Sign_Form{
 	text-align: left;
@@ -231,53 +235,6 @@ div.nav{
 .center{
   text-align: center;
 }
-
-/*.User_Header{
-
-	background-color: rgba(0, 0, 0, .2);
-	border-radius: 18px;
-	margin:auto;
-	width:220px;
-	text-align:center;
-} */
-
-/*.help, .avatar{
-	width : 200px;
-	color: #C4C1BD;
-    margin-bottom : 10px;
-	background-color: rgba(0, 0, 0, .2);
-	border-radius: 18px;
-	box-shadow: 5px 5px 5px #888888;
-}
-
-.helpcontent ul, .avatarcontent ul{
-padding:0px;
-list-style-type:circle;
-}
-
-.helpcontent li, .avatarcontent li{
-padding-left: 5px;
-padding-bottom: 5px;
-}
-
-.navtitleavatar, .navtitlehelp {
-  cursor:pointer;
-  width : 200px;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  font-size : 1.4em;
-  background-color : #010101;
-  border-radius: 18px;
-  box-shadow: 5px 5px 5px #888888;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}*/
 
 #content{
 	margin:auto;
@@ -511,4 +468,3 @@ div.svgpreview
 	padding:10px;
 	height:100px;
 }
-
