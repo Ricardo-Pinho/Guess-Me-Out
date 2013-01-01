@@ -1,6 +1,6 @@
 
 var svgNS = "http://www.w3.org/2000/svg";
-var path="http://guessmeout.herokuapp.com/";
+var path="http://localhost:3000/";
 var avatar;
 function SVGElement(id,svg){
 	this.ID=id;
@@ -270,19 +270,19 @@ $(document).ready(function() {
                     }
                     if (comp==6)
                     {
-                        changeNoseType(type,i);
+                        changeNoseType(type,0);
                     }
                     if (comp==7)
                     {
-                        changeMouthType(type,i);
+                        changeMouthType(type,0);
                     }
                     if (comp==8)
                     {
-                        changeShirtType(type,i);
+                        changeShirtType(type,0);
                     }
                     if (comp==9)
                     {
-                        changeShirtColor(type,i);
+                        changeShirtColor(type,0);
                     }
                     /* //INSTRUCTION if (comp==componentID)
                      {
