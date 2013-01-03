@@ -38,6 +38,10 @@ p {
   font-size: 0.8em;
 }
 
+p.FAQ, p.FAQ ul li {
+  font-size: 1.2em;
+}
+
 
 .Sign_Form{
 	text-align: left;
@@ -114,8 +118,9 @@ div.logo{
     border-radius: 3px;
     height: 20px;
     box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.15) inset;
-    margin: 5px;
     width: 29%;
+    margin-top:5px;
+    margin-right:5px;
   }
 
   div#search input{
@@ -126,8 +131,9 @@ div.logo{
   }
 div#search select{
     border: none;
-    background: rgba(0,0,0,0.1);
+    background: lightgrey;
     height:auto;
+    width:40%;
 }
 
     div#search input[type="text"]{
@@ -180,7 +186,7 @@ div.nav{
   width: 100%;
   height: 30px;
   font-size: 0.8em;
-  background-color: 182b48; /* Dark blueish gray */
+  background-color: #182b48; /* Dark blueish gray */
 }
 .nav li{
   display: inline;
@@ -245,53 +251,6 @@ div.nav{
   text-align: center;
 }
 
-/*.User_Header{
-
-	background-color: rgba(0, 0, 0, .2);
-	border-radius: 18px;
-	margin:auto;
-	width:220px;
-	text-align:center;
-} */
-
-/*.help, .avatar{
-	width : 200px;
-	color: #C4C1BD;
-    margin-bottom : 10px;
-	background-color: rgba(0, 0, 0, .2);
-	border-radius: 18px;
-	box-shadow: 5px 5px 5px #888888;
-}
-
-.helpcontent ul, .avatarcontent ul{
-padding:0px;
-list-style-type:circle;
-}
-
-.helpcontent li, .avatarcontent li{
-padding-left: 5px;
-padding-bottom: 5px;
-}
-
-.navtitleavatar, .navtitlehelp {
-  cursor:pointer;
-  width : 200px;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  font-size : 1.4em;
-  background-color : #010101;
-  border-radius: 18px;
-  box-shadow: 5px 5px 5px #888888;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}*/
-
 #content{
 	margin:auto;
   background-color: #eef2f8;
@@ -316,6 +275,11 @@ padding-bottom: 5px;
   #content img{
     max-width: 100%;
   }
+
+.download_img{
+    width: 50px;
+    height: 50px;
+}
 
 div#credits{
   color: #AAA;
@@ -392,7 +356,7 @@ div#credits{
         border-bottom: #A0C0E7 1px solid;
         border-top: #A0C0E7 1px solid; 
         background-color:#DFEEFF;
-        cursor:default;
+        cursor:pointer;
     }
  
     .meioTab
@@ -401,7 +365,7 @@ div#credits{
         border-bottom: #A0C0E7 1px solid;
         border-top: #A0C0E7 1px solid; 
         background-color:#DFEEFF;
-        cursor:default;
+        cursor:pointer;
     }
  
     .ultimaTab
@@ -411,7 +375,7 @@ div#credits{
         border-right: #A0C0E7 1px solid;
         border-top: #A0C0E7 1px solid;
         background-color:#DFEEFF;
-        cursor:default;
+        cursor:pointer;
     }
 
 
@@ -546,14 +510,6 @@ svg.svgpreview {
     cursor:pointer;
 }
 
-div.svgpreview
-{
-	float:left;
-	width:100px;
-	padding:10px;
-	height:100px;
-}
-
 div.svgpreviewshow
 {
     float:left;
@@ -565,4 +521,3 @@ div#name
 {
     text-align:center;
 }
-
